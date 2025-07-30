@@ -6,6 +6,7 @@
 
 # And don't ignore .ipynb files
 !*.ipynb
+!*.md
 
 # Also don't ignore this .gitignore file
 !.gitignore
