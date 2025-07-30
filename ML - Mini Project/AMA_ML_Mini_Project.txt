@@ -1,0 +1,3990 @@
+[Operations] 09:04:01
+Welcome, everyone! Before we get started with the class, let's go over a few best practices on Zoom.
+
+[Operations] 09:04:08
+First, if you have a technical question, or a question on the material being covered.
+
+[Operations] 09:04:14
+Please add those questions to the Q&A feature, which you'll find at the bottom of the Zoom screen.
+
+[Operations] 09:04:20
+Once you open the Q&A window, you'll be able to type in your question, you'll be able to see the questions that have been asked by your classmates, and you'll be able to upvote questions that you have also in mind, so they can get populated towards the top of the question list.
+
+[Operations] 09:04:35
+The instructor will take short breaks during the lesson to answer those questions, so please wait patiently for them to do so.
+
+[Operations] 09:04:43
+During the class, our instructor will also ask you questions for discussion. If you'd like to answer the question or add to the discussion, please raise your hand and wait your turn to be called on.
+
+[Operations] 09:04:56
+Once the instructor is ready to call on you, then they'll enable the option for you to unmute yourself. And then you'll see a pop-up window.
+
+[Operations] 09:05:04
+Asking you to unmute. Once you are done speaking, please re-mute yourself to reduce any ambient noises.
+
+[Operations] 09:05:12
+If you have a question for our ops team on course logistics or any of our best practices.
+
+[Operations] 09:05:17
+Please send us a message on the chat, and we'll be happy to help you. If you post technical questions on the chat, we'll remind you to repost those questions in the Q&A so the instructor does not miss them.
+
+[Operations] 09:05:30
+Towards the end of the class, our operations team will enable a feedback poll.
+
+[Operations] 09:05:35
+Asking you a few questions about what you thought about the session. Please answer those questions as soon as you see the pop-up window appear. The feedback pool is very important to us.
+
+[Operations] 09:05:46
+And will help us continue to improve. Your classes for the future. So without further ado.
+
+[Operations] 09:05:52
+I'd like to welcome your upcoming instructor.
+
+[Shrikant Kshirsagar] 09:06:00
+Hello, everyone. Welcome to this session on ML Mini Projects.
+
+[Shrikant Kshirsagar] 09:06:05
+My name is Sri Kansher Sagar. And before we go on, I wanna….
+
+[Shrikant Kshirsagar] 09:06:10
+Ask if you can see and hear me clearly. If so, please raise your hand.
+
+[Shrikant Kshirsagar] 09:06:16
+Right, right, thank you, thank you. I see a lot of familiar faces here.
+
+[Shrikant Kshirsagar] 09:06:20
+And maybe a couple new ones, so…. We'll get into introductions pretty soon.
+
+[Shrikant Kshirsagar] 09:06:27
+So, this session is, uh…. Again, for ML mini projects.
+
+[Shrikant Kshirsagar] 09:06:33
+Um, so if you're in the wrong session, make sure that you get the.
+
+[Shrikant Kshirsagar] 09:06:37
+Link for the right session from the operations team. It has happened to me a few times, where….
+
+[Shrikant Kshirsagar] 09:06:42
+Some students joined us… joined one of my sessions, and then midway through the session, they realized they were in the wrong session, so….
+
+[Shrikant Kshirsagar] 09:06:50
+I urge you to double-check and make sure you're on the right session before, uh, continuing.
+
+[Shrikant Kshirsagar] 09:06:53
+And if you're not, just reach out to the operations team.
+
+[Shrikant Kshirsagar] 09:06:56
+Assuming you're all in the right session. Welcome to this one. This is….
+
+[Shrikant Kshirsagar] 09:07:01
+The session on, uh, this… this class is on ML many projects.
+
+[Shrikant Kshirsagar] 09:07:04
+And it's gonna be a very different class than the ones we have usually.
+
+[Shrikant Kshirsagar] 09:07:09
+Usually, you know, for those of you who have taken classes with me or other instructors.
+
+[Shrikant Kshirsagar] 09:07:14
+We have a whole bunch of slides and content we cover, and then go through.
+
+[Shrikant Kshirsagar] 09:07:19
+Uh, you know, understand the theory and the applications. This class is….
+
+[Shrikant Kshirsagar] 09:07:24
+Almost entirely hands-on, application-oriented. So there's not as much theory of material to cover.
+
+[Shrikant Kshirsagar] 09:07:29
+And, in fact, there'll be a little bit of role reversal here.
+
+[Shrikant Kshirsagar] 09:07:33
+In that, what I mean by that is, you know, instead of you asking me questions, I'll be asking a lot of questions.
+
+[Shrikant Kshirsagar] 09:07:38
+And trying to get answers from you. So the goal of this ML mini project is to expose you.
+
+[Shrikant Kshirsagar] 09:07:46
+To how machine learning is applied in the real world. And the nature of this application is such that.
+
+[Shrikant Kshirsagar] 09:07:53
+A lot of different things and concepts and techniques you learned in different classes.
+
+[Shrikant Kshirsagar] 09:07:58
+Now come together and combine. To help you get a solution.
+
+[Shrikant Kshirsagar] 09:08:02
+So, we'll be actually using a lot of the material covered in previous classes.
+
+[Shrikant Kshirsagar] 09:08:08
+And kind of help decide, you know, that'll help decide how to approach the problem.
+
+[Shrikant Kshirsagar] 09:08:13
+Now, I think I've mentioned this several times, uh, in previous lectures.
+
+[Shrikant Kshirsagar] 09:08:18
+When it comes to applied machine learning. There is virtually….
+
+[Shrikant Kshirsagar] 09:08:24
+An unlimited number of ways to do it. And so, the key is to….
+
+[Shrikant Kshirsagar] 09:08:30
+Understand when to apply which technique, and when to not apply a certain technique.
+
+[Shrikant Kshirsagar] 09:08:34
+And so what we're trying to do here is, with the help of these problems in part of… as part of MachineML mini-projects.
+
+[Shrikant Kshirsagar] 09:08:42
+Expose you to these kinds of decisions and trade-offs. That happen in the real world.
+
+[Shrikant Kshirsagar] 09:08:47
+When you're applying machine learning. So, in order to help you really.
+
+[Shrikant Kshirsagar] 09:08:53
+Enhance your intuition about how to… how to apply machine learning in the real world.
+
+[Shrikant Kshirsagar] 09:08:58
+I'm gonna ask you a lot of questions. You can also ask me questions, of course, but I'm also going to ask a lot of questions.
+
+[Shrikant Kshirsagar] 09:09:03
+And, uh, we'll together see how to approach this problem. The two problems that we have, in a way that.
+
+[Shrikant Kshirsagar] 09:09:11
+That tries to mirror how we would do it in the real world.
+
+[Shrikant Kshirsagar] 09:09:14
+Okay? So, the main thing I want to emphasize is this session is going to be very, very interactive.
+
+[Shrikant Kshirsagar] 09:09:20
+Uh, unlike most of the sessions we had before, where it's mostly me talking, you listening, and then….
+
+[Shrikant Kshirsagar] 09:09:25
+Some back and forth. This one is very interactive, so…. I encourage you to participate as much as you can in today's session.
+
+[Shrikant Kshirsagar] 09:09:31
+The more you participate, the more you'll get out of it, and this is especially important in this one, because.
+
+[Shrikant Kshirsagar] 09:09:37
+There's not as much theory to cover. And, uh, don't worry if you don't know the answer, if you think the answer is wrong, I'd still urge you to participate.
+
+[Shrikant Kshirsagar] 09:09:44
+Because that would help me understand where the gaps lie and help you fill those gaps more effectively.
+
+[Shrikant Kshirsagar] 09:09:50
+Okay? So, who's ready to dive into the many projects and ready to participate?
+
+[Shrikant Kshirsagar] 09:09:57
+Raise your hands if you're okay. Okay. A lukewarm response, it looks like….
+
+[Shrikant Kshirsagar] 09:10:02
+A lot of you are still unsure. Yeah? Okay, good, good. All right.
+
+[Shrikant Kshirsagar] 09:10:08
+So… okay, sounds good. So…. During this class, we'll, you know, as I said, it's an interactive one.
+
+[Shrikant Kshirsagar] 09:10:15
+So, what I'm gonna do is, uh, you know, like it was mentioned in the intro video.
+
+[Shrikant Kshirsagar] 09:10:19
+We're gonna, uh, we have a two-hour session scheduled. Thank you, Adam. Yes, let's do it.
+
+[Shrikant Kshirsagar] 09:10:24
+We have a two-hour session scheduled. Um, for this, and I want to make sure we have a chance to go through all the.
+
+[Shrikant Kshirsagar] 09:10:32
+Uh, you know, the problem statement, and what you're expected to do in this in the 2 hours.
+
+[Shrikant Kshirsagar] 09:10:37
+And then after, so I'll spend the first hour on one problem and the second hour on the second problem.
+
+[Shrikant Kshirsagar] 09:10:42
+And then, I want to make sure that in the 2 hours.
+
+[Shrikant Kshirsagar] 09:10:45
+We are able to cover everything that anyone who needs to finish this, uh, wants to finish this project, uh, will have all the necessary information.
+
+[Shrikant Kshirsagar] 09:10:52
+Uh, and then after that, I'll just, uh, if you have more questions, I'm happy to take more questions and stick around and answer those.
+
+[Shrikant Kshirsagar] 09:10:59
+But the goal is to try to set you up to solve, uh, to attempt these problems in the best way possible.
+
+[Shrikant Kshirsagar] 09:11:06
+Again, this is… just to be clear, I'm not gonna…. Tell you how to solve it, or discuss solutions.
+
+[Shrikant Kshirsagar] 09:11:14
+Um, but I will be able to, uh, you know, I'll be pro- I'll be providing.
+
+[Shrikant Kshirsagar] 09:11:18
+Some hints to you, but not even directly. Like, I… the goal here.
+
+[Shrikant Kshirsagar] 09:11:22
+Is to try to help you think about these problems, because when you apply it in the real world, I'm not going to be there to tell you, hey, this is what you should do, this is what you should do, right?
+
+[Shrikant Kshirsagar] 09:11:30
+Um, in some previous sessions that we have seen. Uh, some students really….
+
+[Shrikant Kshirsagar] 09:11:36
+Wanted to have the opportunity to try the problems out themselves before, uh, you know, getting hints or solutions.
+
+[Shrikant Kshirsagar] 09:11:42
+So, what I'm going to do is, in the first two hours of this session, just try to minimize.
+
+[Shrikant Kshirsagar] 09:11:48
+I won't give away anything, so that you have a fair shot of trying out all the solutions, uh, the problems by yourself.
+
+[Shrikant Kshirsagar] 09:11:55
+And then we have technical coaching sessions to, you know, clarify any questions or anything you have, but we can go into more detail. But today, I'm not gonna….
+
+[Shrikant Kshirsagar] 09:12:02
+Tell you how to solve the problem. So I'm just going to ask you questions, and then….
+
+[Shrikant Kshirsagar] 09:12:05
+Hopefully, uh, help you narrow down your list of choices, so you can figure out which direction to go in.
+
+[Shrikant Kshirsagar] 09:12:12
+David, you asked a question, can you change the chat settings so everyone can chat from everyone?
+
+[Shrikant Kshirsagar] 09:12:17
+Can see the chat from everyone. Uh, I think that might be a question for the operations team.
+
+[Shrikant Kshirsagar] 09:12:25
+Uh…. Not sure. Let me see.
+
+[Shrikant Kshirsagar] 09:12:32
+Usually, I don't think we do this setting, so…. Let me see if I can ask the operations team to do that.
+
+[Shrikant Kshirsagar] 09:12:40
+But in case you can't, I'll be happy to repeat the questions and, uh, you know, make sure everyone's on the same page.
+
+[Shrikant Kshirsagar] 09:12:46
+So, in terms of question and answers, what I would suggest is.
+
+[Shrikant Kshirsagar] 09:12:50
+Uh, whenever you have any question, you can raise your hand, I can unmute you.
+
+[Shrikant Kshirsagar] 09:12:54
+And I see Uma has already raised her hand, so let's take the question from Puma.
+
+[Shrikant Kshirsagar] 09:13:00
+Kumon, go ahead and unmute yourself, and you can ask your question.
+
+[Uma Maddigunta] 09:13:03
+Oh, um, I was, uh, raising my hand from earlier, my fault, I apologize.
+
+[Shrikant Kshirsagar] 09:13:07
+Okay, so do… do lower your hand after that, otherwise I'll see me have a question.
+
+[Shrikant Kshirsagar] 09:13:12
+Uh, because you seem to have a question. Go ahead and unmute yourself and ask.
+
+[Vikas Chhabra] 09:13:18
+Okay, Shakan, thank you. So yeah, one quick question I had to look at the… I think the resources that have been provided before this, uh.
+
+[Vikas Chhabra] 09:13:25
+About the two projects. One quick question I had was, I think there was two CSV files for the data.
+
+[Vikas Chhabra] 09:13:31
+He said, uh, but I couldn't really see any…. Data for the Lending Club, uh.
+
+[Shrikant Kshirsagar] 09:13:31
+Oh, you should have…. You should have received, for the first project, you should have received a dataset called loans.csv.
+
+[Vikas Chhabra] 09:13:39
+Thing, there were, uh, I think, two data sets, but none of them actually seemed to be related to the first project.
+
+[Vikas Chhabra] 09:13:46
+Uh, well, did I miss something, or was there some issue with, uh….
+
+[Shrikant Kshirsagar] 09:13:55
+Uh, it's not, I would reach out to the operations team right away and ask them to send you the data set.
+
+[Vikas Chhabra] 09:14:01
+Yeah, the two CSV files was… one was, I think, train.
+
+[Vikas Chhabra] 09:14:04
+Something to do with train, and the other was resources, but I didn't find anything to do with data, and.
+
+[Vikas Chhabra] 09:14:09
+Yeah, and one of the questions did seem to be related to some of the features or variables, which I couldn't find in any of the CSV files, but just, yeah, just raising a quick doubt, I'm not sure if I missed something.
+
+[Shrikant Kshirsagar] 09:14:17
+Yeah, thanks, Bob. Yeah, thanks, Bob. Yeah, thanks for raising that. I would, uh, you know, if you can reach out to the operations team and ask them how you can access it. First, double-check to make sure that.
+
+[Shrikant Kshirsagar] 09:14:28
+You have all the folders, you know, like, uh, that you've seen all the files.
+
+[Shrikant Kshirsagar] 09:14:32
+You should have received all the data set and everything to get started, but if not, reach out to the operations team and ask them to send a file to you.
+
+[Vikas Chhabra] 09:14:38
+Yeah, okay, thank you. I'll take another look, just to make sure. Thanks.
+
+[Shrikant Kshirsagar] 09:14:38
+And they should be to do.
+
+[Shrikant Kshirsagar] 09:14:43
+Uh, and then Joseph, you have a question before we begin?
+
+[Joseph Weathers] 09:14:48
+Yes. Yes, Haru. Can you hear me?
+
+[Shrikant Kshirsagar] 09:14:51
+Yes, go ahead. Yes, I can hear you.
+
+[Joseph Weathers] 09:14:53
+Okay, in response to Viskar's question, um…. Uh, did you click on the link in the….
+
+[Joseph Weathers] 09:15:01
+In the system, in the loan approval system instructions, there's a link that says data set.
+
+[Shrikant Kshirsagar] 09:15:07
+Yeah, so we'll be going through that, uh, in this session.
+
+[Joseph Weathers] 09:15:09
+Yes, if you try that link, if you try that link, I think it's there.
+
+[Joseph Weathers] 09:15:14
+Um, let's…. Um, I just wanted to share that first, but my question is, um, do we have to follow the template?
+
+[Shrikant Kshirsagar] 09:15:22
+We will have to follow template. Well, it's up to you. So, the template is there as a guideline.
+
+[Shrikant Kshirsagar] 09:15:27
+And, uh, to help you guide, uh, you know, guide how to solve the problems, because as I said, there is virtually infinite ways you can, uh, approach the problem.
+
+[Shrikant Kshirsagar] 09:15:34
+Uh, you don't have to, but again, we'll go over the rubrics and expectations, so you can make.
+
+[Joseph Weathers] 09:15:40
+Okay. Okay, thank you.
+
+[Shrikant Kshirsagar] 09:15:40
+Your decision as to how to do it. Okay? No problem.
+
+[Shrikant Kshirsagar] 09:15:44
+All right, so, uh, let's… let's go through this, uh, exercise. So, as I said, uh, the first hour, I'll be discussing one problem, and the second hour, I'll discuss the second project.
+
+[Shrikant Kshirsagar] 09:15:53
+And, uh, what we're gonna do is go over the problem in detail, make sure we understand.
+
+[Shrikant Kshirsagar] 09:15:59
+What is the problem asking us to do? What are we expected to do?
+
+[Shrikant Kshirsagar] 09:16:02
+What is the data set like, and, you know, what are some of the things we could try out?
+
+[Shrikant Kshirsagar] 09:16:07
+And then, uh, discuss the rubrics, uh, to, you know, help you understand what is it that you're being graded on.
+
+[Shrikant Kshirsagar] 09:16:13
+Now, the key thing to remember here is, again, the more you put in, the more you get out.
+
+[Shrikant Kshirsagar] 09:16:18
+So, you know, we expect you to take… to do this in a week or two, but again, like, you can take more or less time. I don't think there's a hard deadline for this, if I… if I remember correctly.
+
+[Shrikant Kshirsagar] 09:16:27
+But the… I would urge you to try to get it done within the next week or two.
+
+[Shrikant Kshirsagar] 09:16:32
+Because if you don't, then you just, you know, get lost. It just gets lost in other things, and then you lose motivation, and….
+
+[Shrikant Kshirsagar] 09:16:39
+You start forgetting how to do things. So, in your own interest, in order to consolidate everything you've learned so far.
+
+[Shrikant Kshirsagar] 09:16:44
+This, I would urge you to try to do this project. This is the best.
+
+[Shrikant Kshirsagar] 09:16:48
+Applying these techniques, what you've learned in class to real-world problems is the best way to absorb.
+
+[Shrikant Kshirsagar] 09:16:53
+And truly understand the nuances of the different machine learning techniques.
+
+[Shrikant Kshirsagar] 09:16:56
+Okay? So, without further ado. Let's get into the, uh, let's get into today's session and start discussing.
+
+[Shrikant Kshirsagar] 09:17:04
+Now, I'm going to start by sharing my screen. Uh, when you see my screen, please raise your hand.
+
+[Shrikant Kshirsagar] 09:17:16
+Can you see my screen? Okay, great, thank you.
+
+[Shrikant Kshirsagar] 09:17:21
+So it looks like some of you can see my screen.
+
+[Shrikant Kshirsagar] 09:17:23
+So, alright. So, as I said, there's no… there's not much theory or anything to discuss in here.
+
+[Shrikant Kshirsagar] 09:17:30
+Will be mostly just, uh, looking at the problem statement and discussing different, uh.
+
+[Shrikant Kshirsagar] 09:17:35
+Different things to consider while you're… while you're trying to attempt to solve this particular ML mini project.
+
+[Shrikant Kshirsagar] 09:17:40
+And, uh, I won't be, again, giving you any answers in the interest of.
+
+[Shrikant Kshirsagar] 09:17:45
+Having you try those things, but you're welcome to ask questions and, you know, depending on how much time we have, we can answer them now or later.
+
+[Shrikant Kshirsagar] 09:17:52
+Okay? But let's make sure we keep this interactive. Again, you can ask a question by raising your hand, and I'll unmute you.
+
+[Shrikant Kshirsagar] 09:17:58
+Um, and then, uh, or if you prefer, you can also use the chat, but I prefer, uh, I won't be necessarily monitoring the chat as frequently, so if you can.
+
+[Shrikant Kshirsagar] 09:18:07
+Raise your hand, that'd be great. Uh, it's hard for me to monitor the chat when I'm screen sharing, so that's why I'm, uh, if you have questions, please raise your hand.
+
+[Shrikant Kshirsagar] 09:18:15
+Okay? And I will be pausing from time to time as well.
+
+[Shrikant Kshirsagar] 09:18:19
+To ask if, you know, ask you questions, like I do in the sessions, but make sure we understand, uh, everything we've covered so far.
+
+[Shrikant Kshirsagar] 09:18:27
+So let's get into it. So ML Mini Project. So, as I said, this session is to.
+
+[Shrikant Kshirsagar] 09:18:32
+Is one of the first ones which is almost completely application-oriented.
+
+[Shrikant Kshirsagar] 09:18:36
+So, we are only going to look at how you apply different ML techniques you have learned here.
+
+[Shrikant Kshirsagar] 09:18:41
+Um, so before we get into that, let's get some introductions out of the way. As I said, I think I've met most of you before in previous classes, but maybe one or two are new faces.
+
+[Shrikant Kshirsagar] 09:18:50
+So, for those of you who haven't met me before, my name is Shrikan Shal Sagar.
+
+[Shrikant Kshirsagar] 09:18:54
+I, uh, did my grad school at UC Berkeley, and then worked at, uh, worked in Silicon Valley.
+
+[Shrikant Kshirsagar] 09:19:00
+Uh, and I was a founding team member in different parts of Amazon.
+
+[Shrikant Kshirsagar] 09:19:04
+And, uh, doing machine learning as well as quantum computing. Uh, and my background is in engineering, and I've been doing AI machine learning for….
+
+[Shrikant Kshirsagar] 09:19:12
+Many years, and was instrumental in applying it to… in various different settings, from, you know, hardware design to.
+
+[Shrikant Kshirsagar] 09:19:18
+Automotive to all kinds of, like, financial services and everything. And the more I learn about it, the more I realize how….
+
+[Shrikant Kshirsagar] 09:19:27
+How powerful these techniques are, and, you know, how these, uh.
+
+[Shrikant Kshirsagar] 09:19:30
+How you can use the same technique in different contexts and get, you know, like, uh, get some useful results.
+
+[Shrikant Kshirsagar] 09:19:35
+So, machine learning as a field is old, but it's only recently with the availability of compute power that is starting to come on its own.
+
+[Shrikant Kshirsagar] 09:19:42
+And so it's a very exciting field, and as you know, AI is all the ways now, so machine learning, AI machine learning is really….
+
+[Shrikant Kshirsagar] 09:19:47
+A good, uh, skill set to develop in this day and age, so….
+
+[Shrikant Kshirsagar] 09:19:52
+I'm glad you're here, and you made the right choice. Uh, that's a little bit about me.
+
+[Shrikant Kshirsagar] 09:19:57
+I would love to hear from you, especially those who I haven't met before, if you can quickly pop into the chat your name.
+
+[Shrikant Kshirsagar] 09:20:04
+Where you are currently, uh, which company you work at, and designation.
+
+[Shrikant Kshirsagar] 09:20:08
+That'll be great, so I can make sure that when I discuss.
+
+[Shrikant Kshirsagar] 09:20:11
+This, uh, session, I'm able to tailor it to your, uh.
+
+[Shrikant Kshirsagar] 09:20:16
+Specific, uh, level and where you're coming from. I'll take a couple of minutes.
+
+[Shrikant Kshirsagar] 09:20:22
+For everyone to respond, and then we'll continue. Welcome back, Howard.
+
+[Shrikant Kshirsagar] 09:20:28
+It's good to see you again.
+
+[Shrikant Kshirsagar] 09:20:52
+Welcome, Adam. Welcome to SAR. Welcome, Uma.
+
+[Shrikant Kshirsagar] 09:20:59
+Oh, very nice. Congratulations, the one. Hi, Savani.
+
+[Shrikant Kshirsagar] 09:21:12
+Hi, Pavani, welcome back.
+
+[Shrikant Kshirsagar] 09:21:18
+Welcome, Siobhan. By the way, I know there's a big heat wave going on in the US for the next few days.
+
+[Shrikant Kshirsagar] 09:21:27
+Is anyone in the area that's affected? I think it's mostly Midwest and Northeast.
+
+[Shrikant Kshirsagar] 09:21:35
+Yeah, yeah, so…. Steve's not warm. Stay cool, stay indoors, stay cool.
+
+[Shrikant Kshirsagar] 09:21:42
+And, uh, get plenty of hydration. Don't… don't let your…. Brain overheat. It's very easy to get overheated in this, uh, and what we're studying is, you know, very, uh.
+
+[Shrikant Kshirsagar] 09:21:53
+Technical, so do take breaks, uh, and stay cool. Wow. Nice.
+
+[Shrikant Kshirsagar] 09:22:02
+Welcome, Sonia.
+
+[Shrikant Kshirsagar] 09:22:07
+Yes, I remember. Thank you. Yes, I remember you saw again. Welcome, Joseph.
+
+[Shrikant Kshirsagar] 09:22:12
+It is quite hard, indeed. Welcome, Vikas.
+
+[Shrikant Kshirsagar] 09:22:18
+All right, it looks like we have got almost everyone in the chat.
+
+[Shrikant Kshirsagar] 09:22:21
+Anybody else that we are missing? All here? Okay.
+
+[Shrikant Kshirsagar] 09:22:27
+So let's… let's get started, and let's talk about what we are doing today, and today's session.
+
+[Shrikant Kshirsagar] 09:22:33
+And, uh, each of the many projects. So, as I said, I would love for this to be interactive.
+
+[Shrikant Kshirsagar] 09:22:38
+Uh, so please, if you have questions, raise your hand, and I'll unmute you.
+
+[Shrikant Kshirsagar] 09:22:42
+Uh, and from time to time, I'll pause and see if there are any questions in the chat as well.
+
+[Shrikant Kshirsagar] 09:22:46
+But I'll first answer the questions that you raised your hand and ask.
+
+[Shrikant Kshirsagar] 09:22:50
+And I'll also ask you questions to make sure that you are understanding what we're doing.
+
+[Shrikant Kshirsagar] 09:22:55
+So, I want this…. What I found is the best way to.
+
+[Shrikant Kshirsagar] 09:23:00
+Lead this kind of class is to have it be led by you, by the students, rather than me leading it, because.
+
+[Shrikant Kshirsagar] 09:23:06
+This helps you develop your own intuition, right? It's not about me trying to find… give you the best solution or the best way to solve this, because.
+
+[Shrikant Kshirsagar] 09:23:14
+In the real world, again, you know, you have to make your own choices.
+
+[Shrikant Kshirsagar] 09:23:17
+So, that's why I want you to take the lead in this class, rather than me doing it.
+
+[Shrikant Kshirsagar] 09:23:22
+Okay, so are you… are you ready for it? Are you ready to take the lead? If so, please raise your hand.
+
+[Shrikant Kshirsagar] 09:23:27
+See how many of you are ready? Great, great, thank you, thank you.
+
+[Shrikant Kshirsagar] 09:23:34
+All right, so let's move on then. So let's look at the first, uh….
+
+[Shrikant Kshirsagar] 09:23:40
+Project. This is a two… there's two projects in this ML Mini project. There's one on… called Lending Club, and there's one on Learning Hope.
+
+[Shrikant Kshirsagar] 09:23:46
+So, what we'll do is we'll first understand. The problem context, then we'll go over the code, and then, uh, at the end, we'll discuss the rubrics.
+
+[Shrikant Kshirsagar] 09:23:55
+Um, so this is what I've shown here is kind of, like, the general….
+
+[Shrikant Kshirsagar] 09:24:01
+Approach you would take when you try to apply machine learning to real-world problems.
+
+[Shrikant Kshirsagar] 09:24:06
+The first step is always to understand the business context. Right? Like, what is it that… what is it that the… what is it that you're trying to solve for? What is the business needing?
+
+[Shrikant Kshirsagar] 09:24:15
+What are the business requirements? And that, uh, is one of the major….
+
+[Shrikant Kshirsagar] 09:24:21
+Components that drives the decisions you'll be making in terms of implementing.
+
+[Shrikant Kshirsagar] 09:24:26
+Uh, different, you know, machine learning techniques, or different approaches, right?
+
+[Shrikant Kshirsagar] 09:24:29
+And so, it's very important to make sure you have a good understanding of the business context.
+
+[Shrikant Kshirsagar] 09:24:33
+So that's what we're going to do first. Then we're gonna go over the starter code, which you should have received, uh, before this class.
+
+[Shrikant Kshirsagar] 09:24:39
+And again, high-level overview. I'm not going to go over detail, like, you know.
+
+[Shrikant Kshirsagar] 09:24:45
+Techniques as to how to do this, how to do that, that's for you to decide, because otherwise I would be lobbying of the opportunity to develop your own intuition.
+
+[Shrikant Kshirsagar] 09:24:51
+But I will ask you questions, and uh…. Kind of, like, help you think along the right directions.
+
+[Shrikant Kshirsagar] 09:24:56
+And then finally, we'll discuss the rubrics. So how can you expect to be graded on this?
+
+[Shrikant Kshirsagar] 09:25:00
+Again, the grade is one aspect of it. You should try to maximize your grade, but beyond the grade.
+
+[Shrikant Kshirsagar] 09:25:06
+Uh, I think it's important for you to try to understand.
+
+[Shrikant Kshirsagar] 09:25:09
+What it is that we're hoping you get out of this, because this is, again, directly correlated to the real world.
+
+[Shrikant Kshirsagar] 09:25:15
+What is important, what's not important, right? So that's what we're gonna be looking at.
+
+[Shrikant Kshirsagar] 09:25:20
+So, with that, let's start with the…. Lending… Lending Club, uh….
+
+[Shrikant Kshirsagar] 09:25:27
+Starter code… sorry, not a starter code. Let's start with the, uh, business, uh, with the problem statement.
+
+[Shrikant Kshirsagar] 09:25:32
+Right? So, do you still see my… do you see my screen now with the, uh….
+
+[Shrikant Kshirsagar] 09:25:38
+Document, expectation setting. Please raise your hand if you don't. Okay, thank you.
+
+[Shrikant Kshirsagar] 09:25:44
+Thank you. So…. So, what are we trying to do in this mini-project?
+
+[Shrikant Kshirsagar] 09:25:51
+Well, you've covered a lot of different topics and concepts and techniques.
+
+[Shrikant Kshirsagar] 09:25:56
+So far in machine learning, right? And in the real world, these….
+
+[Shrikant Kshirsagar] 09:26:01
+These things don't exist in isolation. You usually apply a combination of these things together to achieve the result.
+
+[Shrikant Kshirsagar] 09:26:07
+Uh, you're looking for, right? And so, here is a list of.
+
+[Shrikant Kshirsagar] 09:26:12
+Few important topics that. We will be using or applying for solving this particular ML mini project.
+
+[Shrikant Kshirsagar] 09:26:20
+And all of these are topics that you should have covered and be fairly familiar with.
+
+[Shrikant Kshirsagar] 09:26:24
+Uh, so again, we won't be going into details of this, uh, right now.
+
+[Shrikant Kshirsagar] 09:26:28
+But these are, again, some options and some things for you to consider, or some things for you to, uh, potentially apply in this, right?
+
+[Shrikant Kshirsagar] 09:26:36
+Some or all of them may or may not be applicable. It's not like you have to apply every single thing you see here.
+
+[Shrikant Kshirsagar] 09:26:41
+But you have to kind of use some judgment to figure out, to determine which ones to apply and which ones are not applicable here.
+
+[Shrikant Kshirsagar] 09:26:48
+And that is exactly what I'm going to try to help you do in this session.
+
+[Shrikant Kshirsagar] 09:26:52
+Okay? So, few topics that, uh, that may be applicable here, that may be of interest, that are, uh, useful to think about as you consider this problem.
+
+[Shrikant Kshirsagar] 09:27:02
+Are the linear regression problems, uh, linear regressions. The feature selection, you know, logistic regression and k-nearest neighbors.
+
+[Shrikant Kshirsagar] 09:27:11
+Knife-based decision trees, lagging boosting. Hyperparameter tuning, we'll be doing some of that.
+
+[Shrikant Kshirsagar] 09:27:16
+Um, you know, potentially clustering and dimension reduction. So all of these, again, are high-level techniques that you've learned, which you can productively apply in this problem. You don't have to apply every single one of them.
+
+[Shrikant Kshirsagar] 09:27:27
+But I encourage you to at least think about. Which of these are applicable, and how you'd apply them. And if you find… if you feel like they're not applicable.
+
+[Shrikant Kshirsagar] 09:27:34
+That's okay too, but then I want you to at least think about, like, why they're not applicable.
+
+[Shrikant Kshirsagar] 09:27:39
+So, what this will help you do, this goes beyond what I'm telling you now, goes beyond, like, traditional.
+
+[Shrikant Kshirsagar] 09:27:46
+Machine learning approaches, where. It's not just about, like, you know, trying to, uh, you know.
+
+[Shrikant Kshirsagar] 09:27:52
+Apply some machine learning techniques and get the results, and then move on. But really trying to understand why something applies, or why something doesn't apply.
+
+[Shrikant Kshirsagar] 09:27:59
+And it's a slightly harder problem, but if you… if you train yourself to think about these things.
+
+[Shrikant Kshirsagar] 09:28:03
+What ends up happening is, as you do more and more machine… apply more and more machine learning in the real world.
+
+[Shrikant Kshirsagar] 09:28:09
+Your intuition becomes so strong that you can start looking at a problem and very quickly be able to tell.
+
+[Shrikant Kshirsagar] 09:28:14
+How to solve it, you know, at a high level. And, uh, have really good leads, right?
+
+[Shrikant Kshirsagar] 09:28:19
+So the analogy I'd like to make is, uh…. It's like, imagine you're playing a chess game, right? In a chess game, in the beginning, there aren't many options, but in the middle of the game, there are lots of.
+
+[Shrikant Kshirsagar] 09:28:31
+Combinations you could play, right? For those of you who played chess, you might relate to this, but even if you don't.
+
+[Shrikant Kshirsagar] 09:28:36
+You do understand conceptually that there's a lot of possible moves and a lot of….
+
+[Shrikant Kshirsagar] 09:28:40
+A lot of possibilities, right? But the good chess players don't necessarily go and exhaustively search everything, right? They have a good intuition that tells them.
+
+[Shrikant Kshirsagar] 09:28:47
+This is the right… best move to make at this… at this stage, this is the best move, or these are some of the possibilities, right?
+
+[Shrikant Kshirsagar] 09:28:52
+So, that's what you're trying to do here. We're trying to essentially help you play this chess game of machine learning, because there's always so many.
+
+[Shrikant Kshirsagar] 09:28:59
+Techniques and, uh, applications you can do. But only a few will give you the best results.
+
+[Shrikant Kshirsagar] 09:29:05
+So, figuring out which those are, you know, in a fairly quick, reasonable time without having to exhaustively try everything, is the goal here.
+
+[Shrikant Kshirsagar] 09:29:12
+Okay, so I'm emphasizing this because I really want you to understand.
+
+[Shrikant Kshirsagar] 09:29:16
+The big picture overview, right? I mean, solving this problem, but this is what we're going after.
+
+[Shrikant Kshirsagar] 09:29:20
+So make sure, as you're going through this, that you're focusing on that, owning your intuition.
+
+[Shrikant Kshirsagar] 09:29:25
+Okay, so this project is, again, we're going to consolidate and help you apply this in practical real-world scenarios.
+
+[Shrikant Kshirsagar] 09:29:32
+Um, and then the idea here is. That is oftentimes in the real-world machine learning, there's no one best way to solve a problem. There's often many good ways to solve a problem.
+
+[Shrikant Kshirsagar] 09:29:42
+Right? So, we're not prescribing that you should solve it just this way, and that's it. If you… to a question that was asked earlier, I think by David.
+
+[Shrikant Kshirsagar] 09:29:51
+Uh, if I remember, or Harvard, I don't remember, I'm sorry, I'm, uh….
+
+[Shrikant Kshirsagar] 09:29:55
+Misremembering the name, but one of you asked a question about, you know, do we have to follow the template.
+
+[Shrikant Kshirsagar] 09:29:59
+And the idea is, no, you don't have to. You can use your own creativity and curiosity to come up with a way to solve the problem that makes most sense to you.
+
+[Shrikant Kshirsagar] 09:30:07
+The key is to understand what you're doing, not just blindly apply the techniques, yeah?
+
+[Shrikant Kshirsagar] 09:30:11
+So, you can use everything I've learned, you can go beyond and do your own research and apply other techniques as well.
+
+[Shrikant Kshirsagar] 09:30:16
+And the more you put effort in, the more you become.
+
+[Shrikant Kshirsagar] 09:30:21
+Richer in the knowledge and how to apply, right? So let's look at this project now. What is this particular business?
+
+[Shrikant Kshirsagar] 09:30:26
+Context for this… this project on Lending Club. So, here, we are….
+
+[Shrikant Kshirsagar] 09:30:32
+You know, we asked to implement a machine learning solution, of course, because we're in the machine learning class.
+
+[Shrikant Kshirsagar] 09:30:37
+But what is the objective here? The objective is that we want to automate the loan approval process.
+
+[Shrikant Kshirsagar] 09:30:44
+Right? So, what happens. What happens in a typical loan approval process?
+
+[Shrikant Kshirsagar] 09:30:51
+Can someone, you know. Tell me at a high level, based on, you know, your experience, or….
+
+[Shrikant Kshirsagar] 09:30:56
+Your own, uh, what your… what your understanding is, like, how does the loan approval process work?
+
+[Shrikant Kshirsagar] 09:31:01
+You can pop your answer in the chat, or you can raise your hand if you want to answer.
+
+[Shrikant Kshirsagar] 09:31:06
+Uh, answered live. Sonia, go ahead.
+
+[Shrikant Kshirsagar] 09:31:13
+You can unmute yourself now, and uh….
+
+[Sonia P] 09:31:15
+Yeah, I'm able to unmute now, thank you. So, uh, we have to apply, uh, to the different bank. Um, we have to fill out all our personal labor traffic information, then.
+
+[Sonia P] 09:31:25
+Our credit score, income. Um, how much depth we have, everything we had to apply, and then bank will assess that.
+
+[Sonia P] 09:31:33
+Um, whether we are eligible for that much loan or not, and if we are eligible, how much would be the interest rate, based on our income, uh, and debt ratio, EDC.
+
+[Shrikant Kshirsagar] 09:31:43
+Exactly. Well, yeah, very, very good. So, basically, that's… so the idea is the bank uses a lot of information, um.
+
+[Shrikant Kshirsagar] 09:31:51
+You know, that you provide, say, about your income, and about….
+
+[Shrikant Kshirsagar] 09:31:55
+You know, other assets and all that, and they tried to make, uh… and they tried to, like, make a decision whether to give you the loan that you're asking for or not, right? And also how much interest to charge you.
+
+[Shrikant Kshirsagar] 09:32:04
+So that, at a high level, is what we're trying to automate.
+
+[Shrikant Kshirsagar] 09:32:08
+Huda, do you have something else to add to this? If so, please unmute yourself and, uh….
+
+[Shrikant Kshirsagar] 09:32:11
+Go ahead.
+
+[Uday Singh] 09:32:13
+Yes, so there is a one… yes. Yeah, one point I also want to add, sort of, why do you… there is another thing is, why do you want to take the loan?
+
+[Shrikant Kshirsagar] 09:32:23
+Hmm, correct. The purpose for the loan, yes. So that's part of the information that the bank collects from you, like, what is the purpose of this loan? Why are you trying to apply for this loan?
+
+[Shrikant Kshirsagar] 09:32:31
+And, uh, that helps them determine, you know, like, whether to give you the loan or not. That's a good point, right?
+
+[Shrikant Kshirsagar] 09:32:36
+So, yeah, basically, the big idea… so the idea here is that.
+
+[Shrikant Kshirsagar] 09:32:42
+There's some information that you… various kinds of information you collect from the applicant, you know, like their income, why they want the loan, and all those things.
+
+[Shrikant Kshirsagar] 09:32:49
+And the bank is trying to make an assessment on whether to approve the loan or not, and if so, at what interest rate to charge them, right?
+
+[Shrikant Kshirsagar] 09:32:58
+So, at the core, the machine learning problem is one of, you know.
+
+[Shrikant Kshirsagar] 09:33:04
+Deciding whether to, uh, approve the loan or not. Right? So, what kind of problem is this?
+
+[Shrikant Kshirsagar] 09:33:11
+Pop your answer in the chat. What is it trying to predict? Are we trying to….
+
+[Shrikant Kshirsagar] 09:33:15
+Predict a numerical value? Are we trying to predict some categorical value? Are we trying to predict… what are we trying to predict here?
+
+[Shrikant Kshirsagar] 09:33:25
+And can you… what do you think? Because it's classification, yes, David says.
+
+[Shrikant Kshirsagar] 09:33:33
+Yes, categorical, right, exactly, right? So we are basically trying to predict, you know.
+
+[Shrikant Kshirsagar] 09:33:39
+Whether to approve the loan or not. So, in this particular case, that prediction will be based on.
+
+[Shrikant Kshirsagar] 09:33:46
+Whether you expect the loan to be repaid or not, right?
+
+[Shrikant Kshirsagar] 09:33:49
+So, if you make a loan to someone. Whether they repay the loan or not will help you decide whether you want to approve the loan or not, right?
+
+[Shrikant Kshirsagar] 09:33:57
+Uh, if you… if your machine learning model. Predicts that someone is going to not repay the loan, then would you want to approve the loan?
+
+[Shrikant Kshirsagar] 09:34:06
+Yes or no? No, right, exactly, yeah?
+
+[Shrikant Kshirsagar] 09:34:12
+So, so the idea… so the problem here is, essentially, we're trying to predict, you know, the same problem, right? We're trying to decide whether to give someone a load or not.
+
+[Shrikant Kshirsagar] 09:34:21
+But we're going to do that by trying to predict whether they'll default on their loan or not.
+
+[Shrikant Kshirsagar] 09:34:25
+Right? So you see, the question is, the nature of the question is different, but the….
+
+[Shrikant Kshirsagar] 09:34:30
+Type of response is still the same, right? You're still looking at a classification problem, like, yes or no? Are they going to default or they're not going to default, right?
+
+[Shrikant Kshirsagar] 09:34:36
+And again, why do we do this? Because we want, uh, using machine learning, because humans have done this for many, many years, and it's just time-consuming, it's tedious, you know, they can make mistakes.
+
+[Shrikant Kshirsagar] 09:34:45
+But if you have a machine learning algorithm or a pipeline set up.
+
+[Shrikant Kshirsagar] 09:34:50
+Then, you know, it's much faster, it's reproducible, right? You can spot check it, check it for quality.
+
+[Shrikant Kshirsagar] 09:34:56
+And you can improve it over time, right? With humans, you know, if someone retired, someone else new comes in, they may have different standards and, you know, different kinds of things going on.
+
+[Shrikant Kshirsagar] 09:35:04
+So, as in this day and age, as you know, machine learning is… AI and machine learning are just automating more and more things, so this is becoming very common.
+
+[Shrikant Kshirsagar] 09:35:11
+So what you're seeing here is kind of a. In some sense, an intermediate-level application of machine learning, right? There's a lot of business background here.
+
+[Shrikant Kshirsagar] 09:35:19
+But the problem statement is basically, you know, we want to predict whether someone is going to be able to pay their loan or not.
+
+[Shrikant Kshirsagar] 09:35:25
+Right? So…. Uh, just quickly go over some high-level expectations, right?
+
+[Shrikant Kshirsagar] 09:35:32
+Um, you know, what are some of the techniques, uh, what are some of the things we're looking for over here? You know, we're looking at.
+
+[Shrikant Kshirsagar] 09:35:38
+Data preprocessing techniques, including some of the value… one of some of the things mentioned here.
+
+[Shrikant Kshirsagar] 09:35:42
+By the way, do you have access to this, uh, document as part of your course resources?
+
+[Shrikant Kshirsagar] 09:35:48
+Please pop your answer in the chat. Do you have this expectation setting document?
+
+[Shrikant Kshirsagar] 09:35:53
+I'll share it with you? Okay, good. So, I'm not gonna go over in detail, because you've already… you… if you haven't seen this already, uh, you can… you can see it later.
+
+[Shrikant Kshirsagar] 09:36:03
+Um, quick show of hands, actually. Uh, before we go further, this is something I want to ask you before, but I forgot.
+
+[Shrikant Kshirsagar] 09:36:09
+How many of you have…. If you have gone through all the….
+
+[Shrikant Kshirsagar] 09:36:13
+Resources given to you, like the document… this expectation-setting document, the rubrics.
+
+[Shrikant Kshirsagar] 09:36:19
+The, uh, the, uh, starter code. Please raise your hand if you've gone through it already. I want to quickly see how many.
+
+[Shrikant Kshirsagar] 09:36:25
+Okay, let's see a few…. Okay.
+
+[Shrikant Kshirsagar] 09:36:31
+All right. So, at least some of you have gone through this. This is great. Uh, but it seems like a lot of you haven't.
+
+[Shrikant Kshirsagar] 09:36:38
+So, what I'm gonna do is, uh, I'm gonna go through the documents that we have, like the high level.
+
+[Shrikant Kshirsagar] 09:36:45
+Again, I'm not going to go into details because you have access to this, so if you haven't gone through it, please go through it in detail later on.
+
+[Shrikant Kshirsagar] 09:36:50
+But I'm going to highlight the key things to point out, which will help you.
+
+[Shrikant Kshirsagar] 09:36:54
+You know, try to get a jump start on this project.
+
+[Shrikant Kshirsagar] 09:36:58
+Okay, so here are some of the techniques that, you know, you can, uh, we are, uh….
+
+[Shrikant Kshirsagar] 09:37:03
+Trying to, uh, get you to apply. In this particular project and practice, right?
+
+[Shrikant Kshirsagar] 09:37:09
+And then, um, there is…. Um, this is a total breakdown, you know, we have this live session for 2 hours, and then.
+
+[Shrikant Kshirsagar] 09:37:17
+This is, again, expected time you should spend in these. Now.
+
+[Shrikant Kshirsagar] 09:37:22
+Again, the idea is you don't have to follow this exactly.
+
+[Shrikant Kshirsagar] 09:37:26
+Um, if you have, you know, if you need more or less time for something, that's totally okay.
+
+[Shrikant Kshirsagar] 09:37:30
+But at a high level, this is… this is what you would expect to do in the real world.
+
+[Shrikant Kshirsagar] 09:37:35
+Okay. Mhavani, you have a question? Go ahead and unmute yourself and ask.
+
+[Bhavani Bhavani] 09:37:43
+No, I think I raised a hand for…. Questions, yeah?
+
+[Shrikant Kshirsagar] 09:37:46
+Oh, okay, sorry. No worries.
+
+[Shrikant Kshirsagar] 09:37:51
+Chair, uh, you say you don't have that document. Um, you should have received a document from the….
+
+[Shrikant Kshirsagar] 09:37:58
+From the operations team. I'm not sure I can send it to you.
+
+[Shrikant Kshirsagar] 09:38:03
+Over here, so please reach out to the operations team and ask them to share with you this, uh….
+
+[Shrikant Kshirsagar] 09:38:08
+There's a, like, a Google Drive folder with all these documents in it.
+
+[Shrikant Kshirsagar] 09:38:12
+So please ask them to share those with you, and you'll have all of these with you, because there's several documents here. There's this one, there's.
+
+[Shrikant Kshirsagar] 09:38:19
+A PDF, there's also data sets and starter code. So, make sure you have access to all of these, without which you won't be able to do the project.
+
+[Shrikant Kshirsagar] 09:38:27
+But so far, are we clear on what we're doing here?
+
+[Shrikant Kshirsagar] 09:38:29
+Yeah, high level. We're trying to basically make this, uh, uh, you know, solve this machine learning problem, which is essentially a classification problem.
+
+[Shrikant Kshirsagar] 09:38:38
+Whether someone will default or not on their loan, right? Now, let's look at the business context in a little more detail.
+
+[Shrikant Kshirsagar] 09:38:43
+And try to understand what is it that we are… that… that, uh, you know, we are trying to do here.
+
+[Shrikant Kshirsagar] 09:38:48
+So this is some history about Lending Club. You can read about it if you're interested, or, uh, you know, are a history buff.
+
+[Shrikant Kshirsagar] 09:38:55
+Uh, and want to know where this comes from. But the basic idea is this loan approval process that they have.
+
+[Shrikant Kshirsagar] 09:39:01
+Which, you know, as a couple of you correctly answered. Takes into account all the information that you provide, right? Like, credit score, income, and all those things.
+
+[Shrikant Kshirsagar] 09:39:10
+And ultimately, the problem is to decide whether to approve or reject the loan.
+
+[Shrikant Kshirsagar] 09:39:14
+Right? So, there are…. When you… when you think about this problem, uh, trying to approve or reject a loan.
+
+[Shrikant Kshirsagar] 09:39:21
+What are the kinds of, you know, you obviously want to make the right prediction.
+
+[Shrikant Kshirsagar] 09:39:25
+Right? But obviously, you may or may not be doing the right prediction. So if you make the wrong prediction.
+
+[Shrikant Kshirsagar] 09:39:30
+What kind of errors can you make in this… in this, uh….
+
+[Shrikant Kshirsagar] 09:39:35
+While solving this problem. Can someone pop in the chat?
+
+[Shrikant Kshirsagar] 09:39:41
+And this is true for all classification problems, right? Like, what are types of errors that you can make?
+
+[Shrikant Kshirsagar] 09:39:48
+We discussed this in classification. Does anyone remember? There's… there's the… there's… yes.
+
+[Shrikant Kshirsagar] 09:39:54
+Yes, exactly, Adam. So there's, uh… you can make a false positive.
+
+[Shrikant Kshirsagar] 09:40:00
+So, we'll come to false, uh, later on, but there's basically two types of errors. The first is.
+
+[Shrikant Kshirsagar] 09:40:05
+Uh, you know, like, you… you say someone will…. Will be able to replay the loan, but they don't… are actually not able to replay the loan, right?
+
+[Shrikant Kshirsagar] 09:40:13
+So, that is what, in this context, is known as a default risk.
+
+[Shrikant Kshirsagar] 09:40:16
+Right? So you approve the loan for someone. Uh, because your model predicts that they will repay the loan, and they don't want to repay the loan, right?
+
+[Shrikant Kshirsagar] 09:40:23
+So, that will lead to losses. You know, for Lending Club and the investors, which is not good, right?
+
+[Shrikant Kshirsagar] 09:40:29
+And the other type of error. Is when you reject someone's application for the loan, but they're actually… what if they had been approved, they would have been able to repay the loan, right?
+
+[Shrikant Kshirsagar] 09:40:40
+So that's the rejection method. So these… these are two types of errors, which is, you know, again, happens in every classification problem, right?
+
+[Shrikant Kshirsagar] 09:40:47
+Uh, in this context, these Type 1 and Type 2 errors, as they're called.
+
+[Shrikant Kshirsagar] 09:40:52
+In this context, they're known as default risk and rejection risk, right?
+
+[Shrikant Kshirsagar] 09:40:56
+So, basically, you want to minimize these two types of lists, right? We want a model to be able to, as accurate as possible.
+
+[Shrikant Kshirsagar] 09:41:03
+Predict who will be able to repay and who will not be able to repay, and minimize the default risk and the rejection risk.
+
+[Shrikant Kshirsagar] 09:41:09
+Right? So, those are the two types of risks that we need to be aware of in this, in this context.
+
+[Shrikant Kshirsagar] 09:41:14
+So, what are the key objectives? Automate the loan approval, reduce… we discussed all this, right? Make it so more, uh, enhance the decision-making, make it reproducible.
+
+[Shrikant Kshirsagar] 09:41:24
+Now, let's look at the technical objectives, right? So, this is the business objectives.
+
+[Shrikant Kshirsagar] 09:41:29
+Uh, the technical objectives is basically, at the end of the day, what we want is.
+
+[Shrikant Kshirsagar] 09:41:32
+The application should… the solution… the machine learning algorithm should be able to take an application and.
+
+[Shrikant Kshirsagar] 09:41:38
+Basically say whether it's likely to default or likely to repay.
+
+[Shrikant Kshirsagar] 09:41:41
+Right? So it's a basic classification problem. So, what are… what are some of the things that….
+
+[Shrikant Kshirsagar] 09:41:46
+We are expected to do in this project. First is, of course, this is true for all machine learning problems.
+
+[Shrikant Kshirsagar] 09:41:52
+You do data collection and exploration, right? Eda. Pd is a cornerstone of a good.
+
+[Shrikant Kshirsagar] 09:41:57
+Machine learning approach, because without that. You're basically shooting in the dark.
+
+[Shrikant Kshirsagar] 09:42:02
+And I think I've mentioned this in some classes before, but for those of you who haven't taken a class before, or weren't in all those classes.
+
+[Shrikant Kshirsagar] 09:42:10
+Eda is critical because it helps… it can help narrow down the kinds of machine learning techniques.
+
+[Shrikant Kshirsagar] 09:42:16
+That are applicable for a given problem or not. A technique that might be applicable in one particular scenario.
+
+[Shrikant Kshirsagar] 09:42:22
+May be completely inapplicable in another one, based on a dataset characteristics.
+
+[Shrikant Kshirsagar] 09:42:25
+And the only way to know that is to actually. You know, collect the data, do some exploratory analysis on it, see what kind of data distribution you have.
+
+[Shrikant Kshirsagar] 09:42:32
+And then make decisions, right? So that's… that's what we're gonna do here. Uma, you have a question? Go ahead and ask.
+
+[Uma Maddigunta] 09:42:39
+Yeah, um, I was just gonna ask a question about cats. So, um, is there, like, any testing in EDA we can do to, like.
+
+[Uma Maddigunta] 09:42:47
+Like, guarantee or, like, clarify what, um, methods that the modeling we should train with to, like.
+
+[Uma Maddigunta] 09:42:53
+Like, random boosting, foresting, like, is there, like, any tests we can do in the EDA to, like, know, oh, we have to do that type of….
+
+[Shrikant Kshirsagar] 09:42:54
+Yeah.
+
+[Uma Maddigunta] 09:43:02
+Model, prediction, like, or, like, that algorithm, or is there, like, yeah, if you understand my question.
+
+[Shrikant Kshirsagar] 09:43:06
+Yeah, so… so…. Yeah, yeah, so, so, uh, yeah, so the question is, you know, is there any testing you can do in EDA to figure out which.
+
+[Shrikant Kshirsagar] 09:43:13
+Yeah, well, mentors to apply. The purpose of EDA is to get a sense of data distribution.
+
+[Shrikant Kshirsagar] 09:43:18
+To help you guide in making the right choices for, uh, you know, which machining techniques to apply.
+
+[Shrikant Kshirsagar] 09:43:24
+There are a few tests we'll be actually doing some… we'll be talking about that briefly in the code when we discuss the code, the starter code.
+
+[Shrikant Kshirsagar] 09:43:31
+There are a few things you can do to kind of, like, rule out certain techniques or, you know, make sure you apply certain techniques.
+
+[Shrikant Kshirsagar] 09:43:37
+Uh, before you make the machine learning model. Uh, but then, again, the….
+
+[Shrikant Kshirsagar] 09:43:42
+You don't necessarily have. Like, a series of tests, I'll definitely tell you this will apply, this will not apply. So the purpose is to just get a sense of data set and.
+
+[Shrikant Kshirsagar] 09:43:51
+Rule out, uh, machining techniques that are unlikely to give you good results, and also.
+
+[Shrikant Kshirsagar] 09:43:55
+Figure out which ones are likely to give you good results. It's all about, you know, the probabilities of which one is going to work better, which one's not going to work better.
+
+[Uma Maddigunta] 09:44:02
+And that's just up to the programmers, like, intuition and their trial and error, correct?
+
+[Shrikant Kshirsagar] 09:44:03
+Well, that makes sense.
+
+[Uma Maddigunta] 09:44:08
+Like, there's, like… yeah. Okay.
+
+[Shrikant Kshirsagar] 09:44:08
+To some extent, to some extent. Yeah, but it can help narrow down the list of choices, right? So again, going back to Chess analogy, right?
+
+[Shrikant Kshirsagar] 09:44:14
+Make, like, millions of moves at any given point in time, but you don't want to consider every single move, right? You want to consider only the most promising ones, so….
+
+[Uma Maddigunta] 09:44:20
+Yeah, that's true
+
+[Shrikant Kshirsagar] 09:44:21
+Help you narrow down the most promising ones. Hope that makes sense.
+
+[Shrikant Kshirsagar] 09:44:27
+Great. So… so data collection and exploration, so that's the first thing we're going to do, is just look at a dataset, do some exploratory data analysis, and see.
+
+[Shrikant Kshirsagar] 09:44:34
+What machine learning techniques may or may not be applicable, given the nature of data set, and the problem statement you're trying to solve, right?
+
+[Shrikant Kshirsagar] 09:44:41
+Both of those, uh, both of those are important. Next thing we do is, uh, feature engineering.
+
+[Shrikant Kshirsagar] 09:44:46
+Which is, you know, like, given the data in its raw form, do we need to make any transformations on the data?
+
+[Shrikant Kshirsagar] 09:44:52
+In order to make it more amenable for, uh, applying machine learning.
+
+[Shrikant Kshirsagar] 09:44:56
+So this includes things like scaling and, you know, normalization, all those things you learned before.
+
+[Shrikant Kshirsagar] 09:45:01
+Uh, and we'll look at what may or may not be applicable here.
+
+[Shrikant Kshirsagar] 09:45:04
+Again, it depends on the type of data you have. It's data distribution and all that, which is why doing data exploration is important.
+
+[Shrikant Kshirsagar] 09:45:10
+After we've done all that, then we can kind of make some intelligent choices as to, like, what possible machine learning models may be applicable here, which are likely to give us good results.
+
+[Shrikant Kshirsagar] 09:45:19
+Which may not give us good results. And, uh, you know, decide, uh, based on that. So, the choice of the machine learning model is partly determined by.
+
+[Shrikant Kshirsagar] 09:45:27
+The business problem you're trying to solve, right? So in this case, we are trying to solve a classification problem.
+
+[Shrikant Kshirsagar] 09:45:31
+So, obviously, we're only going to look at classification algorithms, you're not going to look at regression algorithms.
+
+[Shrikant Kshirsagar] 09:45:35
+Uh, and within classification, there is, you know, a whole buffet of choices, right? So, which ones.
+
+[Shrikant Kshirsagar] 09:45:41
+Uh, woodwork, which ones wouldn't work. There's always trade-offs between different, uh, options.
+
+[Shrikant Kshirsagar] 09:45:46
+And the business context plus the nature of data set, it together help you narrow down your choices, and.
+
+[Shrikant Kshirsagar] 09:45:51
+Start with a few promising ones. So this is, again, very important, because what happens is beginner machine learning, uh.
+
+[Shrikant Kshirsagar] 09:45:58
+People will just randomly, you know, pick the most. Promising-looking one, what they've read about, or what seems, you know, what seems like the hot thing, or what their colleague has told them.
+
+[Shrikant Kshirsagar] 09:46:07
+Having no idea whether it's applied or not. And more often than not what happens is you get bad results, and you have no clue what's going on, whether.
+
+[Shrikant Kshirsagar] 09:46:15
+Your, uh, dataset, you know, whether you're not. Of pre-processing data set correctly, whether you're not using the right hyperparameters, or whether the technique itself is not useful in this context, right?
+
+[Shrikant Kshirsagar] 09:46:25
+Uh, so rather than being lost later on, be like, I have no idea why this is not working, and trying out different things to make it work.
+
+[Shrikant Kshirsagar] 09:46:31
+Uh, you know, it's better to do these steps before, so that you can make intelligent choices later on.
+
+[Shrikant Kshirsagar] 09:46:36
+Finally, after you do the model selection. Um, you know, you obviously have to train and test and validate the model.
+
+[Shrikant Kshirsagar] 09:46:43
+Uh, which is… which helps you select the best possible option from the different choices you have.
+
+[Shrikant Kshirsagar] 09:46:47
+And, uh, in order to improve the performance, you do hyperparameters… you can do hyperparameter tuning.
+
+[Shrikant Kshirsagar] 09:46:53
+To make the machine learning model as optimal as possible. And then finally, uh, you know, because it's a business context, it's not a research project.
+
+[Shrikant Kshirsagar] 09:47:00
+You have to provide a report of some sort, so you have to… and that takes the form of evaluation metrics, so….
+
+[Shrikant Kshirsagar] 09:47:06
+He provided a report as to, like, you know, what is the accuracy, what is, you know, the level of risk, the two types of risks we discussed, like, what is the….
+
+[Shrikant Kshirsagar] 09:47:13
+Quantify that somehow. And there are various ways to quantify that, as we have seen before, like precision, recall.
+
+[Shrikant Kshirsagar] 09:47:19
+Reference for Rock, AUC, and all that. Right? So, again, in different business contexts, different metrics become important.
+
+[Shrikant Kshirsagar] 09:47:25
+Uh, not all of them are equally important in all contexts.
+
+[Shrikant Kshirsagar] 09:47:28
+So, what you report is based, ultimately, on what is the business requirement.
+
+[Shrikant Kshirsagar] 09:47:34
+Right? So those are the high-level things that we're going to be covering in this, uh.
+
+[Shrikant Kshirsagar] 09:47:38
+Project, and as you can see, it is a…. It takes different concepts, different machine learning techniques from different classes you've learned, and combines them all together. This is what real-world machine learning looks like.
+
+[Shrikant Kshirsagar] 09:47:48
+Yeah? So, it's very exciting, and you can see how different things can plug and play together.
+
+[Shrikant Kshirsagar] 09:47:52
+And create this fully working machine learning model. That's really amazing to watch, how when you create that.
+
+[Shrikant Kshirsagar] 09:47:59
+Finally, a little bit about the dataset. Someone asked a question about datasets, so there's actually a link embedded in this one.
+
+[Shrikant Kshirsagar] 09:48:06
+I think. So you can click on this to get the dataset directly.
+
+[Shrikant Kshirsagar] 09:48:10
+Uh, or you can ask the operations team to share it with you, but you should have a loans.csv file, and we'll look at that file when you go over the starter code.
+
+[Shrikant Kshirsagar] 09:48:18
+Uh, but you will…. The deliverables here are basically our Jupyter notebook.
+
+[Shrikant Kshirsagar] 09:48:23
+Uh, which, you know, provides…. Provides your explanation of how you approach the problem, what are the different techniques you have tried out.
+
+[Shrikant Kshirsagar] 09:48:31
+You know, what are the completions you have drawn from, you know, doing EDA and, uh….
+
+[Shrikant Kshirsagar] 09:48:35
+You know, how those are driving your decisions to use this model, or that model, or do hyperparameter training this way or that way.
+
+[Shrikant Kshirsagar] 09:48:40
+So, this is… this is what is the final expected delivery for this, how you evaluate, uh, you know, how do you….
+
+[Shrikant Kshirsagar] 09:48:47
+Not only just construct the machine learning model, but how are you evaluating different machine learning models and deciding which ones to use and not use.
+
+[Shrikant Kshirsagar] 09:48:53
+Okay, so that is… that is what, uh, that is what we'll be covering next, is the Jupyter Notebook.
+
+[Shrikant Kshirsagar] 09:48:59
+In order to help me get started, we have provided some starter code.
+
+[Shrikant Kshirsagar] 09:49:03
+To, again, guide… guide you in the solving of this particular, uh.
+
+[Shrikant Kshirsagar] 09:49:08
+Problem for this project. Uh, the intention here is, again, to help you, since you're starting out.
+
+[Shrikant Kshirsagar] 09:49:14
+It's just kind of help you, guide you a little bit in terms of, like, which directions to go in.
+
+[Shrikant Kshirsagar] 09:49:20
+Uh, but having said that, if you're curious, and if you want to learn more, you're more than welcome to go in any other direction, try on different other techniques, and see if you can actually get better results than what is suggested here.
+
+[Shrikant Kshirsagar] 09:49:30
+That's more than encouraged, right? We'll go over the rubrics later on.
+
+[Shrikant Kshirsagar] 09:49:33
+And then we'll, uh, we'll talk about what, uh. What those look like. Uh….
+
+[Shrikant Kshirsagar] 09:49:42
+Okay, Vandana, I see you have a Q&A. Uh, can we get a link for this talk? Again, this should have been shared with you in the, uh….
+
+[Shrikant Kshirsagar] 09:49:50
+With the operations team. So, uh, if you haven't gotten this yet, uh, it should be in the list of, uh, files that was in the Google Drive.
+
+[Shrikant Kshirsagar] 09:49:58
+If not, please reach out to them and, uh, ask them about it, yeah?
+
+[Shrikant Kshirsagar] 09:50:02
+Also, uh, please pop your questions in the chat for this session, just because it's, you know, I don't want to monitor, like, 5 different windows, it's hard for me to do that.
+
+[Shrikant Kshirsagar] 09:50:11
+So, just make sure you pop your questions in the chat, and uh….
+
+[Shrikant Kshirsagar] 09:50:15
+Thank you. And then, uh, or you can ask a question live, just by raising your hand.
+
+[Shrikant Kshirsagar] 09:50:19
+Okay. All right, so let's go into the starter code now.
+
+[Shrikant Kshirsagar] 09:50:24
+And, uh, make sure we, uh, understand what is being asked and what is….
+
+[Shrikant Kshirsagar] 09:50:29
+Okay, this is… no, this is learning. This is the one.
+
+[Shrikant Kshirsagar] 09:50:32
+This is the lending club. And make sure we understand, uh, how to approach the problem.
+
+[Shrikant Kshirsagar] 09:50:38
+Now, again, I'm not gonna go into, you know, in the interest of giving everyone a fair chance to try it out themselves.
+
+[Shrikant Kshirsagar] 09:50:44
+I'm not going to go into too many details as to the data set or the different conclusions.
+
+[Shrikant Kshirsagar] 09:50:48
+What I'm going to do is ask you questions. To help prompt you to think about things.
+
+[Shrikant Kshirsagar] 09:50:54
+That… that may come up as your, uh, going through the project and trying to solve it, okay?
+
+[Shrikant Kshirsagar] 09:51:00
+So, you can think of them as hints. But you can also think of them as starting points of.
+
+[Shrikant Kshirsagar] 09:51:05
+Investigating further, okay? Because this is typically what happens in machine learning projects. Like, in the real world.
+
+[Shrikant Kshirsagar] 09:51:10
+We really don't know what, uh, what the result would look like, or what dataset looks like.
+
+[Shrikant Kshirsagar] 09:51:16
+So, you have to approach it with a very curious, open mindset, and think about, you know, different.
+
+[Shrikant Kshirsagar] 09:51:21
+Possibilities, different edge cases. And think about how you'll go about addressing that.
+
+[Shrikant Kshirsagar] 09:51:26
+Okay, so that's what we're going to do here. This is not, you know, we're not going to prescribe a solution to you over here.
+
+[Shrikant Kshirsagar] 09:51:31
+Okay, so we start off with the business background, you've already seen this, I'm not gonna repeat it.
+
+[Shrikant Kshirsagar] 09:51:36
+Um, and the problem statement is, you know, we talked about two types of lists. The default risk and the rejection risk, right?
+
+[Shrikant Kshirsagar] 09:51:43
+But the problem statement here is we want to decide whether to approve a loan or not.
+
+[Shrikant Kshirsagar] 09:51:47
+Which we're going to decide based on whether we predict if an applicant is going to repay the loan or default on it.
+
+[Shrikant Kshirsagar] 09:51:53
+Right? Uh, we talked about the two kinds of risk and their impacts.
+
+[Shrikant Kshirsagar] 09:51:57
+Uh, and what are we trying to do here, right? So as of… as a data scientist, as a machine learning scientist yourself.
+
+[Shrikant Kshirsagar] 09:52:03
+You're going to create this ML model that helps predict whether the loan is likely default or not.
+
+[Shrikant Kshirsagar] 09:52:08
+Okay, so that's… that's the job. So we're doing a binary classification here, essentially.
+
+[Shrikant Kshirsagar] 09:52:15
+Right? Now, let's look at the dataset. Uh, by the way, is this font readable to you, or do you want me to increase the font size? If you want me to increase the font size.
+
+[Shrikant Kshirsagar] 09:52:22
+Please raise your hand.
+
+[Shrikant Kshirsagar] 09:52:27
+Okay. Looks like it is small, so it's not just small. Let's see if I can list this.
+
+[Shrikant Kshirsagar] 09:52:34
+Is this better? Absolutely, raise your hand.
+
+[Shrikant Kshirsagar] 09:52:41
+Okay, good. All right. So… so we're given a data set, which again, uh, for those of you who don't have it, please, uh, ask the operations team.
+
+[Shrikant Kshirsagar] 09:52:50
+The dataset is a CSV file called loans.csv. And there are various columns in there, okay?
+
+[Shrikant Kshirsagar] 09:52:57
+Now, in the real world, you'll often get dataset. You'll be collecting data, or you may be given a data set from somewhere, and there'll be a lot of information in there.
+
+[Shrikant Kshirsagar] 09:53:06
+Now, is it true that you have to use all the information in a given data set to… in your machine learning model to make predictions?
+
+[Shrikant Kshirsagar] 09:53:13
+Yes or no? Pop in the… pop your answer in the chat.
+
+[Shrikant Kshirsagar] 09:53:17
+No, right? In fact. Sometimes, if you try to use all the data, or more than the necessary amount of data, your machine learning model's performance may actually degrade.
+
+[Shrikant Kshirsagar] 09:53:26
+So there's a little bit of, uh, judgment that comes in, or a little bit of, like, you know.
+
+[Shrikant Kshirsagar] 09:53:32
+Yeah, judgment call you have to make, uh, based on the business context as to what data.
+
+[Shrikant Kshirsagar] 09:53:36
+Is useful, what's not useful. And it's useful, and it's important to kind of, like, throw away.
+
+[Shrikant Kshirsagar] 09:53:41
+The dataset that's not… the part of the dataset that's not useful to make predictions at the outset, because we don't want to keep carrying it around and.
+
+[Shrikant Kshirsagar] 09:53:48
+You know, uh, make your machine learning model, uh, slower, right? Your pipeline runs slower.
+
+[Shrikant Kshirsagar] 09:53:53
+Um, so for example, over here, there's columns like ID and member ID, right?
+
+[Shrikant Kshirsagar] 09:53:57
+It's just an ID number. And as far as, uh…. Making predictions for whether someone's gonna need for it or not.
+
+[Shrikant Kshirsagar] 09:54:04
+Id plays essentially no role, right? So, we can throw those out at you. We know it's just a number, it's an identifier, but it doesn't mean anything for the machine learning model.
+
+[Shrikant Kshirsagar] 09:54:12
+So, there are some columns here that are completely useless. There are other columns here that may seem useful.
+
+[Shrikant Kshirsagar] 09:54:18
+But for the specific problem you're trying to solve, may not actually apply, right?
+
+[Shrikant Kshirsagar] 09:54:24
+So let's look at some of these. So we have the loan amount, which is, you know, like, how much loan you're applying for.
+
+[Shrikant Kshirsagar] 09:54:28
+This seems to be an important one, right? This is one of the information that's used.
+
+[Shrikant Kshirsagar] 09:54:32
+We have the term, which is how many payments, interest rate, installments.
+
+[Shrikant Kshirsagar] 09:54:36
+Now, this installment, uh, column. This is the monthly payment owed by the borrower of the loan originals.
+
+[Shrikant Kshirsagar] 09:54:42
+Notice that this is how much. You expect, uh, like, this is how much… this is what is called the EMI, or the monthly… monthly, uh, payment, right, that someone has to make to repay the loan.
+
+[Shrikant Kshirsagar] 09:54:53
+But this only applies if the loan is approved. Right? But what is the problem you're trying to solve here?
+
+[Shrikant Kshirsagar] 09:55:01
+The problem you're trying to solve is whether you should approve the loan or not, right?
+
+[Shrikant Kshirsagar] 09:55:05
+So this particular column, the information over here. Uh, is only relevant.
+
+[Shrikant Kshirsagar] 09:55:10
+Only if you know that this loan is approved or not, but we don't know that yet, right?
+
+[Shrikant Kshirsagar] 09:55:13
+So, in this case, we…. We won't be able to use this column. Like, even though we have information about this in the dataset.
+
+[Shrikant Kshirsagar] 09:55:20
+We won't be able to use this column because this is, you know, what we're trying to predict.
+
+[Shrikant Kshirsagar] 09:55:24
+Right? So, this is…. Potentially useful column, but actually not useful in our case for the business problem we are trying to solve.
+
+[Shrikant Kshirsagar] 09:55:32
+Right? Uh, there are other columns, like grade, subgrade, which just assigns a quality to the.
+
+[Shrikant Kshirsagar] 09:55:37
+Loan, um, and may be useful. Employment length, again, something that may be useful. Home ownership, annual income.
+
+[Shrikant Kshirsagar] 09:55:45
+Verification status, whether the, you know, the income that is, uh, that is reported, which is self-reported, usually.
+
+[Shrikant Kshirsagar] 09:55:52
+Is it verified or unverified? Uh, then again, the purpose, right, someone mentioned, like, you know, this is one of the informations that they ask in the application process. Why do you need the loan?
+
+[Shrikant Kshirsagar] 09:56:01
+Than the DTI, which is debt-to-income ratio. Again, something that may be relevant for making this decision.
+
+[Shrikant Kshirsagar] 09:56:07
+Delinquency, uh, inquiries, open accounts, public records, like, all of these things that.
+
+[Shrikant Kshirsagar] 09:56:13
+That, uh, you know, may play a role in making decisions. At the outset, we don't know what we need, what we… what is useful or what's not useful.
+
+[Shrikant Kshirsagar] 09:56:21
+But this is all the information. There's another one that's, uh….
+
+[Shrikant Kshirsagar] 09:56:26
+Last payment amount, right? This is, again, like, how much was the last installment amount from the loan received from the borrower. So this only applies.
+
+[Shrikant Kshirsagar] 09:56:33
+If the loan was actually made to the borrower, right? But again, that's the problem you're trying to predict, right? Do we want to make a low into this bottle or not?
+
+[Shrikant Kshirsagar] 09:56:40
+So even though this seems like it might be a useful column, it's actually not, because we just… we are trying to make that decision, right?
+
+[Shrikant Kshirsagar] 09:56:46
+So, this is also something that we'll have to throw away before we… before we make any use of it.
+
+[Shrikant Kshirsagar] 09:56:52
+So this is… this is at a high level, what the data….
+
+[Shrikant Kshirsagar] 09:56:56
+Data columns look like, okay? Now, uh….
+
+[Shrikant Kshirsagar] 09:57:00
+As we said, like, what are the steps that we are going to do? We're first going to do data, you know, gathering, data exploration.
+
+[Shrikant Kshirsagar] 09:57:06
+Then we're gonna do, depending on the data, uh, data set characteristics, we may do some feature engineering, pre-processing.
+
+[Shrikant Kshirsagar] 09:57:13
+And then finally, uh, you know, build the machine learning model, do some training, do some, uh….
+
+[Shrikant Kshirsagar] 09:57:18
+Hyperparameter tuning if necessary. And then evaluate the model, right? So we're going to do these steps in… stepwise, right? And in each.
+
+[Shrikant Kshirsagar] 09:57:26
+Each one will be kind of giving you. Guidance as to, like, what… what you should consider, what you should… what is something to watch out for, right?
+
+[Shrikant Kshirsagar] 09:57:33
+So, first step is always, you know, the important essay library, so, you know, your standard pandas, NumPy, matplotlib, CBON, all those things.
+
+[Shrikant Kshirsagar] 09:57:41
+You import that. The next thing you would do, of course, is load the dataset, right? So here you'd use… what is… what would you use to load dataset? If you're trying to read a CSV file, what do you do?
+
+[Shrikant Kshirsagar] 09:57:50
+Was it near November? You just use Read CSV, right?
+
+[Shrikant Kshirsagar] 09:57:56
+So you use the read CSV file, uh, read CSV from Pandas, and you can just load it as well.
+
+[Shrikant Kshirsagar] 09:58:00
+So that will load dataset into a data frame, right? That's usually the first step. You just take data side, load into data frame.
+
+[Shrikant Kshirsagar] 09:58:06
+And then, one of the first things you want to do is just.
+
+[Shrikant Kshirsagar] 09:58:10
+Observe what the data set. Values look like, right? So you can just do, you know, observe the first few rows.
+
+[Shrikant Kshirsagar] 09:58:16
+Uh, and see what kind of data… what is the nature of data set? What are some of the columns? What are some of the values in that, right?
+
+[Shrikant Kshirsagar] 09:58:22
+So, um, how do you do… how do you do this? How do you, uh, after you load data set, how do you, uh, get the….
+
+[Shrikant Kshirsagar] 09:58:29
+Post-free rules. Yes, you do not have, right? So you just….
+
+[Shrikant Kshirsagar] 09:58:33
+You have the data frame, you just do .head on it, and then you kind of, like, just see what data set looks like.
+
+[Shrikant Kshirsagar] 09:58:39
+Again, I'm not going to show it over here. For those of you who want to try it.
+
+[Shrikant Kshirsagar] 09:58:42
+But you'll see all these columns that we talked about before. Some of them are integers, some of them are floats, some of them are categorical variables.
+
+[Shrikant Kshirsagar] 09:58:49
+And we'll see all kinds of combinations, right? Uh, the next thing you want to do, uh, as you're doing expert data analysis, you want to check for.
+
+[Shrikant Kshirsagar] 09:58:56
+Non, uh, you know, like, whether any missing values, right? Um, and so….
+
+[Shrikant Kshirsagar] 09:59:02
+The… that helps you kind of, like, assess the… at a high level, the quality of data set. You know, do you have a lot of missing values? Do you have, you know, only a few?
+
+[Shrikant Kshirsagar] 09:59:09
+Why is this important? Why do we… why do we want to know the missing values? And what do we do if we have missing values?
+
+[Shrikant Kshirsagar] 09:59:18
+Popian's in the chat.
+
+[Shrikant Kshirsagar] 09:59:24
+Yes, yes, correct. So, you can do imputations, or you can drop them.
+
+[Shrikant Kshirsagar] 09:59:28
+So, depending on when would you drop and when would you impute?
+
+[Shrikant Kshirsagar] 09:59:32
+You know? Dropping and impuditions are the two common things you can do. Imputation is when you just replace it with some other value, right?
+
+[Shrikant Kshirsagar] 09:59:40
+And dropping is when you just drop those rows altogether. When would you do one versus the other?
+
+[Shrikant Kshirsagar] 09:59:47
+Adam says rock for classification, okay? That's… that's an option. Usually what you do is you look at how much data you have, right? If you have a very small data set.
+
+[Shrikant Kshirsagar] 09:59:58
+Then dropping is not really a good option, right? Because you're gonna just reduce the amount of data you have to train your model.
+
+[Shrikant Kshirsagar] 10:00:04
+Right? So, this is determined by how big a dataset is, and how many rows are missing, right? If the vast majority of them are missing values, then dropping them doesn't make sense.
+
+[Shrikant Kshirsagar] 10:00:14
+Right? So you want to… that's how you get a sense. That's why it's important to do these things, right?
+
+[Shrikant Kshirsagar] 10:00:18
+So, you look at the dataset size, you look at how many missing values there are.
+
+[Shrikant Kshirsagar] 10:00:21
+And then you make a call. If it's a small fraction, then yes, you can drop it, drop those hooks. If it's not, then you want to, uh, impute those values.
+
+[Shrikant Kshirsagar] 10:00:28
+And what do you mean by impute? Impute means you basically, uh….
+
+[Shrikant Kshirsagar] 10:00:33
+Fill those missing values with something else. So what are some val… what are some techniques, what are some, uh, values you can fill them with?
+
+[Shrikant Kshirsagar] 10:00:39
+Does anyone remember? So, someone is saying, smooth.
+
+[Shrikant Kshirsagar] 10:00:45
+Being, you know, smart is something that's used for sampling. We're going to come to sampling later on. This is just….
+
+[Shrikant Kshirsagar] 10:00:50
+Missing values, right? So, you use some kind of central tendency, like a mean value or a mode value, right?
+
+[Shrikant Kshirsagar] 10:00:56
+Um, so the idea is. If there are some missing values in there.
+
+[Shrikant Kshirsagar] 10:01:00
+Depending on the column type you have, like, if you have a numerical column, then you can take the mean value of all the non-missing values, and then just.
+
+[Shrikant Kshirsagar] 10:01:09
+Replace the missing values by the mean values. If it's a categorical column, then mean doesn't… may not always make sense, and then you can use something like more.
+
+[Shrikant Kshirsagar] 10:01:16
+What is more, it's the most frequent value, right? Yes, exactly. So, so….
+
+[Shrikant Kshirsagar] 10:01:22
+Doing this will help you kind of, like, get the… get a sense of, like, you know, how much.
+
+[Shrikant Kshirsagar] 10:01:26
+What's the data quality, and how much imputation you'd need, what kind of imputation techniques you'd need, right?
+
+[Shrikant Kshirsagar] 10:01:32
+Um, and you can always check the data sheet to see, you know, how many values there are in all, and, uh, you know, how many null values there are, and all that.
+
+[Shrikant Kshirsagar] 10:01:39
+This is… this is part of… this is part of the initial exploration, just to kind of, like.
+
+[Shrikant Kshirsagar] 10:01:43
+Get a sense of the data set, right? Like, what… how many missing values there are.
+
+[Shrikant Kshirsagar] 10:01:47
+So, what you may find is there are some columns where there's no missing value, some other columns where there are a few missing values.
+
+[Shrikant Kshirsagar] 10:01:53
+And some of the columns were…. You expect the values to be numerical, but, you know, again, raw data set.
+
+[Shrikant Kshirsagar] 10:01:59
+Comes in all shapes and forms, right? So, for example, there's a column called, uh, I don't know, let's say interest rate, right?
+
+[Shrikant Kshirsagar] 10:02:06
+So, it says it's a float. But in your data set, you may find that it's… it's expressed as a string, because people like to put percentage signs or whatever in there, right?
+
+[Shrikant Kshirsagar] 10:02:15
+And when you import data set in the CSV file. Python doesn't know what it is, so it'll just treat this as a string.
+
+[Shrikant Kshirsagar] 10:02:20
+So you may have to, for example. Uh, stripped that character and make it numerical, right?
+
+[Shrikant Kshirsagar] 10:02:26
+So remove the percentage sign, or whatever, remove… remove any…. Remove any, like, uh, you know, needing or trailing spaces or something to make it… make it numerical.
+
+[Shrikant Kshirsagar] 10:02:36
+Because ultimately, it's a numerical value, right? So… so that's… that's what, uh, that's what we have to do, uh, when you… that's the kind of things you'll find out when you… when you do this initial exploration, right? To see, like, what dataset looks like, and what we need to do.
+
+[Shrikant Kshirsagar] 10:02:50
+So, uh, you may… yeah, as I said, so perform a single impedation, remove the extra symbols, characters, and make sure that they're in the right.
+
+[Shrikant Kshirsagar] 10:02:58
+Right, uh, format for the machine learning, right? So this is what you'd be doing next.
+
+[Shrikant Kshirsagar] 10:03:02
+Now, once you have done that, uh, what's the next step? So, we have now just kind of cleaned a dataset and made sure that it's complete and usable, right?
+
+[Shrikant Kshirsagar] 10:03:10
+Now, we can, uh… and we also talked about the, uh, you know, not carrying over unnecessary data, right? So there are some columns, like ID and member ID that we know is not useful, so we can drop those.
+
+[Shrikant Kshirsagar] 10:03:21
+As well as other columns that are not. Applicable for this problem, right?
+
+[Shrikant Kshirsagar] 10:03:27
+The installment last payment amount. And so we can drop those as well.
+
+[Shrikant Kshirsagar] 10:03:31
+And then, you know, the remaining data set is what we want to work with.
+
+[Shrikant Kshirsagar] 10:03:35
+Right? So, after this, you can, you know, like, after this is done.
+
+[Shrikant Kshirsagar] 10:03:41
+Then you can start doing more EDA on the data and seeing, like, what's the data description look like, what is the values, and everything.
+
+[Shrikant Kshirsagar] 10:03:47
+Uh, we can also do more analysis if you want. Again, this is… this is the part where you are free to use your own creativity.
+
+[Shrikant Kshirsagar] 10:03:52
+And come up with other ways of, you know, analyzing data and helping you make more informed choices.
+
+[Shrikant Kshirsagar] 10:03:57
+This is, again, just some suggestions, but you can do more.
+
+[Shrikant Kshirsagar] 10:04:01
+Data preparation steps, if you want. Okay, so….
+
+[Shrikant Kshirsagar] 10:04:05
+This is kind of the initial, uh, data preparation, or data exploration, right?
+
+[Shrikant Kshirsagar] 10:04:10
+Now… now we can go a step further and now start looking at data in more detail. So, what are some of the things we do in that?
+
+[Shrikant Kshirsagar] 10:04:16
+Well, the first thing you can do is, uh, you know, what are the main factors that may contribute to this default rate, right? So….
+
+[Shrikant Kshirsagar] 10:04:24
+This is what we'll try to, uh, kind of get a sense of. Again, we won't be getting exact answers, but we can get a.
+
+[Shrikant Kshirsagar] 10:04:30
+Get a, uh… we can make good guesses as to what are the important columns, what are not the important columns, what are the ones that we can drop, which are the ones that are relevant and worth keeping, and all that.
+
+[Shrikant Kshirsagar] 10:04:40
+Right? So, um, this will also, uh, help us understand, you know, if there are issues, like.
+
+[Shrikant Kshirsagar] 10:04:46
+Someone mentioned, uh, Smart over there, right? So, Smote is applicable. When is Smart applicable? When do you use Smote?
+
+[Shrikant Kshirsagar] 10:04:54
+Does anyone remember? What is smart about? When do you use mode?
+
+[Shrikant Kshirsagar] 10:05:01
+Oversampling, yes, exactly. So smart applies when you have class imbalances, right? Yes, exactly.
+
+[Shrikant Kshirsagar] 10:05:06
+So, we don't know at the outs of this class imbalance or not. We've just looked at some of the values of data set, and.
+
+[Shrikant Kshirsagar] 10:05:12
+Imperial missing management on. So, whether we want to apply some more to other techniques, that will become clear once we understand the distribution of the data, right?
+
+[Shrikant Kshirsagar] 10:05:21
+So that's what we're going to try to do next, to assess if there's any class imbalance, and you know, like, whether we need to do smooth or something else to address that.
+
+[Shrikant Kshirsagar] 10:05:29
+Right? So we started the univariate analysis. Which is basically, you know, giving us a distribution of each.
+
+[Shrikant Kshirsagar] 10:05:36
+Column by itself, right? So for categorical columns, it'll be just like a….
+
+[Shrikant Kshirsagar] 10:05:40
+Bar plot, a bar chart, showing how many values of one category or the second category, and so on and so forth.
+
+[Shrikant Kshirsagar] 10:05:45
+For numerical values, it'll be like a scatterplot, right, where you can see the distribution of the data set.
+
+[Shrikant Kshirsagar] 10:05:50
+Uh, you know, uh, like a whisker, pox and whisker blocks, so you can see the distribution of data set, how, how skewed it is, how, how, uh, spread out it is, and all that.
+
+[Shrikant Kshirsagar] 10:05:59
+Right? So…. For the unit analysis, again, you can do on each of the columns that exist.
+
+[Shrikant Kshirsagar] 10:06:05
+Um, but our suggestion is to do these ones, because these are the ones that are most relevant for this problem. But you're welcome to do others as well, right?
+
+[Shrikant Kshirsagar] 10:06:13
+Uh, loan status is an important one, because that's the one we want to basically.
+
+[Shrikant Kshirsagar] 10:06:17
+Make the prediction on whether it was, you know, default or non-default, right?
+
+[Shrikant Kshirsagar] 10:06:21
+So, when you do the… when you do the analysis on loan status, you have basically two options. Either the loan was paid, or it wasn't paid.
+
+[Shrikant Kshirsagar] 10:06:27
+All right? Um…. So, once you do the analysis.
+
+[Shrikant Kshirsagar] 10:06:33
+What would you… what do you think you'll find? You'd think you'll… you'll be some….
+
+[Shrikant Kshirsagar] 10:06:38
+David's a super magic word sampling technique, yes. There's all these super magic ones, but not really, no.
+
+[Shrikant Kshirsagar] 10:06:43
+So when you do this loan status, how many values, how many possible values.
+
+[Shrikant Kshirsagar] 10:06:48
+Do you expect to find here, and what do you expect to find? Like, do you find they'll be all equal distributed, or unequally distributed? What do you think?
+
+[Shrikant Kshirsagar] 10:06:57
+If someone has tried this out already, then I'd love to know what you've found.
+
+[Shrikant Kshirsagar] 10:07:01
+Adam says unequal, yes. So, yes, there are basically only two possible values, right? Either someone has paid off the loan, or they haven't paid off the loan, right? So it's… it's either default or non-defaulted.
+
+[Shrikant Kshirsagar] 10:07:12
+And when you do the analysis, more often than not, in the real world, you'll find that.
+
+[Shrikant Kshirsagar] 10:07:16
+There's a class imbalance, you know, most likely have. A preponderance of one class over to the other, right?
+
+[Shrikant Kshirsagar] 10:07:22
+Now, depending on how good the bank is. Uh, if it's a good bank, if it's a good lender.
+
+[Shrikant Kshirsagar] 10:07:28
+We expect to have most of the loans. Be in default or not in default?
+
+[Shrikant Kshirsagar] 10:07:32
+What do you think?
+
+[Shrikant Kshirsagar] 10:07:37
+Again, these are questions I'm asking you to help you stimulate.
+
+[Shrikant Kshirsagar] 10:07:41
+How to think about these problems, and then…. And then make choices, like, make intelligent choices, right?
+
+[Shrikant Kshirsagar] 10:07:46
+Yeah, so a lot of you are saying most of them would be non-default.
+
+[Shrikant Kshirsagar] 10:07:49
+And that's what you expect to find here, right? Lending Club has been around for a while, so clearly they're doing.
+
+[Shrikant Kshirsagar] 10:07:53
+Something that's working for them. If most of their loans were defaulting, then they would probably not be in business.
+
+[Shrikant Kshirsagar] 10:07:59
+So the question, Adam, was, do we expect most of the loans to be in default or not defaulted? And the answer is, a lot of you said not default, because again, if they were defaulting, then.
+
+[Shrikant Kshirsagar] 10:08:08
+Going, uh, you know, Lending Club would be out of business, right?
+
+[Shrikant Kshirsagar] 10:08:10
+So… so we expect that to be some class imbalance here.
+
+[Shrikant Kshirsagar] 10:08:14
+Now, the degree of class imbalance is something that you'll find out after you do this analysis, right? After losing your analysis.
+
+[Shrikant Kshirsagar] 10:08:19
+It may be that it's a small imbalance, maybe that's a large imbalance.
+
+[Shrikant Kshirsagar] 10:08:22
+Given that it's a big, successful lending organization, we expect there to be… most of it to be.
+
+[Shrikant Kshirsagar] 10:08:29
+Uh, you know, not default, right? So we expect there to be quite a bit of imbalance here.
+
+[Shrikant Kshirsagar] 10:08:33
+And so, things like smooth and things do become important, right? We want to make sure that we take into account the fact that this class increments, right?
+
+[Shrikant Kshirsagar] 10:08:40
+Uh, and you can find out the exact rate of default as well, if you want over here.
+
+[Shrikant Kshirsagar] 10:08:45
+And just document your observation, you know, like, how much… how much is the default, how much is not default?
+
+[Shrikant Kshirsagar] 10:08:50
+Um, we can also look at the… how the default rate is impacted.
+
+[Shrikant Kshirsagar] 10:08:56
+Across different variables, right? But this will come in the bi-wead analysis. So we only looked at the default rate here, like, whether there's, you know, classing bells there or not.
+
+[Shrikant Kshirsagar] 10:09:05
+But you also want to see what is the impact on different variables, which variables impact the default rate or not?
+
+[Shrikant Kshirsagar] 10:09:09
+That's what the biobid analysis comes. So, bivariate means two variables, right?
+
+[Shrikant Kshirsagar] 10:09:13
+So, you're gonna analyze two variables. To see, uh, you know, like, the effect of one on the other.
+
+[Shrikant Kshirsagar] 10:09:19
+What's one of the variables? One of the variables will be?
+
+[Shrikant Kshirsagar] 10:09:22
+The default rate, right? Like, whether the loan was paid off or not.
+
+[Shrikant Kshirsagar] 10:09:25
+And the other variable is the variable of interest, you know? The x-axis will be, like, whether this.
+
+[Shrikant Kshirsagar] 10:09:30
+A particular column name, right? Whether this was for. Purpose X, or whether this was for income level Y, or whatever it is.
+
+[Shrikant Kshirsagar] 10:09:36
+And on the y-axis, you'll have whether the person defaulted or not, right?
+
+[Shrikant Kshirsagar] 10:09:39
+And so by doing this biogreen analysis. You can visually see the importance of different.
+
+[Shrikant Kshirsagar] 10:09:47
+Columns, right? Now, this is, again, helps you visually kind of get the intuition of, like, what it looks like.
+
+[Shrikant Kshirsagar] 10:09:54
+But it may not… it's not quantitative, right? So you have to still quantitatively find it out, and that comes when you're doing more deeper analysis, and this is just an expert data analysis, right?
+
+[Shrikant Kshirsagar] 10:10:04
+But a few things you can do here is…. You know, plot this, uh, plot this….
+
+[Shrikant Kshirsagar] 10:10:09
+You know, chart of, like, default rate versus different variables. You can do correlation matrix or heat map that we have seen in a few.
+
+[Shrikant Kshirsagar] 10:10:16
+Examples before. Uh, and you can do other things as well, right? So, it's up to you how you want to do this, but….
+
+[Shrikant Kshirsagar] 10:10:21
+We want to look at, for example, how the default rate changes with, for example, some of the other variables here, like loan term, or grade.
+
+[Shrikant Kshirsagar] 10:10:29
+On purpose, or amount, or annual income. You do expect some of these quantities to impact the default rate, right?
+
+[Shrikant Kshirsagar] 10:10:36
+Like, for example, grade. Like, you expect that higher grade loans will have.
+
+[Shrikant Kshirsagar] 10:10:40
+Less default and lower grade levels, right? But you can actually.
+
+[Shrikant Kshirsagar] 10:10:42
+Make the plots here, and then see for yourself what is the impact.
+
+[Shrikant Kshirsagar] 10:10:46
+Right? So that's part of…. The EDU, right? So this is EDA. We are just trying to get a sense of, like, what data distribution looks like, what might be important, what might be important, all those things.
+
+[Shrikant Kshirsagar] 10:10:56
+And there are many ways to do it, so…. The choice is yours, what you want to do.
+
+[Shrikant Kshirsagar] 10:11:00
+The next thing we want to do is some pre-processing, right? So, based on the EDA, you may have found, for example, things like, you know.
+
+[Shrikant Kshirsagar] 10:11:09
+There's a strong correlation between one or the other, or there is some outliers and stuff, right?
+
+[Shrikant Kshirsagar] 10:11:14
+So, suppose you find that there's outliers. Now, where do you think outliers will lie?
+
+[Shrikant Kshirsagar] 10:11:19
+Among these. Where do you think the outliers will most likely be?
+
+[Shrikant Kshirsagar] 10:11:25
+What about income? Income tends to have a lot of outsiders, right? Like, the lowest value of income is zero, but the highest value can be.
+
+[Shrikant Kshirsagar] 10:11:31
+Millions of dollars, right? Someone can make a lot of money.
+
+[Shrikant Kshirsagar] 10:11:34
+So, some of these will definitely… you expect to have some outliers, right?
+
+[Shrikant Kshirsagar] 10:11:38
+And so, when you have these outliers. That basically affects the….
+
+[Shrikant Kshirsagar] 10:11:43
+Spread of the data, right? Or what we call standard deviation, right? Because outliers make the data look more spread out than it is.
+
+[Shrikant Kshirsagar] 10:11:56
+Model that sends to the outliers, you want to make sure that you account for the outliers. You can either remove them altogether.
+
+[Shrikant Kshirsagar] 10:12:01
+Or you can scale them, but you have to make sure that you take the outliers into account, and uh… so that it doesn't degrade the performance of the machine learning model.
+
+[Shrikant Kshirsagar] 10:12:08
+Right? So that's… that's basically, uh…. What you need to do in the pre-processing part, right?
+
+[Shrikant Kshirsagar] 10:12:15
+So, thicker outliers. And again, if you have categorical variables.
+
+[Shrikant Kshirsagar] 10:12:19
+There are standard techniques we do, right? Uh, like, one-hot encoding, right?
+
+[Shrikant Kshirsagar] 10:12:23
+Uh, we know that there are some critical variables here based on the column descriptions we saw over here, right? We saw that this is a categorical, this is categorical.
+
+[Shrikant Kshirsagar] 10:12:30
+And so, you want to convert this into a form that the machine learning model will understand.
+
+[Shrikant Kshirsagar] 10:12:35
+Which is what we do with one-hot encoding, right? So in the one-hot encoding.
+
+[Shrikant Kshirsagar] 10:12:39
+You can also do the train test splitting for preparing the machine learning model for training.
+
+[Shrikant Kshirsagar] 10:12:44
+Scaling and normalization, and we discussed the smart, right? We discussed class imbalance.
+
+[Shrikant Kshirsagar] 10:12:48
+So, all of this you'll do in this section. To kind of, like, prepare the data set for.
+
+[Shrikant Kshirsagar] 10:12:54
+Or doing machine learning, right? So, again, I'm not going to tell you details about how to do it. There are, you know, various ways to do it.
+
+[Shrikant Kshirsagar] 10:13:00
+I'll let you decide what makes most sense to you in terms of encoding.
+
+[Shrikant Kshirsagar] 10:13:04
+In terms of handling class imbalance and train tests, but…. Now, I will point out there's a little bit of an error here.
+
+[Shrikant Kshirsagar] 10:13:11
+Uh, in that the class imbalance when you do. It should be done on a train set only.
+
+[Shrikant Kshirsagar] 10:13:17
+So, you have to first do a train test split, and then do the class imbalance. But the way the code's written here.
+
+[Shrikant Kshirsagar] 10:13:22
+You'll see that they're doing smooth first and train test first, so….
+
+[Shrikant Kshirsagar] 10:13:26
+This is not actually correct. You have to first… so this code… this block of code will go up here, and then it'll go smooth.
+
+[Shrikant Kshirsagar] 10:13:31
+Okay, so just something to keep in mind. Make sure you do the train test script first, and then do the snow.
+
+[Shrikant Kshirsagar] 10:13:36
+Otherwise, there's this problem, you know, it's not…. Otherwise, it's not correct. You have to, you know, reinterstate, and then only smote on the.
+
+[Shrikant Kshirsagar] 10:13:44
+Training center. Otherwise, there's data leakage between training and test cyc.
+
+[Shrikant Kshirsagar] 10:13:47
+So that's a little caveat for you to remember. Uh, but once you do that, then you take the training set, you know where you're scaling.
+
+[Shrikant Kshirsagar] 10:13:54
+And then, once the data… now dataset is ready for model… for applying machine learning model, right?
+
+[Shrikant Kshirsagar] 10:13:59
+So, what you want to do here is usually, you know, there's not one best machine learning model, right? You don't know in advance which is the best one.
+
+[Shrikant Kshirsagar] 10:14:05
+So what you want to do here is you want to try out different models.
+
+[Shrikant Kshirsagar] 10:14:08
+Here, we're asking you to try out 3 different models, at least 3 models.
+
+[Shrikant Kshirsagar] 10:14:12
+One of them, you know, again, it's a suggestion, but the baseline ones, they need to be logistic regression, because logistic regression is the equivalent of.
+
+[Shrikant Kshirsagar] 10:14:19
+Linear regression for, uh, regression problems, right? We talked about logistic regression on the previous classes.
+
+[Shrikant Kshirsagar] 10:14:24
+So, start off with a logistic regression and use that as a baseline.
+
+[Shrikant Kshirsagar] 10:14:28
+And then you can use… you can use, you know, XGBoost, or random forest, or Distant Frees, or anything else.
+
+[Shrikant Kshirsagar] 10:14:34
+For doing additional classification models, and then compare the performance, right?
+
+[Shrikant Kshirsagar] 10:14:38
+Now, when you compare the performance, you want to check for both.
+
+[Shrikant Kshirsagar] 10:14:41
+Under and overfitting, right? And whenever you build a model, the initial set of parameters you have.
+
+[Shrikant Kshirsagar] 10:14:47
+They may or may not be optimal, right? You don't know that. You're just starting out building a model.
+
+[Shrikant Kshirsagar] 10:14:51
+So how do you determine the optimal set of parameters? What do you do?
+
+[Shrikant Kshirsagar] 10:14:57
+You do hyperparameter tuning, right, exactly, right? So you do hyperparameter tuning and cross-validation to figure out what documents are the hyperparameters are for each of the models.
+
+[Shrikant Kshirsagar] 10:15:05
+And then, finally, evaluate the models using the evaluation metric, and then you select which is the best one, right?
+
+[Shrikant Kshirsagar] 10:15:10
+So all of this is what we'll be doing at the end, like, after we've done all this, but doing all this pre-work helps us.
+
+[Shrikant Kshirsagar] 10:15:16
+Uh, make sure the dataset is ready to be applied, uh, that the machine learning models, uh.
+
+[Shrikant Kshirsagar] 10:15:21
+That we're using, uh, the dataset is ready to, uh, you can apply this over here, and also helps us kind of, like.
+
+[Shrikant Kshirsagar] 10:15:27
+You know, uh, make decisions as to which model to potentially.
+
+[Shrikant Kshirsagar] 10:15:31
+Build and evaluate, right? Because you can't build all possible models. That'll take too long.
+
+[Shrikant Kshirsagar] 10:15:35
+Right? So… so here we're going to start off with the simplest model of just a regression model.
+
+[Shrikant Kshirsagar] 10:15:40
+Which, again, you have seen many, many times before, so…. Uh, you just build the model, you, you know, the standard three-part technique we saw, right? You instantiate the model, you do dot fit, and you do dot trade, right? And then dot credit.
+
+[Shrikant Kshirsagar] 10:15:51
+So, we build the model, you check its evaluation metrics. How do you check the evaluation metrics? Again, there are various metrics you can use. You can use.
+
+[Shrikant Kshirsagar] 10:15:57
+Uh, what are some of the metrics you can use for evaluation?
+
+[Shrikant Kshirsagar] 10:16:02
+There's a new November? What about something like confusion matrix?
+
+[Shrikant Kshirsagar] 10:16:09
+You can use a confusion matrix, for example, here. Or you can use, you know, precision, recall, F1 score. We looked at all these evaluation metrics before, right?
+
+[Shrikant Kshirsagar] 10:16:19
+So, you have complete choice as to how you want to.
+
+[Shrikant Kshirsagar] 10:16:22
+How you want to evaluate that. You can use either or all of these, right?
+
+[Shrikant Kshirsagar] 10:16:27
+And then just print out a classification report, you know, like, how many….
+
+[Shrikant Kshirsagar] 10:16:31
+How much… how much accuracy the model is, how much precision recall, whatever you want to print out, right?
+
+[Shrikant Kshirsagar] 10:16:36
+Again, it's determined on the business context. And in your report, you can print out all of those things, and then make a call as to, like, what makes, you know, whether it's a decent model, or is it not a good model.
+
+[Shrikant Kshirsagar] 10:16:47
+Is it performance good on one class versus another, right? These are things that will come from the model evaluation.
+
+[Shrikant Kshirsagar] 10:16:55
+Right? So, the key thing to note here is you don't want to just focus on the overall model accuracy.
+
+[Shrikant Kshirsagar] 10:17:00
+Why don't we want to just focus on the model accuracy?
+
+[Shrikant Kshirsagar] 10:17:04
+Why is that by itself not a good evaluation metric? Does anyone remember?
+
+[Shrikant Kshirsagar] 10:17:13
+Yeah, so the…. Remember? Because, yes, there's a class imbalance, right? So, it may be that your model is doing really well on the majority class and really poorly on the minority class, so you're going to still have a big risk factor there, right? You're going to make a lot of.
+
+[Shrikant Kshirsagar] 10:17:26
+Uh, default risk or injection risk errors. We don't want that. So therefore, you can't just rely on accuracy. Look at individual class prediction accuracy as well.
+
+[Shrikant Kshirsagar] 10:17:34
+And so, that's why precision recall and all those things are coming.
+
+[Shrikant Kshirsagar] 10:17:37
+Another thing you can do is also…. Uh, you know, look at the importance of different.
+
+[Shrikant Kshirsagar] 10:17:44
+Columns, or different features, right? So, you can, uh, get the coefficients that are used in the regression model and help determine.
+
+[Shrikant Kshirsagar] 10:17:51
+You know, which one is more important, which is not important. And this is, by the way, you can do this for decision tree, you can do this for random forest, right? There's feature importance that you can use there.
+
+[Shrikant Kshirsagar] 10:18:00
+So, this will kind of help you. Assess, you know, like, which features are more important, which features are not as important.
+
+[Shrikant Kshirsagar] 10:18:06
+And so you do this comparison, so you do this for the logistic regression over here.
+
+[Shrikant Kshirsagar] 10:18:11
+And then you do the same thing, uh, for, uh, decision page. You can do the same thing for random forests.
+
+[Shrikant Kshirsagar] 10:18:17
+Uh, and then just compare the models, compare the accuracies, compare their precision recalls, whatever, whatever you want to compare.
+
+[Shrikant Kshirsagar] 10:18:23
+And then, in the end, just make a report, like, you know, these are different models, these are the… these are the classification accuracy, and all those.
+
+[Shrikant Kshirsagar] 10:18:30
+And this is how… this is what, uh…. You know, this is what the best model is.
+
+[Shrikant Kshirsagar] 10:18:35
+Now, one thing I would also suggest you do is, after you build those models, make sure you.
+
+[Shrikant Kshirsagar] 10:18:40
+Or do some hyperparameter tuning. The reason being, the initial module build may not, you know, obviously the best model.
+
+[Shrikant Kshirsagar] 10:18:46
+And hyperventilings sometimes can lead to a very good increase in the model's performance.
+
+[Shrikant Kshirsagar] 10:18:51
+Right? So, uh, when you, uh, when you do… when you build this model.
+
+[Shrikant Kshirsagar] 10:18:56
+Uh, first check for underfitting or overfitting by looking at the accuracy and other metrics.
+
+[Shrikant Kshirsagar] 10:19:01
+And then it's also…. Useful to do hyperparameter tuning, so….
+
+[Shrikant Kshirsagar] 10:19:07
+Try to optimize the model as best as I can. Okay. All right.
+
+[Shrikant Kshirsagar] 10:19:11
+So, this is… this is basically going through the starter code. Again, I've tried to keep it at high level so that you have a chance to, uh.
+
+[Shrikant Kshirsagar] 10:19:19
+Tide yourself. Let's quickly go to rubrics, and then we'll take a short break.
+
+[Shrikant Kshirsagar] 10:19:23
+Okay? So, can you see my screen with the rubrics now?
+
+[Shrikant Kshirsagar] 10:19:29
+Okay. So…. I'm just gonna increase the font size so it's a little more visible.
+
+[Shrikant Kshirsagar] 10:19:34
+Stupid. So, what are the different criteria we're going to use? So, there are basically seven criteria.
+
+[Shrikant Kshirsagar] 10:19:42
+That are along different dimensions, right? So…. We actually covered each of these in a separate section in the course, so we're gonna evaluate the….
+
+[Shrikant Kshirsagar] 10:19:49
+The project along how we have done the dataset overview. Oh, you have done the pre-processing, the EDA.
+
+[Shrikant Kshirsagar] 10:19:55
+The model selections, right? Whether you have done hyperventuning, you know, how much hyperparameter tuning have you done, what are the different things you've tried?
+
+[Shrikant Kshirsagar] 10:20:04
+How you evaluate the model, the evaluation metrics. And finally, your conclusion and results, right?
+
+[Shrikant Kshirsagar] 10:20:09
+So there are different, uh, criteria in here for, like, what constitutes as excellent versus good versus fair.
+
+[Shrikant Kshirsagar] 10:20:16
+Versus, uh, 4. So, I urge you to take a look at this, uh, as you… as you're building… as you're completing this project.
+
+[Shrikant Kshirsagar] 10:20:23
+And, uh, try to, uh, you know, get to the excellent stage for each of these different, uh, evaluation.
+
+[Shrikant Kshirsagar] 10:20:30
+Rubrics, project rubrics that we are…. Using to evaluate this project.
+
+[Shrikant Kshirsagar] 10:20:35
+Okay? So…. Let's take a little… little break here.
+
+[Shrikant Kshirsagar] 10:20:40
+Uh, it's 20 past the hour. Uh, we'll take maybe a 5 minutes break.
+
+[Shrikant Kshirsagar] 10:20:44
+And then come back, and then look at the second, uh, second, uh.
+
+[Shrikant Kshirsagar] 10:20:49
+Project, and uh… you can just get upstretch, you know, take a bye break if you want. Think about what we have discussed.
+
+[Shrikant Kshirsagar] 10:20:56
+And if you have any questions, uh, when we come back, you can ask those questions.
+
+[Shrikant Kshirsagar] 10:20:59
+Okay, so let's take a 5-minute break, and we'll reconvene at 25 past the hour.
+
+[Shrikant Kshirsagar] 10:21:04
+Thank you.
+
+[Shrikant Kshirsagar] 10:26:40
+Okay, hope you're back from your break, all refreshed. If so, please raise your hand.
+
+[Shrikant Kshirsagar] 10:26:51
+Please raise your hand if you're back from your break. Okay, at least a couple of years back, that's nice.
+
+[Shrikant Kshirsagar] 10:26:58
+The recipe is still on break? Oh, good, okay. Looks like a lot… most of you are back now. Great, thank you.
+
+[Shrikant Kshirsagar] 10:27:03
+I hope that was refreshing, and you had a chance to think about what we had covered so far.
+
+[Shrikant Kshirsagar] 10:27:08
+Um, are there any questions about. What we talked about for the first project, before we go on to the second one.
+
+[Shrikant Kshirsagar] 10:27:17
+If so, please raise your hand, I can unmute you.
+
+[Shrikant Kshirsagar] 10:27:25
+Okay, looks like a good… alright. So in that case, let's, uh, let's go to the second, uh….
+
+[Shrikant Kshirsagar] 10:27:31
+Second project, and discuss that real quick. Uh, let me start by sharing my screen.
+
+[Shrikant Kshirsagar] 10:27:39
+It's always so many screens here.
+
+[Shrikant Kshirsagar] 10:27:54
+Okay, can you please raise your hand if you see my screen?
+
+[Shrikant Kshirsagar] 10:28:00
+Great, thank you. All right. So… so that was the first project, and….
+
+[Shrikant Kshirsagar] 10:28:08
+Again, the idea here, uh, what we're going to do in the second one is basically.
+
+[Shrikant Kshirsagar] 10:28:12
+Very similar to what we did the first time. You're going to quickly look at the high-level overview of the project, like, what is it we're trying to do?
+
+[Shrikant Kshirsagar] 10:28:18
+Uh, and then go through starter code. Again, uh, I'm… the idea is not to….
+
+[Shrikant Kshirsagar] 10:28:23
+Tell you what to do over there, that's… that's the project about. You need to figure out, uh, by yourself.
+
+[Shrikant Kshirsagar] 10:28:29
+Uh, you know, what are the best things to do, or what would apply, what would not apply here, and that's how you develop your judgment and intuition.
+
+[Shrikant Kshirsagar] 10:28:35
+And then, uh, we'll go to the rubrics. And then, uh, at the end, I'll just, you know, take questions, uh, that you may have about anything we discussed in today's class.
+
+[Shrikant Kshirsagar] 10:28:44
+And keep in mind, we also have the technical coaching sessions on Wednesdays, so….
+
+[Shrikant Kshirsagar] 10:28:48
+If something is, uh, you're not able to cover today, or couldn't ask the question now, you could always come back on Wednesday and ask 10 as well.
+
+[Shrikant Kshirsagar] 10:28:55
+Okay, so let's go to Learning Hope project now, which is a different problem.
+
+[Shrikant Kshirsagar] 10:28:59
+And then, uh, see what the problem statement is, and what are we trying to, uh, what are we trying to accomplish there.
+
+[Shrikant Kshirsagar] 10:29:06
+So, are you able to see the…. Learning group document, so please raise your hand.
+
+[Shrikant Kshirsagar] 10:29:15
+Okay, thank you, Adam. All right. So what is… what is the learning hope? So here, this is a very different problem.
+
+[Shrikant Kshirsagar] 10:29:21
+Uh, but you'll see there's a lot of commonalities with the first, uh, project that we discussed, the Lending Hope, uh, the, uh.
+
+[Shrikant Kshirsagar] 10:29:28
+Lending Home, yes. Lending Hope. Lending Club, I'm sorry, Lending Club project.
+
+[Shrikant Kshirsagar] 10:29:34
+Uh, and that is one of the beautiful things of machine learning, is that.
+
+[Shrikant Kshirsagar] 10:29:38
+The similar techniques can apply across such different domains. It, uh, it's quite amazing, like, very similar ideas and similar techniques apply across different domains, but in different contexts, right?
+
+[Shrikant Kshirsagar] 10:29:48
+So, here we'll look at how this project, uh, works, and what is it that we're asking you to do.
+
+[Shrikant Kshirsagar] 10:29:53
+So, at a high level, again, I'm gonna not go through all the details. You can read this at your own leisure later on.
+
+[Shrikant Kshirsagar] 10:29:59
+But a high level, what are we trying to do here? What is the business objective?
+
+[Shrikant Kshirsagar] 10:30:02
+So the business objective here is that you have. You know, this organization that, uh….
+
+[Shrikant Kshirsagar] 10:30:09
+People apply to, to, uh, you know, get funding for some projects they're trying to do, educational projects that they're trying to do.
+
+[Shrikant Kshirsagar] 10:30:16
+Right? And the challenge that this organization, it's called DonorsChoose Organization.
+
+[Shrikant Kshirsagar] 10:30:22
+Uh, they… they want to efficiently predict. The approval status of the project proposals.
+
+[Shrikant Kshirsagar] 10:30:27
+So these projects are submitted by teachers for various educational things they're trying to do.
+
+[Shrikant Kshirsagar] 10:30:33
+And DonorsChoose wants to…. Predict which ones are more likely to be accepted, which ones are less likely to be accepted, right?
+
+[Shrikant Kshirsagar] 10:30:39
+So, the commonality with the previous one is that, in a sense.
+
+[Shrikant Kshirsagar] 10:30:43
+This… in a sense, they're applying for loans of sort, right? But instead of a loan, this is a grant, right?
+
+[Shrikant Kshirsagar] 10:30:49
+Uh, but there's a lot of similarities between the first and second one, that in the loan application process, you have to put in a lot of information about, you know, what you're applying the loan for.
+
+[Shrikant Kshirsagar] 10:30:58
+You know, and all those things. Here, too, teachers. Put in similar information, you know, like, what is it that they're applying, uh, grant funding for.
+
+[Shrikant Kshirsagar] 10:31:06
+And, uh, you know, what is it going to be used for in all those things, right?
+
+[Shrikant Kshirsagar] 10:31:10
+Uh, so they created this project proposal. Uh, the nature of the data here is slightly different than in the first case. Like, here they have tried, for example, essays and whatnot.
+
+[Shrikant Kshirsagar] 10:31:19
+Uh, in the loan application, at least in the dataset we saw, we didn't have to write an essay there.
+
+[Shrikant Kshirsagar] 10:31:23
+Uh, but… but other than these minor differences, at a high level, there's a lot of similarities between these two.
+
+[Shrikant Kshirsagar] 10:31:28
+Right? Of course, machine learning techniques a user will be slightly different.
+
+[Shrikant Kshirsagar] 10:31:32
+Because of the different… difference in the nature of the data set.
+
+[Shrikant Kshirsagar] 10:31:36
+And this highlights the key point I was trying to make before, which is that.
+
+[Shrikant Kshirsagar] 10:31:39
+Sometimes, even the problems are very similar, and even what you're trying to predict is similar, depending on the nature dataset, the type of machine learning techniques you'd apply may be very, very different.
+
+[Shrikant Kshirsagar] 10:31:49
+Okay, so we'll come to that in a second. So the business problem here is, again, we're trying to predict the approval status of project proposals, right?
+
+[Shrikant Kshirsagar] 10:31:55
+So what kind of problem is this? Is the classification or regression problem?
+
+[Shrikant Kshirsagar] 10:31:58
+Or something else. We're trying to predict whether a project will be approved or not based on various postulated features. So, what kind of problem are we looking at?
+
+[Shrikant Kshirsagar] 10:32:10
+You can pop your answer in the chat. Yes, exactly. So, at least a few of you are paying attention, and you're calling it binary classification, right?
+
+[Shrikant Kshirsagar] 10:32:19
+So it's basically the similar kind of problem that we are solving before, right? So instead of creating someone with default or not, here we are trying to predict whether a project proposal will be approved or not, right?
+
+[Shrikant Kshirsagar] 10:32:28
+So if I get a binary classification problem. So, we're still going to look at classification algorithms, and very similar.
+
+[Shrikant Kshirsagar] 10:32:35
+Uh, very similar algorithm, uh, you know, considerations that we had there.
+
+[Shrikant Kshirsagar] 10:32:39
+But again, because the data set is different here, because the kinds of things that are input.
+
+[Shrikant Kshirsagar] 10:32:46
+Over here is different. We might have to make different choices here.
+
+[Shrikant Kshirsagar] 10:32:48
+Alright, so we'll come to those in a second. Uh, so what this is a basic problem. It's a classification problem, a binary classification, where you're trying to predict whether a proposal will be approved or not.
+
+[Shrikant Kshirsagar] 10:32:57
+Business objectives are, again, similar to before. That we have talked about. Our technical objectives, again, very similar to what we had before. We wanted to do data exploration, feature engineering, selection, training.
+
+[Shrikant Kshirsagar] 10:33:09
+Hyperparameter tuning and evaluation metrics. So all of this is very, very similar to what we had before, right?
+
+[Shrikant Kshirsagar] 10:33:13
+Uh, the dataset is obviously very different. You can download dataset from the link provided here, or there's also code.
+
+[Shrikant Kshirsagar] 10:33:19
+Given away here that you can use to download a dataset.
+
+[Shrikant Kshirsagar] 10:33:22
+As a zip file. Now, this dataset is slightly bigger, and it's a different format. There's two CSV files here.
+
+[Shrikant Kshirsagar] 10:33:27
+And we're gonna have to combine them somehow later on. So, uh, use it for training machine learning model. But we'll get to that in a second.
+
+[Shrikant Kshirsagar] 10:33:36
+Right? But the main thing to notice is this dataset is huge. There's, like, 100,000.
+
+[Shrikant Kshirsagar] 10:33:40
+About 100,000 records and 100,000 rows. So we have a lot of data, right?
+
+[Shrikant Kshirsagar] 10:33:46
+Um, and so when you're training the machine model, especially if you're training it on your local machine with limited resources.
+
+[Shrikant Kshirsagar] 10:33:51
+Uh, it may actually end up taking up the entire memory of your computer or slowing it down.
+
+[Shrikant Kshirsagar] 10:33:56
+So, you can, if you want, if you want to develop locally.
+
+[Shrikant Kshirsagar] 10:33:59
+Just take a subset of data and work with that. Okay? Um, just an FYI.
+
+[Shrikant Kshirsagar] 10:34:04
+If you're doing it on Google Cloud, uh, on the Colab platform, it usually works, but it does take time.
+
+[Shrikant Kshirsagar] 10:34:08
+So, if you want to quickly iterate and make some changes and see how that works, you can work with a subset.
+
+[Shrikant Kshirsagar] 10:34:14
+Have something for you to decide on your own. Um, what are the deliverables? Again, the same thing as before. We want a Jupyter notebook.
+
+[Shrikant Kshirsagar] 10:34:20
+Where you, you know, show us what you've done data set, the EDA part, what can data processing feature changing and vectorization you've done.
+
+[Shrikant Kshirsagar] 10:34:28
+How you've done the model training and hyperventive search, how you evaluated the model, and then final report, you know, and what can be done next.
+
+[Shrikant Kshirsagar] 10:34:35
+So, the two projects are kind of very similar in terms of deliverables and, you know, even the problem you're trying to solve.
+
+[Shrikant Kshirsagar] 10:34:40
+But the nature of data is very different here. And that's what makes this very, uh, very different problem, uh.
+
+[Shrikant Kshirsagar] 10:34:48
+Somewhat different problem than the one we saw before. Right? So, any questions about the….
+
+[Shrikant Kshirsagar] 10:34:55
+Business problem that… or business objectives, before we move to the starter code.
+
+[Shrikant Kshirsagar] 10:35:01
+Next, so raise your hand. No? Okay, cool. So let's look at… let's look at this starter code then.
+
+[Shrikant Kshirsagar] 10:35:09
+Again, as before, I'm gonna ask you questions to prompt you to think about issues that may come up when you're.
+
+[Shrikant Kshirsagar] 10:35:15
+Uh, trying to, uh, you know, write the code here. And, uh, I would like to hear your answers and how you think about these things.
+
+[Shrikant Kshirsagar] 10:35:22
+Right? So, predicting project approval on DonorsSQs.org. So, objective is to, again, you know, streamline the screening process and, you know, apply machine learning to make reproducible results.
+
+[Shrikant Kshirsagar] 10:35:34
+These are the six steps, very similar to what we did the last time. The same 6 steps you're going to do.
+
+[Shrikant Kshirsagar] 10:35:39
+Slightly… the problem is obviously different, the context is different. Uh, but basically a similar idea, right?
+
+[Shrikant Kshirsagar] 10:35:44
+So, first step is, you know, we do data collection, you explore, you clean up the data, you do some pre-processing, whatever you want to do.
+
+[Shrikant Kshirsagar] 10:35:50
+This is the first step, right? So, the code sample was given to you in the….
+
+[Shrikant Kshirsagar] 10:35:56
+Doc in the Google Doc. You can also, uh, it's also in a starter code, so you can use this to get the zip file.
+
+[Shrikant Kshirsagar] 10:36:02
+And again, if the dataset is too big, uh, feel free to….
+
+[Shrikant Kshirsagar] 10:36:05
+Just use a subset of data set to, you know, for the rest of this, uh, node.
+
+[Shrikant Kshirsagar] 10:36:10
+Okay, but if you use the whole one, it will take a while to run, so just keep that in mind.
+
+[Shrikant Kshirsagar] 10:36:15
+Uh, you can access the dataset by, you know, like, if you're using Google Colab, then you can just click this files, and you'll see it over here.
+
+[Shrikant Kshirsagar] 10:36:20
+I'm not connected to that runtime, it's still connecting, so… but if it's connected, you'll see the files over here.
+
+[Shrikant Kshirsagar] 10:36:25
+And then, uh, you'll have… you'll see there's two CSV files. There's a train data file and a resources file.
+
+[Shrikant Kshirsagar] 10:36:30
+So, what we can do is we can basically. Fourth step is to just load dataset, right? So, since we have two CSV files.
+
+[Shrikant Kshirsagar] 10:36:37
+We'll just load it into different data types, right? So again, you can do .readCS3 to get those two data frames.
+
+[Shrikant Kshirsagar] 10:36:43
+And now we can just look at the top…. You know, a few rows to get a sense of what dataset looks like.
+
+[Shrikant Kshirsagar] 10:36:48
+So, what you'll see here… so you'll see two files, two data files, right? So let's look at the columns over here. This was written in a previous one.
+
+[Shrikant Kshirsagar] 10:36:55
+So what you'll see here is we have the train.csd, the train data frame.
+
+[Shrikant Kshirsagar] 10:37:01
+As these columns. As a project ID, there's a title. There's a project grade category.
+
+[Shrikant Kshirsagar] 10:37:07
+Uh, subcategory, uh, subject category, uh, state, and, uh. Subject, subcategory, resource summary.
+
+[Shrikant Kshirsagar] 10:37:15
+Then this project essays…. And then submitted time, teacher ID, teacher prefix, teacher number of fields, plus different projects, right?
+
+[Shrikant Kshirsagar] 10:37:22
+So just as in the previous case, we can already tell there are some.
+
+[Shrikant Kshirsagar] 10:37:26
+Some features here that are irrelevant to our prediction problem, right?
+
+[Shrikant Kshirsagar] 10:37:29
+Like, can you… can you tell me… can you pop in the chat what you think might be some features that are not… that you think won't be useful for predicting?
+
+[Shrikant Kshirsagar] 10:37:40
+Howard, do you have a question? So, go ahead and unmute yourself and ask.
+
+[Howard Mitchell] 10:37:44
+Yes, um, so I actually had a question outside of, but I'll answer first. Anything with, like, high cardinality, you don't really want, like, ID columns and stuff like that, um….
+
+[Howard Mitchell] 10:37:53
+It's not really gonna add much for the model predictions. Um, however, my question, though, is.
+
+[Shrikant Kshirsagar] 10:37:56
+Right. Correct, exactly.
+
+[Howard Mitchell] 10:38:01
+On the business end of things. So, after, like, going through the problem statement and everything, and….
+
+[Howard Mitchell] 10:38:06
+And doing, you know, EDA for this project. Um, one….
+
+[Howard Mitchell] 10:38:13
+Big consideration is the interpretability. Um, what myself and David, we've been kind of working through this already, and what we….
+
+[Howard Mitchell] 10:38:22
+Gathered from the…. Overall project is that we're in service of the….
+
+[Howard Mitchell] 10:38:26
+More so the volunteers to have a more stringent, um. Screening process throughout this?
+
+[Howard Mitchell] 10:38:33
+For the company, um, for the nonprofit. And therefore, interpretability may not be as important.
+
+[Howard Mitchell] 10:38:41
+Although there are some. Text in the problem statement that.
+
+[Howard Mitchell] 10:38:46
+Indicates that the teachers will, you know, get a little bit of notification here, but it still seems as if they'll just get, like, a.
+
+[Howard Mitchell] 10:38:54
+A quicker approval or a disapproval notification. So, is that safe to say that interpretability might not be as important? Because it has a big ramification as to how you.
+
+[Howard Mitchell] 10:39:03
+Uh, go about the model building, if you want to abstract away, you know, features into principal components and stuff like that.
+
+[Howard Mitchell] 10:39:10
+We're just gonna inherently hinder the interpretability. So I just wanted to get more clarity on that, and kind of treat you as the surrogate, um….
+
+[Shrikant Kshirsagar] 10:39:14
+Yes.
+
+[Howard Mitchell] 10:39:17
+Uh, you know, um…. A decision maker on this one.
+
+[Shrikant Kshirsagar] 10:39:21
+Yeah, yeah, that's a good question. So, uh, the question is, you know, how important interpretability in this business context, because that will drive the decision as to whether you want to use some techniques like PCA or not, right?
+
+[Shrikant Kshirsagar] 10:39:31
+So, given… given what this problem is stating so far. Uh, there is no mention of interpretability requirements over here, right?
+
+[Shrikant Kshirsagar] 10:39:41
+So you're welcome to use, you know, whatever techniques you want to, you know, create the best possible model over, uh, over, uh, for this project.
+
+[Shrikant Kshirsagar] 10:39:49
+Having said that, in some business contexts, interpretability is an important issue, and there.
+
+[Shrikant Kshirsagar] 10:39:53
+You want to make sure whatever techniques you're using, you're able to, uh, you know, they're basically interpretable, right?
+
+[Shrikant Kshirsagar] 10:39:59
+And you're able to make, uh, informed, uh. Reports as to, like, what is important, what's not important.
+
+[Shrikant Kshirsagar] 10:40:05
+We actually saw interpretability, uh, come up also in a previous project when discussing the feature importance, right? Using decision trees or whatever.
+
+[Shrikant Kshirsagar] 10:40:12
+So you can use things like that over here as well.
+
+[Shrikant Kshirsagar] 10:40:14
+You know, if you're interested in getting interpretability. And we'll see this as we go through the code as well.
+
+[Shrikant Kshirsagar] 10:40:20
+Okay. I hope that answers your question. No problem. All right, so yes, as you said, some of the IDs are unimportant and all those, so we'll just drop them at the outset, again, because the dataset is big.
+
+[Howard Mitchell] 10:40:25
+Yep, thank you.
+
+[Shrikant Kshirsagar] 10:40:34
+We don't want to carry them around and consume all memory, right? So we can drop things like the IDEs and other things like that.
+
+[Shrikant Kshirsagar] 10:40:40
+Uh, there's a… there's an asterisk next to the project essays.
+
+[Shrikant Kshirsagar] 10:40:43
+And this is something, uh, you know, like, uh, one of the technical caveats for this dataset.
+
+[Shrikant Kshirsagar] 10:40:49
+Uh, which is that, uh, you know, there was this two-phase, uh, submission process. In the first phase.
+
+[Shrikant Kshirsagar] 10:40:55
+The teachers are required to submit four essays. In the second phase, they were just required to submit.
+
+[Shrikant Kshirsagar] 10:41:00
+Two assays, right? Um, and so…. The idea is that, uh, after whatever this dataset has submissions from both before and after this date.
+
+[Shrikant Kshirsagar] 10:41:08
+But some of the submissions that come after this date, there'll be only two essays, not four.
+
+[Shrikant Kshirsagar] 10:41:14
+Right? So 3 and 4 would be NAN, or not a number, right?
+
+[Shrikant Kshirsagar] 10:41:18
+Uh, so we're gonna see how we… how we can deal with this later on.
+
+[Shrikant Kshirsagar] 10:41:22
+But at the outset, we already know. That we will see some missing values in at least some of the columns, right?
+
+[Shrikant Kshirsagar] 10:41:28
+So, that is… that is already expected, that is already known. So we'll keep this in mind.
+
+[Shrikant Kshirsagar] 10:41:33
+So that's… that's the training dataset. Uh, some other columns you mentioned, uh….
+
+[Shrikant Kshirsagar] 10:41:38
+You know, we know that IDs are unimportant. The other ones we may or may not find it important, so….
+
+[Shrikant Kshirsagar] 10:41:43
+We can't… we don't want to, at the outset, throw away the columns, even if they might be important, so let's… let's….
+
+[Shrikant Kshirsagar] 10:41:48
+We'll find out when we do the numerator and bi-weight analysis, right?
+
+[Shrikant Kshirsagar] 10:41:51
+So that's… that's when we'll, uh, see what is important, what's not important.
+
+[Shrikant Kshirsagar] 10:41:55
+Uh, in the resources one, uh, this one is about. The details about what resources are required for each project. So again, there's an ID here, which is the same project ID that was used in the previous one.
+
+[Shrikant Kshirsagar] 10:42:05
+And so we'll use this column to combine the two data flames into one, right? So this is a common column.
+
+[Shrikant Kshirsagar] 10:42:12
+Uh, there's a description of what the resource is, quantity, and price, right?
+
+[Shrikant Kshirsagar] 10:42:15
+So, basically, the required… requested resources are in a separate CSV file.
+
+[Shrikant Kshirsagar] 10:42:20
+Uh, and then the project details are in this CSV file. So, eventually, you want to combine them into one.
+
+[Shrikant Kshirsagar] 10:42:26
+Make… and then train our machine learning model on that, right?
+
+[Shrikant Kshirsagar] 10:42:29
+So, uh, the trained CSV. Contains this label, project is approved, right? So this is what you want to predict.
+
+[Shrikant Kshirsagar] 10:42:36
+So zero means project was not approved, 1 is approved. So this is the column that we'll… we're going to try to predict, uh, train our machine learning model.
+
+[Shrikant Kshirsagar] 10:42:44
+To, uh, to predict. Right? Does that make sense to everyone?
+
+[Shrikant Kshirsagar] 10:42:48
+So now, having seen all this, now we can, like, look at the dataset.
+
+[Shrikant Kshirsagar] 10:42:52
+Uh, and assess, right? So, for example, you can see how many… what types of data there is, how many null values are all, uh, in the different gaining data frames.
+
+[Shrikant Kshirsagar] 10:43:01
+You know, using the Panda's data plane, uh, methods. Uh, you'll find, for example, there'll be a lot of null values in SA3 and SA4, as we discussed before, right?
+
+[Shrikant Kshirsagar] 10:43:10
+So, that is to be expected, and we'll see how we, uh, combine those. There might be null values in some other columns as well.
+
+[Shrikant Kshirsagar] 10:43:16
+Uh, which, again, you have to assess. Uh, then the next thing you want to see is the same thing for the resources, right?
+
+[Shrikant Kshirsagar] 10:43:23
+See how many null values there are non-null values there are.
+
+[Shrikant Kshirsagar] 10:43:27
+And, uh, what… what those numbers…. How those numbers compare to the training set?
+
+[Shrikant Kshirsagar] 10:43:32
+Now, question for you. Do you think the two data frames will have the same number of….
+
+[Shrikant Kshirsagar] 10:43:38
+Records or different number of records? What do you think?
+
+[Shrikant Kshirsagar] 10:43:44
+You can pop your answer in the chat. Adams says different.
+
+[Shrikant Kshirsagar] 10:43:49
+David, you have a question? You can unmute yourself and ask.
+
+[Shrikant Kshirsagar] 10:43:54
+I would say….
+
+[David Hunsicker] 10:43:55
+Um, no, I didn't have a question, but I think, uh….
+
+[David Hunsicker] 10:44:00
+We… having already looked at the data pretty thoroughly, I mean, the resources are just, uh, line items for the projects. I wanted to see if we could kind of move the conversation more towards.
+
+[Shrikant Kshirsagar] 10:44:11
+Yes, exactly.
+
+[David Hunsicker] 10:44:11
+Um, testing intuition and looking at, um. Attempting to assess what's an appropriate avenue for measuring the essays.
+
+[David Hunsicker] 10:44:20
+Um, rather than, like, going over the basics of…. Just what's in the spreadsheet.
+
+[Shrikant Kshirsagar] 10:44:23
+Yeah. Yeah, we'll get to that when we go to the start of course. So, just hold that thought, okay?
+
+[Shrikant Kshirsagar] 10:44:33
+Yeah, so as you were saying, uh…. We expect different number of, uh….
+
+[Shrikant Kshirsagar] 10:44:39
+Grows in this one, right? Because. This is details about the resources required for each project, and it may happen that a single project may require.
+
+[Shrikant Kshirsagar] 10:44:46
+Three or four different kinds of resources, right? Ultimately going to combine them all into one, but we can't just do, like.
+
+[Shrikant Kshirsagar] 10:44:51
+A one-to-one, you know, like, combine this row with that row. We might have to combine multiple rows into one row of the first one, right?
+
+[Shrikant Kshirsagar] 10:44:58
+But that's something to keep in mind, and that's… that is… this is.
+
+[Shrikant Kshirsagar] 10:45:01
+Again, this is what I'm getting at, is, like, the data side is different here, so the pre plus sync steps and all those things will differ, right?
+
+[Shrikant Kshirsagar] 10:45:08
+And so you have to be mindful of that. And you can also see any missing values here, you know, like what data set shape looks like and all that.
+
+[Shrikant Kshirsagar] 10:45:15
+And that will give you a sense of, you know, like, uh….
+
+[Shrikant Kshirsagar] 10:45:18
+How to combine them, right? So…. As we discussed in your observations, you need to, like, you know, discuss, like, you know, what are the missing values and, you know.
+
+[Shrikant Kshirsagar] 10:45:28
+What is, uh, what are some of the…. Columns that may or may not be relevant.
+
+[Shrikant Kshirsagar] 10:45:33
+And, uh, which ones you want to keep, and which ones you want to throw away, right?
+
+[Shrikant Kshirsagar] 10:45:37
+Now, the next thing you've got to do is combine those data sets, right? Because we need a….
+
+[Shrikant Kshirsagar] 10:45:41
+In the combined data set to train and test the machine learning model.
+
+[Shrikant Kshirsagar] 10:45:44
+So, as we saw, there's a project ID column here. Uh, which is the same ID column here, which matches to the project ID column, and the other one. But this may….
+
+[Shrikant Kshirsagar] 10:45:54
+Have… this may have… this second data set, resources. May have, uh, multiple, uh, val….
+
+[Shrikant Kshirsagar] 10:46:01
+The same value of ID come multiple times, because different resources may be required.
+
+[Shrikant Kshirsagar] 10:46:05
+So, what do you need to do here? You need to basically take all the resources together for the same ID, combine them into one quantity.
+
+[Shrikant Kshirsagar] 10:46:12
+And then you can combine it with the original data set, the training dataset, right?
+
+[Shrikant Kshirsagar] 10:46:16
+So, that's what we need to do over here. We… each line of resources represents a single resource required by the project.
+
+[Shrikant Kshirsagar] 10:46:23
+But if a project has multiple resources, then you have these multiple values, right?
+
+[Shrikant Kshirsagar] 10:46:27
+So, what we want to do is we want to basically.
+
+[Shrikant Kshirsagar] 10:46:30
+Combine all the different resource requirements of the… for a given IDE.
+
+[Shrikant Kshirsagar] 10:46:34
+Into one, and then use that to merge it with the first dataset.
+
+[Shrikant Kshirsagar] 10:46:39
+Okay, and this you can do directly in Pandas, right? So, first thing is, what you can do is you can just create a new data frame that basically.
+
+[Shrikant Kshirsagar] 10:46:48
+Is, like, every, uh, row in that is… corresponds to a single project ID.
+
+[Shrikant Kshirsagar] 10:46:53
+And then the columns represent a total quantity of resources, right? So, like, the total price and total quantity. So you've merged this all into one.
+
+[Shrikant Kshirsagar] 10:47:00
+And then now you have a data frame with just one row per project ID, and this training data frame also has one row per train ID. Now you can combine those two.
+
+[Shrikant Kshirsagar] 10:47:10
+Right? So that's… that's what you have to do in this part. And again, it's very straightforward.
+
+[Shrikant Kshirsagar] 10:47:15
+Uh, the only thing you have to remember is when you combine the two, make sure you do an inner join, right?
+
+[Shrikant Kshirsagar] 10:47:19
+So that, uh, if the missing value's on one or missing values on the other.
+
+[Shrikant Kshirsagar] 10:47:23
+Then they are excluded, because there's only a lot of data, so even if you have to drop some, that's not… that's not necessarily a problem.
+
+[Shrikant Kshirsagar] 10:47:31
+Right? So, with this. You should see that you have, you know, a combined data frame, which is about 100,000 or so, like before.
+
+[Shrikant Kshirsagar] 10:47:38
+Most of them, you know, will be…. As we saw columns, you know, the text values, right? So they'll be represented as objects.
+
+[Shrikant Kshirsagar] 10:47:46
+There might be some integer values, like the price and all that.
+
+[Shrikant Kshirsagar] 10:47:48
+And, uh, you should not see… there'll be some columns with null values, like the essays we saw.
+
+[Shrikant Kshirsagar] 10:47:54
+And, uh, maybe one or two more. So… so when you… when you find that, uh, you can just, you know, like.
+
+[Shrikant Kshirsagar] 10:48:01
+Deal with the… what to do, you know? Like, you can check this.
+
+[Shrikant Kshirsagar] 10:48:05
+And then you can decide what you're missing values. Now, for the missing values, there are two types of missing values. There's one.
+
+[Shrikant Kshirsagar] 10:48:13
+And with the project essay, as we saw. Uh, number 3 and number 4.
+
+[Shrikant Kshirsagar] 10:48:16
+They'll have a lot of NAN values. Why? Because, again, the application process changed, and it didn't require people to submit the last two essays.
+
+[Shrikant Kshirsagar] 10:48:24
+So, how can we…. How can we combine the essays? How can we come… sorry, how can we treat the missing values? How can we….
+
+[Shrikant Kshirsagar] 10:48:32
+Uh, you know, like, uh…. Make it, um….
+
+[Shrikant Kshirsagar] 10:48:36
+You know, like, uh, make sure that we are taking all the data into account.
+
+[Shrikant Kshirsagar] 10:48:40
+While knowing that there's some, um, some values that I'm missing.
+
+[Shrikant Kshirsagar] 10:48:44
+So, here we have provided you a hint for one possible strategy to do it.
+
+[Shrikant Kshirsagar] 10:48:49
+Uh, is this the best strategy to do it? Um, may or may not be.
+
+[Shrikant Kshirsagar] 10:48:52
+And I would encourage you to…. Potentially, you know, be creative.
+
+[Shrikant Kshirsagar] 10:48:57
+And, uh, and see if you can come with other ways to combine the essays, right?
+
+[Shrikant Kshirsagar] 10:49:02
+But the simplest… one of the simplest ways you can do it.
+
+[Shrikant Kshirsagar] 10:49:05
+Is just basically combine all the essays, whether there's 1, 2, 3, or 4, all of them into one single giant essay column.
+
+[Shrikant Kshirsagar] 10:49:13
+And then you can just remove the other columns. So what does this do? It basically automatically accounts for the NAN values, right? Because if it's missing, then it's not going to add to the total assay value.
+
+[Shrikant Kshirsagar] 10:49:23
+But you're also able to, uh, keep all the content of the essays.
+
+[Shrikant Kshirsagar] 10:49:28
+Together, right? Because that might, again, the content of the essay might.
+
+[Shrikant Kshirsagar] 10:49:32
+Play an important role in determining whether a project is approved or not.
+
+[Shrikant Kshirsagar] 10:49:36
+Right? So that is what we are suggesting here, that you can do.
+
+[Shrikant Kshirsagar] 10:49:41
+And then…. Um, that's, that's, uh, that's one way to, you know, do it.
+
+[Shrikant Kshirsagar] 10:49:47
+Another way to think about it, and actually, Adam, uh, thank you for asking the question. Adam asked, could it be two separate problems and models, or do we want a single silver bullet solution to put all data?
+
+[Shrikant Kshirsagar] 10:49:57
+So that was the other thing I was going to mention, is….
+
+[Shrikant Kshirsagar] 10:49:59
+You could, if you have time, if you're interested. Try to develop a separate model for, you know, Mongoli Chest 4SS and one which has two assays.
+
+[Shrikant Kshirsagar] 10:50:10
+And then, you know, make predictions separately for those. That's an option if you want.
+
+[Shrikant Kshirsagar] 10:50:15
+Uh, here in this one, we are looking for one single model that works on all the data.
+
+[Shrikant Kshirsagar] 10:50:19
+So in this case, it's not applicable. In the real-world business context, it may happen that, you know, you want two separate models.
+
+[Shrikant Kshirsagar] 10:50:27
+The reason being that the questions that are asked in the two essays are also very different, right?
+
+[Shrikant Kshirsagar] 10:50:31
+Like, prior to this date, the questions that were asked were these.
+
+[Shrikant Kshirsagar] 10:50:35
+And prior to… after that date, the questions that were asked were these.
+
+[Shrikant Kshirsagar] 10:50:38
+And so the type of responses you expect to get from the teachers who are applying to this.
+
+[Shrikant Kshirsagar] 10:50:44
+May differ significantly from, you know, before the date to after this date, right?
+
+[Shrikant Kshirsagar] 10:50:48
+And so, in the real world, it might…. Makes sense to create two different models, uh, and treat those two separately.
+
+[Shrikant Kshirsagar] 10:50:55
+Having said that, having said that, though, for this particular project.
+
+[Shrikant Kshirsagar] 10:50:58
+Uh, the recommendation is to just combine them into one and use a single model to make the predictions.
+
+[Shrikant Kshirsagar] 10:51:03
+Okay. Howard, do you have a question? If so, go ahead and unmute yourself and ask.
+
+[Howard Mitchell] 10:51:09
+Yeah, so, um, on the topic of, like, combining everything into one.
+
+[Howard Mitchell] 10:51:13
+Uh, one thought that I had was… I thought it would probably be the way to go for this particular project, especially since you, uh.
+
+[Howard Mitchell] 10:51:20
+Kind of clarified that we're more so focused on. Kind of put yourself in a black box model and interpretability or explainability is not as big of a deal.
+
+[Howard Mitchell] 10:51:28
+So you don't really need to, like, you know, split up any of the, um, essay information, in my opinion, because.
+
+[Howard Mitchell] 10:51:35
+And like I said, we'll just make it easier for the model, less dimensionality.
+
+[Howard Mitchell] 10:51:40
+You don't need the extra column to be able to point to this, like, level of granularity as to why, like, maybe….
+
+[Howard Mitchell] 10:51:45
+Um, you know, um, the…. Explanation as to how it helps the students.
+
+[Howard Mitchell] 10:51:50
+More so help than the introduction… introduction of the students, so on and so forth. So that was kind of, like, my thoughts around it.
+
+[Howard Mitchell] 10:51:55
+But also, you know, what Adam said about the performance of the model.
+
+[Shrikant Kshirsagar] 10:51:56
+No.
+
+[Howard Mitchell] 10:52:00
+Um, if you do somehow get better performance by splitting them, I don't think it hurts to do, like, an A-B test, but….
+
+[Howard Mitchell] 10:52:06
+It's just kind of, like, my thoughts around it.
+
+[Shrikant Kshirsagar] 10:52:08
+Yeah, so thanks for sharing that to us, and that's exactly what I would recommend. If you have time and inclination and want to.
+
+[Shrikant Kshirsagar] 10:52:14
+Try it out, feel free to make two separate models, and then compare the performance of those two models to this one, and let me know if you find any difference.
+
+[Shrikant Kshirsagar] 10:52:21
+Again, for most people, you know, because, you know, we are doing full-time jobs and have other responsibilities.
+
+[Shrikant Kshirsagar] 10:52:26
+Uh, you may not have the bandwidth to do it, but if you're interested, I would certainly encourage you to do it.
+
+[Shrikant Kshirsagar] 10:52:30
+And that's what I would do in the real world, just to test it out.
+
+[Shrikant Kshirsagar] 10:52:33
+Okay, so moving on, in the interest of time, I want to make sure we try to cover as close to, you know, don't go.
+
+[Shrikant Kshirsagar] 10:52:39
+Way too fast, too. We'll go a little bit past, but hopefully not too much, just so that.
+
+[Shrikant Kshirsagar] 10:52:43
+Those of you who need to leave by to have all the information you need to work on the project.
+
+[Shrikant Kshirsagar] 10:52:47
+Uh, and I'll take questions afterwards, okay? Um, we next have the, uh, some missing values in this teacher prefix column as well.
+
+[Shrikant Kshirsagar] 10:52:54
+Now, one of you mentioned that it may not be relevant, but we don't know that at the outset. We'll find it out when we do Eating A.
+
+[Shrikant Kshirsagar] 10:52:59
+So for now, since it has only a few missing values, we can, you know, just develop a strategy of fixing that, and you can do the same thing that we did before. We can just basically….
+
+[Shrikant Kshirsagar] 10:53:08
+Uh, you know, impute using more value or something. And just, uh, get that. This may or may not be important, because the teacher prefix values.
+
+[Shrikant Kshirsagar] 10:53:16
+You know, depending on whether it says doctor, or mister or miss, they may or may not influence the outcome, right? So, we don't know this in the outset, so that's why we keep this call.
+
+[Shrikant Kshirsagar] 10:53:25
+Okay? Um…. So, yeah, you can impute the values using whatever imputation strategy you want.
+
+[Shrikant Kshirsagar] 10:53:30
+Note that this category, because you can't use mean or something, right? So you have to use something like mold or something else.
+
+[Shrikant Kshirsagar] 10:53:36
+And then after that, make sure that, you know, there's no missing values. First forward, you can inspect the post period rows of data frame.
+
+[Shrikant Kshirsagar] 10:53:42
+Uh, and make sure everything looks good. And now comes the EDA part. So now, uh, when you're doing EDA.
+
+[Shrikant Kshirsagar] 10:53:48
+You want to, uh, you know, like, there's a lot of text in here, right? So you need to do some text processing.
+
+[Shrikant Kshirsagar] 10:53:54
+And so we use this NLTK library. To, uh, get all the, uh, you know, to do the text analysis, as well as PFDF, IDF, uh, transformer.
+
+[Shrikant Kshirsagar] 10:54:02
+Now, note that NLP is something you may not have covered so far.
+
+[Shrikant Kshirsagar] 10:54:05
+So this… so whatever is in here. Just try to, at a high level, understand what it's doing. We'll be covering this in more detail in featured classes.
+
+[Shrikant Kshirsagar] 10:54:13
+But this is just to give you a taste of, you know, what is to be coming. So, even if you don't understand all the details in here, that's quite okay, you know?
+
+[Shrikant Kshirsagar] 10:54:21
+We'll, we'll, uh, we just want to get. This… think of this as a way to just process the text data into something that the machine learning model will understand.
+
+[Shrikant Kshirsagar] 10:54:28
+Okay, so that's what we're going to be using the NLDK library search for.
+
+[Shrikant Kshirsagar] 10:54:33
+So, PDA, uh, in order to help you guide, uh, there's a lot of questions, a lot of things you can do in EDA, but to… in order to help keep the scope constrained.
+
+[Shrikant Kshirsagar] 10:54:41
+There's a few questions that we have used as checkpoints to guide you along the ADA, and that'll help you build the right model and do the right analysis on it.
+
+[Shrikant Kshirsagar] 10:54:48
+So, the questions are explicitly listed here, and you can write code to answer these questions, right? You know, like, for example, what is approved versus not approved?
+
+[Shrikant Kshirsagar] 10:54:56
+This will tell you about class imbalance. You can look at approval rate per state, or per project.
+
+[Shrikant Kshirsagar] 10:55:02
+Category, you know, if there's any, like, uh… this is gender bias, but it should be actually teacher prefix bias. You know, the teacher prefix column affects the approval rate.
+
+[Shrikant Kshirsagar] 10:55:09
+So all of these things will help you determine, you know, like, which columns may or may not be important. And if you find it, for example, each of your prefix column is not as important, then you can drop it.
+
+[Shrikant Kshirsagar] 10:55:16
+But don't drop it before you do this analysis, right? After you do this analysis, you may be going to find that it's not important, but don't do it before.
+
+[Shrikant Kshirsagar] 10:55:24
+Um, and then you can, you know, do further analysis, again, the more patterns you can uncover, the.
+
+[Shrikant Kshirsagar] 10:55:29
+Easier it is for you to build a correct machine learning model for this, right?
+
+[Shrikant Kshirsagar] 10:55:33
+So here are some suggestions, and you can obviously do more of these analysis you want.
+
+[Shrikant Kshirsagar] 10:55:38
+Don't go overboard, but, you know, just enough analysis so you know, like, what type of machine learning algorithms and problem techniques to apply.
+
+[Shrikant Kshirsagar] 10:55:45
+Right? So, after that, you know, the EDS section is complete, now you know, now you can… now you're ready to, like, uh….
+
+[Shrikant Kshirsagar] 10:55:53
+Prepare the data for applying machine learning. So what do you mean by prepare?
+
+[Shrikant Kshirsagar] 10:55:55
+Well, there's a lot of text data in here, right? And machine learning models, you can't directly, at least the models you've learned so far, you can't directly put text data in there. The Gen AI models, yes, you can.
+
+[Shrikant Kshirsagar] 10:56:05
+Uh, in here, you have to do some transformations. So, what are some of the things you'll be doing here? You'll see that there's a class imbalance.
+
+[Shrikant Kshirsagar] 10:56:12
+So, you know, very similar to what we had before, we'll have to use some rebalance… resampling techniques.
+
+[Shrikant Kshirsagar] 10:56:18
+To address that. We also have a lot of text data for especially the essay column, so we'll need to do some pre-processing there.
+
+[Shrikant Kshirsagar] 10:56:24
+We have a lot of categorical data, so again, we use some encoding.
+
+[Shrikant Kshirsagar] 10:56:28
+Some scaling, you know, uh, reprocessing, standardization, normalization, uh, that we always do for data.
+
+[Shrikant Kshirsagar] 10:56:34
+And then, finally, we can do the train-test split. Right? So, class imbalance, again, you know, you can undersample, oversample, a lot of options here.
+
+[Shrikant Kshirsagar] 10:56:42
+It's… use your creativity to figure out which. Which one, uh, which sampling, oversampling or unsampling method, uh, makes sense. You can even try out a few and see which… which helps a lot.
+
+[Shrikant Kshirsagar] 10:56:53
+But you will have to address this, otherwise your machine learning models' performance will suffer.
+
+[Shrikant Kshirsagar] 10:56:59
+For text processing, there are basically two main steps you're asking to, uh, do here. And again, because NLP is not covered in detail, we won't go.
+
+[Shrikant Kshirsagar] 10:57:06
+Into too much detail here, but you want to basically make sure that the text is clean. What we mean by clean is, you know, it has a certain form. It's not like.
+
+[Shrikant Kshirsagar] 10:57:13
+As we write, uh, colloquially. Because that makes it harder to process the text.
+
+[Shrikant Kshirsagar] 10:57:18
+And then you want to convert it into some numeric features, right?
+
+[Shrikant Kshirsagar] 10:57:21
+This is basically what we do with categorical features as well, right? Because the machine learning model doesn't understand individual categories, it understands numbers.
+
+[Shrikant Kshirsagar] 10:57:27
+So, for text cleaning, there's a lot of different, uh…. You know, challenges that you can just.
+
+[Shrikant Kshirsagar] 10:57:35
+Quickly solved by using this piece of code we've given you.
+
+[Shrikant Kshirsagar] 10:57:38
+That does a lot of substitutions and transformations on the text.
+
+[Shrikant Kshirsagar] 10:57:41
+So that it's in a standard form. Right? And so there's this, uh, function that is defined pre-processed text that will just take all the text and.
+
+[Shrikant Kshirsagar] 10:57:49
+Put it in a standard form, so it's easier for the….
+
+[Shrikant Kshirsagar] 10:57:53
+Text to be encoded into numerical features. Right? So, that's what you'll do in this step, and now the next step is to convert to numeric features.
+
+[Shrikant Kshirsagar] 10:58:16
+And what we are suggesting here to use is the bag of words, uh, bag of words method.
+
+[Shrikant Kshirsagar] 10:58:16
+So, the basic idea is very simple. You represent each word as, uh….
+
+[Shrikant Kshirsagar] 10:58:16
+As a vector in a high-dimensional space. And whenever that word appears in a particular essay or in a particular document, you put a 1 there. If it doesn't, then you put a 0.
+
+[Shrikant Kshirsagar] 10:58:20
+Right? So this is how it looks like, and this is a way to convert words into.
+
+[Shrikant Kshirsagar] 10:58:25
+Numbers that the machine learning model can then process. Right? There are pros and cons for this, which again, we won't go into detail.
+
+[Shrikant Kshirsagar] 10:58:31
+This will be covered in the NLP class. But this is, like, one of the simplest things you can do to….
+
+[Shrikant Kshirsagar] 10:58:37
+Encode the text into numerical values that we can use in the machine learning model.
+
+[Shrikant Kshirsagar] 10:58:41
+So, you can, again, import this, uh, you know, you can use this count vectorizer class to do this.
+
+[Shrikant Kshirsagar] 10:58:47
+I would highly recommend you read the documentation in Skiller. It's very, very well documented there.
+
+[Shrikant Kshirsagar] 10:58:52
+Uh, and then, uh, use that to basically convert this into a document term matrix. So, the rows represent documents and columns represent the words, like over here.
+
+[Shrikant Kshirsagar] 10:59:02
+Right? Uh…. You can also, you know, we talked about this before, like, interpreter is not as important here, so you can think about maybe applying PCA here.
+
+[Shrikant Kshirsagar] 10:59:11
+Uh, you don't have to, but if you do, it might save time in model training. Again, this is strictly optional, but it's up to you to decide, uh, to see if it.
+
+[Shrikant Kshirsagar] 10:59:18
+Helps you a lot. Uh, finally, we do, uh, you know, the categorical variables are one-hot encoding, the standard thing.
+
+[Shrikant Kshirsagar] 10:59:25
+And then, uh, scaling for numerical values, so, you know, this is, again, important for some machine learning models, critical that you do that.
+
+[Shrikant Kshirsagar] 10:59:32
+And after all of this, the dataset is now…. In a format that can be actually put into machine learning models directly. So now you can do the train, test, split.
+
+[Shrikant Kshirsagar] 10:59:40
+And then, uh, you know, start building a model. Okay, so these are the basic steps required for data preparation.
+
+[Shrikant Kshirsagar] 10:59:48
+For, uh, building the machine learning model. Now that you've done this, uh….
+
+[Shrikant Kshirsagar] 10:59:53
+You have to… you can start building a model. Now, again, as we said before, this is a big, big data set.
+
+[Shrikant Kshirsagar] 10:59:59
+So, in order to save you time, it's better to, you know, start off with a subset of datasets. So we suggest you start off with 20%, up to you, you can do 20-25%.
+
+[Shrikant Kshirsagar] 11:00:09
+Uh, and then kind of, like, build a model on that and do high-performance tuning on that. And then, at the end, you can use the whole data set.
+
+[Shrikant Kshirsagar] 11:00:15
+Right? So, the steps are actually very similar to what we discussed in the last one, you know, that's why I'm going through them a little bit faster, because we've already covered… so you can start with object regression.
+
+[Shrikant Kshirsagar] 11:00:24
+Do your hyperparameter tuning, like we did last time. And then you can use, you know, another model, like decision tree or random 4S or HGBoost.
+
+[Shrikant Kshirsagar] 11:00:33
+And do the same steps, right? So, the idea… this part is very similar to what we did in the first one, and so basically a repeat of the steps would be what would be required here.
+
+[Shrikant Kshirsagar] 11:00:43
+Of course, this will take a little bit longer, because data set is different, and a couple of things that are different.
+
+[Shrikant Kshirsagar] 11:00:48
+But the overall steps will be very, very similar. Right? And finally, the evaluation. And again, you can do the exact same thing I did last time. You can build confusion matrix, you can plot the ROC AUC curves, you can print a class action report.
+
+[Shrikant Kshirsagar] 11:01:00
+And basically get a sense of which model performs best, right?
+
+[Shrikant Kshirsagar] 11:01:03
+Uh, again, some suggestions here to consider bagging boosting. You don't have to, you can use your own, uh….
+
+[Shrikant Kshirsagar] 11:01:09
+Intuition to see which are the models work best. But after you do all this, there's a, like, you can put a comparison of different methods and evaluation metrics, and which ones.
+
+[Shrikant Kshirsagar] 11:01:19
+Perform well, which ones didn't perform well? When you do this, make sure you, for each of those models, you're using hype… you're doing hyperparameter tuning to get the best possible model.
+
+[Shrikant Kshirsagar] 11:01:27
+Right? Um…. And then, after you, you know, like, do this.
+
+[Shrikant Kshirsagar] 11:01:32
+You should be able to get a model who's, you know, at least 60-70% accurate.
+
+[Shrikant Kshirsagar] 11:01:37
+Uh, after I've done all the hypergrunt tuning and regularization. Uh, and if you notice any word fitting, make sure that you… you can't… you train the model.
+
+[Shrikant Kshirsagar] 11:01:46
+Hyperonority tuning, you don't do it correctly, so it's not overfilted.
+
+[Shrikant Kshirsagar] 11:01:50
+Right? So, this is…. The steps here are basically very similar to what you saw in the learning loan, uh, Lending Club one, right?
+
+[Shrikant Kshirsagar] 11:01:57
+It's just that the data set is very different in nature, like, there's a lot of text data in here, so we used a lot of.
+
+[Shrikant Kshirsagar] 11:02:03
+Nltk and other things to pre-process data. But otherwise, the steps are very similar.
+
+[Shrikant Kshirsagar] 11:02:08
+And so, the idea here is machine learning, you know, a lot of the techniques.
+
+[Shrikant Kshirsagar] 11:02:12
+Are transferable from domain to domain. Uh, the details sometimes differ. Sometimes significantly, sometimes not significantly. And some….
+
+[Shrikant Kshirsagar] 11:02:19
+Some techniques, for example, that might work really well here, and actually perform really poorly here, because of nature data set.
+
+[Shrikant Kshirsagar] 11:02:25
+And that's… that's part of the beauty of machine learning, is you don't know in advance. There's no one technique that works uniformly well for the same kind of problem. It really depends on the data.
+
+[Shrikant Kshirsagar] 11:02:34
+Um, so this is… this is what the dataset, uh, looks like.
+
+[Shrikant Kshirsagar] 11:02:37
+Now, before we end, I know you have a question, Vikas, but I just want to quickly go over the project rubrics, and then our starting questions, okay?
+
+[Shrikant Kshirsagar] 11:02:43
+So, project rubrics for Learning Hope. Uh, so the dimensions we are evaluating is, again, very similar to the seven dimensions we have.
+
+[Shrikant Kshirsagar] 11:02:51
+First one is, you know, understanding objectives. So, how well you understand your objective. When you write out, you know, your understanding of what needs to be done.
+
+[Shrikant Kshirsagar] 11:02:58
+Eda is another dimension we'll be evaluating a lot. Uh, how do you do data processing and vectorization? Since this is using NLDK, we, you know, this is an important one, which didn't apply here, but this one.
+
+[Shrikant Kshirsagar] 11:03:09
+We will… this is important over here, so this will be another….
+
+[Shrikant Kshirsagar] 11:03:12
+Rubric, uh, dimension. And then the other things are very similar, the model training, hyperparameter tuning.
+
+[Shrikant Kshirsagar] 11:03:19
+Evaluation metrics and result analysis. Those are very similar to the Lending Club one.
+
+[Shrikant Kshirsagar] 11:03:24
+So, again, look at what constitutes excellent, and try to, uh, try to, uh, you know, like, solve this in this way.
+
+[Shrikant Kshirsagar] 11:03:32
+So, this is basically the rubrics for this one. If there are any questions now, at this point, I'll raise your hand, and I'll take questions online, but if you don't have questions, you're welcome to drop off.
+
+[Shrikant Kshirsagar] 11:03:45
+And try it on your own, and then, um, if you have more questions, you can come back on Wednesday.
+
+[Shrikant Kshirsagar] 11:03:51
+For technical coaching session, I'd be happy to answer those for you.
+
+[Shrikant Kshirsagar] 11:03:54
+But I hope this was helpful. This will give you a good start as to how to approach these problems.
+
+[Shrikant Kshirsagar] 11:03:59
+And, uh, it really is an opportunity for you to really.
+
+[Shrikant Kshirsagar] 11:04:03
+Uh, you know, apply all that you've learned, uh, and other things that we may have picked up on your own.
+
+[Shrikant Kshirsagar] 11:04:08
+And see what works, what doesn't work. That's the best way to master machine learning, so I'd highly recommend.
+
+[Shrikant Kshirsagar] 11:04:13
+So, thank you very much. I hope you have a nice rest of your Sunday.
+
+[Shrikant Kshirsagar] 11:04:18
+For those of you who are in the heat wave, uh, first day of summer, it's very roasting, so stay cool, stay safe.
+
+[Shrikant Kshirsagar] 11:04:24
+And, uh, good luck, and, uh, with the project. I hope to see you again soon.
+
+[Shrikant Kshirsagar] 11:04:28
+You're welcome, Hawaii. So, I'll start, uh, by taking questions now, because you have a question?
+
+[Shrikant Kshirsagar] 11:04:34
+Go ahead and unmute yourself, Vanessa.
+
+[Vikas Chhabra] 11:04:37
+Kind of things, yeah. So the question I have was with respect to, I think, the natural language processing we talked about.
+
+[Vikas Chhabra] 11:04:44
+You know, the NLTK. So I'm just trying to get my head around the whole, um….
+
+[Shrikant Kshirsagar] 11:04:47
+Yeah.
+
+[Vikas Chhabra] 11:04:51
+Natural language processing in general. I think the…. The things mentioned in the resources, I think, talk about the NLT can be talking about bag of words, and.
+
+[Vikas Chhabra] 11:04:59
+Term frequency and inverse document frequency, and all of that. But in general, I think the more advanced techniques allow us to kind of use the whole.
+
+[Shrikant Kshirsagar] 11:05:03
+Yeah, that's….
+
+[Vikas Chhabra] 11:05:09
+Encoding and capturing the contextual and semantics of the natural language processing, the….
+
+[Vikas Chhabra] 11:05:16
+The capabilities that we have available to Davis. You know, the encodings and all of that.
+
+[Vikas Chhabra] 11:05:20
+So I'm just trying to understand, because. When we are using these, if I can call it that, primitive techniques of, you know, natural language processing, we're.
+
+[Vikas Chhabra] 11:05:30
+Kind of ignoring those techniques? Is it because. They fall more in the deep, uh, learning domain.
+
+[Vikas Chhabra] 11:05:36
+Or, uh, or we're just trying to keep it simple and just talk about, you know, those.
+
+[Shrikant Kshirsagar] 11:05:42
+Yeah. Yeah, I like how you said primitive techniques, because….
+
+[Vikas Chhabra] 11:05:42
+Those basic natural language processing themes.
+
+[Shrikant Kshirsagar] 11:05:47
+Uh, if you think about it, like, these techniques are fairly recent. I mean, you know, they're not, like, from 16th to 17th century.
+
+[Shrikant Kshirsagar] 11:05:54
+We still study Newtonian in college, remember? And it's from what? Like, Isaac Newton was doing this in the 17th century, but….
+
+[Vikas Chhabra] 11:05:55
+Hey, Dave.
+
+[Shrikant Kshirsagar] 11:06:01
+You know, we still go through our identity and start, right?
+
+[Vikas Chhabra] 11:06:02
+Okay. No, but, but what? Yeah, yeah. But you get what I'm trying to say, right? Because we are….
+
+[Shrikant Kshirsagar] 11:06:03
+So, no, yeah.
+
+[Vikas Chhabra] 11:06:08
+Trying to totally ignore the whole semantic and contextual meaning of the words and phrases in the natural language processing, the essays, and.
+
+[Vikas Chhabra] 11:06:16
+All of that, because that may… because that can take away.
+
+[Vikas Chhabra] 11:06:19
+A lot of, you know, this manual things of, you know, looking at specific words, if it has the same word as an already approved.
+
+[Vikas Chhabra] 11:06:27
+Project, or something like that, right? So that's what I'm trying to get at. I mean, is it only because that's only possible using.
+
+[Shrikant Kshirsagar] 11:06:28
+Yeah, yeah.
+
+[Vikas Chhabra] 11:06:35
+Giant networks, deep neural networks that. That can do that kind of processing, and we need GPU power and all of that, and.
+
+[Vikas Chhabra] 11:06:42
+Simple processing, simple processing, natural language processing can be done without all of that overhead.
+
+[Shrikant Kshirsagar] 11:06:48
+Yeah, so one of the main limitations… that's a really good question. So the question is, you know, like, how do I take into account the semantic structure and all that, right? So one of the limitations of bag of words, which is the simplest possible thing you can do, is that it doesn't take into that… into account.
+
+[Shrikant Kshirsagar] 11:07:01
+There are slightly more advanced techniques in natural language processing. Remember, natural language processing is an old field, you know? There's transformers and other deep learning things.
+
+[Shrikant Kshirsagar] 11:07:10
+Only came into the scene very recently, but people have been doing NLP for a very long time.
+
+[Shrikant Kshirsagar] 11:07:14
+And there are other techniques that are used, you know, with two words, three words.
+
+[Shrikant Kshirsagar] 11:07:19
+2 grams, 3 grams, uh, that help you… that can, uh, take into account the semantic structure.
+
+[Shrikant Kshirsagar] 11:07:25
+Now, how much semantic structure you can take into account? With these techniques, as you, as you call them, primitive, is limited, which is why transformers and these things.
+
+[Shrikant Kshirsagar] 11:07:35
+Are so useful, because they can take into account a lot more context, right? There's this concept of context window.
+
+[Shrikant Kshirsagar] 11:07:41
+Right? Which, in current, uh, today, there's millions of tokens or something, right?
+
+[Shrikant Kshirsagar] 11:07:45
+The point is, yes, as you want to take in more context.
+
+[Shrikant Kshirsagar] 11:07:50
+In the semantic structure, naturally, your processing power will go up.
+
+[Shrikant Kshirsagar] 11:07:54
+And at some point, you know, you'll start hitting LLM levels, processing power, right?
+
+[Shrikant Kshirsagar] 11:08:00
+Um, and so the reason we're not doing that now is because we don't want you to build your own LLM.
+
+[Shrikant Kshirsagar] 11:08:05
+For analyzing this, right? Uh, so the part here to keep it simple, but also because in a lot of applications.
+
+[Shrikant Kshirsagar] 11:08:12
+Uh, you don't necessarily need. All that, uh, all that, uh, understanding of the semantic structure. As I said, you know, NLP, people have been using NLP productively for many, many years.
+
+[Shrikant Kshirsagar] 11:08:23
+Without having, you know, all these LLMs and other things we have now, right? Of course, now that we have access to these things, we can use them productively.
+
+[Shrikant Kshirsagar] 11:08:31
+And, uh, get even more out of it. But the point you're trying to make here is, even with the so-called primitive techniques that you described, you can still go pretty far.
+
+[Shrikant Kshirsagar] 11:08:40
+Right? So, the idea here is to, like, kind of, like, see.
+
+[Shrikant Kshirsagar] 11:08:44
+How far you can go with the primitive techniques, because. Sometimes that's… that's all you need, you know, and… and these ones….
+
+[Vikas Chhabra] 11:08:49
+Right.
+
+[Shrikant Kshirsagar] 11:08:50
+Much faster to train, much faster to, you know, deploy and all that.
+
+[Shrikant Kshirsagar] 11:08:54
+You know, and so you're not bottlenecked by, you know, like, the processing speed of the big models.
+
+[Shrikant Kshirsagar] 11:08:59
+So, yeah, you're right, we could use the other ones too, but yeah, I mean, there's a whole module on that, so we'll get there when we get there.
+
+[Vikas Chhabra] 11:09:00
+Makes sense.
+
+[Shrikant Kshirsagar] 11:09:06
+Hope that answers the question. Yeah? No problem. However, do you have a question?
+
+[Vikas Chhabra] 11:09:07
+Thank you. Yeah, thanks.
+
+[Shrikant Kshirsagar] 11:09:12
+Go ahead and unmute yourself and ask.
+
+[Howard Mitchell] 11:09:16
+Yeah, so, um, my question is with regard to… well, one of my concerns is, like, will….
+
+[Howard Mitchell] 11:09:22
+Basically explode the dimensionality of the dataset, um, like, once we… because you're going through all these different essays.
+
+[Howard Mitchell] 11:09:29
+Um, they're all, you know, unique in their own way. You're gonna have a huge vocabulary, um.
+
+[Howard Mitchell] 11:09:34
+And that's… I'm just trying to put in my mind, like, how many features we're gonna ultimately.
+
+[Howard Mitchell] 11:09:40
+End up getting from this, and trying to bounce off. A few, kind of, ideas that may, uh, streamline things. I was thinking, you know, maybe….
+
+[Howard Mitchell] 11:09:47
+As opposed to tokenization at the word level, even after you remove stop words, you're still going to have a whole lot of, you know, different, unique words.
+
+[Howard Mitchell] 11:09:55
+Uh, tokens. Would it be more….
+
+[Howard Mitchell] 11:09:59
+Um, would it be…. More advantageous for us to tokenize by, like, trigrams or something, you know, kind of….
+
+[Howard Mitchell] 11:10:06
+Have a fewer amount of tokens, or what are your thoughts.
+
+[Shrikant Kshirsagar] 11:10:09
+Yeah, I would definitely try that. Programs and, uh, you know, diagrams, trigrams, and even, you know.
+
+[Shrikant Kshirsagar] 11:10:15
+Higher engrams, basically. Uh, another suggestion, I think is mentioned here is using PCAs, right? So….
+
+[Shrikant Kshirsagar] 11:10:21
+Um, especially combined with the engrams, you might be able to actually.
+
+[Shrikant Kshirsagar] 11:10:25
+Keep the dimensionality of the dataset. Constrained by, uh, you know, using… selecting a top key dimensions that preserve, you know.
+
+[Shrikant Kshirsagar] 11:10:35
+Like, most of the model variants. It doesn't have to be 95%, it can be, you know, lower or higher, depending on.
+
+[Shrikant Kshirsagar] 11:10:40
+How many, uh, how many components, uh, how many principal components you keep.
+
+[Shrikant Kshirsagar] 11:10:45
+But the idea is, yes, you can basically…. Use a combination of things to control the dimensionality of the… of the feature space.
+
+[Shrikant Kshirsagar] 11:10:54
+You're right in that, you know, like, the fleet mental application of drag of words is just gonna….
+
+[Shrikant Kshirsagar] 11:11:00
+Explore the dimensionality, and you're just gonna take forever to trade, so you really don't want that.
+
+[Shrikant Kshirsagar] 11:11:04
+Uh, in practice, that's exactly what we do. We use cryograms and a combination of that with PC and other things to make it more contained.
+
+[Shrikant Kshirsagar] 11:11:12
+Does that make sense? I hope that makes sense.
+
+[Howard Mitchell] 11:11:15
+Yeah, it makes perfect sense. Thank you.
+
+[Shrikant Kshirsagar] 11:11:17
+No problem. Uh, and I have a question for you, Howard. Since I'm seeing two of you in here, how is that?
+
+[Shrikant Kshirsagar] 11:11:24
+Am I just seeing things? Are you… this is Howard Mitchell and another half.
+
+[Howard Mitchell] 11:11:27
+You know, from my phone. I log on from my phone and my laptop, so sometimes I get tired of sitting down in the chair, so I just like to walk around the house while I'm….
+
+[Shrikant Kshirsagar] 11:11:29
+Oh, okay, okay.
+
+[Howard Mitchell] 11:11:36
+In class, so yeah, that's why it's always two of me during these sessions.
+
+[Shrikant Kshirsagar] 11:11:40
+So there's a doppelganger with the same name. Anyway, thank you.
+
+[Shrikant Kshirsagar] 11:11:43
+All right, uh, let's…. No worries. Uh, who's next? Adam, you have a question? Go ahead and ask.
+
+[Howard Mitchell] 11:11:43
+Nah, no worries.
+
+[Adam Rosin] 11:11:51
+Hi, can you hear me okay? Okay, so my question is, um, you know, I was looking at….
+
+[Shrikant Kshirsagar] 11:11:52
+Yes, I can hear you.
+
+[Adam Rosin] 11:11:58
+The other data file, the resources. Um, and also, just reading about.
+
+[Adam Rosin] 11:12:05
+This organization, um…. And it seems to me like you can sort of.
+
+[Shrikant Kshirsagar] 11:12:07
+Yeah.
+
+[Adam Rosin] 11:12:11
+Further classify the things in the resources file. Um, into sort of certain categories of what those type of resources are, like, you know, you can see, like, some things are, like, music supplies, some things are, like.
+
+[Adam Rosin] 11:12:24
+We want books, some things are, like. Um, you know, have… go on a field trip somewhere.
+
+[Adam Rosin] 11:12:31
+Um, so, I mean, it's not like there… there is a decent amount of variation, but I think there could be….
+
+[Adam Rosin] 11:12:37
+You know, a not-large, finite number of categories, but is that… am I, like, going down a rabbit hole and should not be….
+
+[Adam Rosin] 11:12:44
+Thinking about it that much in depth.
+
+[Shrikant Kshirsagar] 11:12:47
+So, first of all, I wouldn't…. Uh, I would never say no to going down rabbit holes, because sometimes you never know what kind of treasure you'll find down there.
+
+[Adam Rosin] 11:12:55
+Okay.
+
+[Shrikant Kshirsagar] 11:12:55
+But of course, there's an infinite number of rabbit holes to explore, so I would suggest, you know, don't go down every rabbit hole you find, because then you'll just be stuck in this loop forever.
+
+[Shrikant Kshirsagar] 11:13:03
+Um, in terms of what you're suggesting of, you know, categories of different, uh, types of resources, yes, there are different categories of them.
+
+[Shrikant Kshirsagar] 11:13:11
+They're not explicitly listed here, you know, the resources itself just says.
+
+[Shrikant Kshirsagar] 11:13:15
+The description and the quantity. So, if you want to go down that rabbit hole.
+
+[Shrikant Kshirsagar] 11:13:19
+You'd have to basically, uh…. Kind of come up with a way to deduce the type of category based on the description.
+
+[Shrikant Kshirsagar] 11:13:27
+And, uh, some of the descriptions actually are missing, if I remember correctly, in this resources.cspace, so you may not be even able to.
+
+[Shrikant Kshirsagar] 11:13:34
+Figure out what those are. You can call them a category or whatever, that's not a problem. But the point is, you'd have to….
+
+[Adam Rosin] 11:13:37
+Well….
+
+[Shrikant Kshirsagar] 11:13:40
+One way or another, reduce the category. But another way you… another shortcut you could use, or another proxy you can use.
+
+[Shrikant Kshirsagar] 11:13:47
+Is, uh… and it's not a perfect proxy, but…. You can try to look at the… there's a… there's a column… there's a couple of columns in the train CSV file.
+
+[Shrikant Kshirsagar] 11:13:57
+Uh, like, project, uh, subject category and subcategory. That you can use, uh, to kind of, like, essentially….
+
+[Shrikant Kshirsagar] 11:14:06
+Stand in for the kind of resources requested. Right? I'm not saying it's a perfect correlation, but….
+
+[Shrikant Kshirsagar] 11:14:12
+For example, if you have the project subcategory or project category, uh, subcategory, subject category.
+
+[Shrikant Kshirsagar] 11:14:19
+As music, then you can, you know. Reduce, or you can guess that the resource type requested will be musical instruments, right?
+
+[Shrikant Kshirsagar] 11:14:28
+But as if it's, uh, something like history and civics. Then maybe it's some, you know, it's not so much music-related, but more like books, or field trips, or something.
+
+[Shrikant Kshirsagar] 11:14:38
+Right? So, in project category, subject category, and project subject subcategory already exist as columns, categorical columns in the train data.
+
+[Shrikant Kshirsagar] 11:14:48
+So, you know, you don't need to invent a new column from the resources file to reduce the type of resource requested.
+
+[Adam Rosin] 11:14:54
+Okay, um…. Thank you for that. And then the other thing I was wondering about, because I went to the actual crowdfunding site.
+
+[Shrikant Kshirsagar] 11:14:55
+So that's….
+
+[Adam Rosin] 11:15:03
+And so I was seeing how it was actually presented. Um, so I know there's certain data, like, we're not getting in our data set that.
+
+[Adam Rosin] 11:15:09
+They do give to…. You know, the end user to….
+
+[Adam Rosin] 11:15:13
+Start putting money on these things. Um, but so I'm… I could see how….
+
+[Adam Rosin] 11:15:19
+You know, based on the resources, right? Like you said, like, some of them are just not descriptive at all, and it's just like….
+
+[Adam Rosin] 11:15:24
+What does this even mean? Um…. But I… but also, I could see how, you know, like, a human looking at that to be like, do I want to contribute money to this project?
+
+[Adam Rosin] 11:15:35
+Um, and saying, like, well, what are you even needing this for? That doesn't make sense to me. And then being like, no, I'm not gonna give money to this, because it's like, I don't even know what you're asking for.
+
+[Adam Rosin] 11:15:45
+Um, so that one, and then…. And then another one, because I was looking at the other data, the, um….
+
+[Shrikant Kshirsagar] 11:15:47
+Exactly. Mhm.
+
+[Adam Rosin] 11:15:54
+The train data, and so one of the con… you know, it was like, how many times previously have you submitted.
+
+[Adam Rosin] 11:16:00
+Um… submit it. And so I was like, that's kind of an interesting one, and so….
+
+[Shrikant Kshirsagar] 11:16:02
+Projects, yeah.
+
+[Adam Rosin] 11:16:05
+You know, most of the… a lot of teachers are at, like, 30, and they're, like, being approved, being approved, being approved. And then one, it was like.
+
+[Adam Rosin] 11:16:11
+You know, 15, and she was denied, and then I was like, I wonder what that was. And then it's like.
+
+[Adam Rosin] 11:16:17
+You know, I look at the, um…. The summary, the project resource summary.
+
+[Adam Rosin] 11:16:22
+And, um…. You know, most of them are just, like, very polite, like, my student needs this, and then here's the reason why, and hers was just like.
+
+[Adam Rosin] 11:16:31
+We need 6 tablets. You know, and 3 exclamation marks. So my one question also was, like.
+
+[Adam Rosin] 11:16:37
+I know, like, we talked earlier about, like, removing special characters, but to me, it's like… it seems having a bunch of exclamation marks.
+
+[Adam Rosin] 11:16:45
+Is highly correlated to…. You being denied things.
+
+[Shrikant Kshirsagar] 11:16:49
+Yeah, that's an interesting observation, right? I mean, it is true, like, when you….
+
+[Shrikant Kshirsagar] 11:16:53
+When you try to standardize the text, you do lose some nuance and information in that, you know, like exclamation marks and all those things.
+
+[Shrikant Kshirsagar] 11:17:00
+And so there's this debate in general in the, uh…. Not debate, but there's this, like, yeah, a lot of people talk about this in the NLP community, you know, like.
+
+[Shrikant Kshirsagar] 11:17:08
+How much, like, would it… does it always make sense to remove these tokens, or should we keep some, or….
+
+[Shrikant Kshirsagar] 11:17:14
+You know, retain the count of them, I think, like, one approach is, you know, they give you….
+
+[Shrikant Kshirsagar] 11:17:17
+Keep track of all the special characters, and. Use that in a separate… use that as a separate feature vector, you know? How many special characters do you see in the….
+
+[Shrikant Kshirsagar] 11:17:24
+In the, uh, in a given corpus of text. Uh, that's something you could certainly try out.
+
+[Shrikant Kshirsagar] 11:17:30
+In most applications. Um, you know, special characters.
+
+[Shrikant Kshirsagar] 11:17:35
+Don't have a lot of significance, and that's when they're removed.
+
+[Shrikant Kshirsagar] 11:17:38
+In general. Over here, you know, because in this particular context, like, we observed.
+
+[Shrikant Kshirsagar] 11:17:43
+Now, it may be a one-off thing, it may be, like, you know, this is a consistent pattern, there's no way to know.
+
+[Shrikant Kshirsagar] 11:17:48
+So, you could, if you… if you want to, as an experiment.
+
+[Shrikant Kshirsagar] 11:17:51
+Keep track of the special characters, uh, in a separate, you know, feature vector.
+
+[Shrikant Kshirsagar] 11:17:56
+And then use that as an additional column to make predictions, and see if that improves your prediction accuracy.
+
+[Shrikant Kshirsagar] 11:18:01
+I've seen people… yeah. No. So….
+
+[Adam Rosin] 11:18:01
+Okay. Interesting. Um, because that seems a lot easier, because I was going to ask you if, like, is there an easy just way to do, like, sentiment analysis on, like, a phrase?
+
+[Adam Rosin] 11:18:11
+Um, but to me, it seems like. Why even bother with that level of intricacy when it's like, okay, if you're putting three exclamation marks on something.
+
+[Adam Rosin] 11:18:22
+Um, you know, that's… that's different than everyone else.
+
+[Shrikant Kshirsagar] 11:18:22
+Yeah. Yeah, exactly. So, yeah, you can keep track of, you know, you can just keep… you can create a column, for example, that says how many exclamation points, or something like that, right? And then….
+
+[Shrikant Kshirsagar] 11:18:33
+See if that improves accuracy. I suspect most of them will have zeros or ones, so it may….
+
+[Shrikant Kshirsagar] 11:18:37
+It may not improve the prediction accuracy by that much, but, you know, it's worth experimenting. The thing is.
+
+[Shrikant Kshirsagar] 11:18:44
+With the data sets, you really don't know until you try out things. Like, in the real world, you know, whether something will work or not, you just have to try it out.
+
+[Shrikant Kshirsagar] 11:18:52
+And if your hunch tells you this is worth exploring, I would encourage you to explore it and see, you know, how it impacts the performance.
+
+[Shrikant Kshirsagar] 11:18:58
+And who knows, he might model that's much better than all the others.
+
+[Adam Rosin] 11:18:58
+Yeah, this…. This reminds me a lot of my former life of doing, um….
+
+[Shrikant Kshirsagar] 11:19:01
+And be very curious.
+
+[Adam Rosin] 11:19:06
+You know, search engine optimization and trying…. To get people to click on things.
+
+[Shrikant Kshirsagar] 11:19:12
+It's… it's… it's not very uncommon, like, there's a lot of similarities there as well, and now we're in the age of AI engine optimization, so again, very similar.
+
+[Shrikant Kshirsagar] 11:19:21
+Similar things people are thinking about. So, yeah, I mean…. There's a lot of trial and error in machine learning, that's true in general.
+
+[Shrikant Kshirsagar] 11:19:29
+Anyway, I hope that answered your question. No. Yeah, no problem.
+
+[Adam Rosin] 11:19:32
+Yes, thank you very much. Appreciate it.
+
+[Shrikant Kshirsagar] 11:19:36
+Um, okay, any other questions? If so, please raise your hand.
+
+[Shrikant Kshirsagar] 11:19:41
+Um, if not, you're welcome to drop off, and hopefully I'll see some of you on Wednesday.
+
+[Shrikant Kshirsagar] 11:19:46
+Uh, as I said, we have technical coaching sessions to cover anything, any questions that you weren't able to cover today or didn't have a chance to, you know, like.
+
+[Shrikant Kshirsagar] 11:19:55
+Try the project, or read the project. Uh, if you do, please, uh, please show up on Wednesday and we can discuss it then.
+
+[Shrikant Kshirsagar] 11:20:02
+Or, uh, yeah, if you have questions, now you can raise your hand. If not, um, yeah, have a good rest of your Sunday.
+
+[Shrikant Kshirsagar] 11:20:10
+Thank you so much for attending today's class, and for all the good questions you asked. This is fantastic, and….
+
+[Shrikant Kshirsagar] 11:20:16
+I really hope you learned something useful, and this helps you in becoming a more.
+
+[Shrikant Kshirsagar] 11:20:21
+Competent, uh, confident machine learning engineer. Things we discussed today.
+
+[Shrikant Kshirsagar] 11:20:30
+You're very welcome, Adam. You're very welcome. Joseph and Howard, yes?
+
+[Shrikant Kshirsagar] 11:20:37
+Thank you very much. Thank you, everyone, for attending. Thank you, Manoj, Shivam, Sonia, Vish.
+
+[Shrikant Kshirsagar] 11:20:43
+Thank you. Alright, I guess there's no more questions?
+
+[Shrikant Kshirsagar] 11:20:51
+Any more questions while you're on? And do I say, what is this?
+
+[Shrikant Kshirsagar] 11:20:57
+No, that's not a question.
+

@@ -1,0 +1,1209 @@
+[Joseph Babcock] 11:01:40
+So this is a form of polymorphism in Python called dynamic polymorphism where when Python interpreter is running, it looks at the object And depending upon what function that object is attached to, it will have different behaviors. You could have the same
+
+[Joseph Babcock] 11:01:42
+Function name, depending upon what object, it only behaves differently.
+
+[Joseph Babcock] 11:01:47
+This isn't covered explicitly in these slides but i just Also wanted to footnote that there's another form of polymorphism in Python called static polymorphism, which means that you have function with different function with different behavior, depending on what arguments you pass in. So that's like if you have a default parameter
+
+[Joseph Babcock] 11:02:04
+The function may have a different behavior depending upon whether you specify that default or not.
+
+[Joseph Babcock] 11:02:09
+Let me see we had a couple of questions here. One second.
+
+[Joseph Babcock] 11:02:15
+Is a protected method obfuscated same way with Yes, it is. Yeah, exactly. That class name in front of the method. Yep.
+
+[Joseph Babcock] 11:02:24
+And what was the There we go.
+
+[Joseph Babcock] 11:02:35
+All right. Okay, so let's look at a couple examples of that.
+
+[Joseph Babcock] 11:02:40
+Let's say, for example, we have a car class that has the start engine method.
+
+[Joseph Babcock] 11:02:45
+And then it's child class electric car has a start engine method and they have different outputs depending upon which function is called. So same function different outputs.
+
+[Joseph Babcock] 11:02:57
+And it will vary what function you get depending upon what object is calling, whether it's a car or an electric car that's calling this function.
+
+[Joseph Babcock] 11:03:04
+So what we call dynamic polymorphism is that if you have my car and an electric car how this function behaves start engine depends what object it's attached to, whether there's a start engine function on electric car and on car
+
+[Joseph Babcock] 11:03:21
+And Python is figuring out at runtime what kind of an object it's attached to and it determines which start engine to run.
+
+[Joseph Babcock] 11:03:31
+So then I want to show The other type here.
+
+[Joseph Babcock] 11:03:38
+So this is another example of polymorphism is that you have student You have an add grade function on the parent that adds a tuple and then on the child class
+
+[Joseph Babcock] 11:03:57
+Oh, I'm sorry. It's the ISPAS. So ISPAST is no behavior on the parent class and it has this logic on the trial class. So which is past function to run is dynamically determined by Python based on whether is passed is attached to a
+
+[Joseph Babcock] 11:04:15
+New student object or a student object. And then I just want to show this example. So let's say we had a class that was define function a b D equals one.
+
+[Joseph Babcock] 11:04:36
+A plus B. So we would call this another form of polymorphism where you could pass either two arguments or three arguments to this function.
+
+[Joseph Babcock] 11:04:47
+And Python is figuring out at compile time how to execute this, whether it substitutes C or not.
+
+[Joseph Babcock] 11:04:54
+So you could have function with two arguments or function with three arguments overriding C.
+
+[Joseph Babcock] 11:04:58
+So this is another form of polymorphism. Python does not have explicit overloading in the same way that Java or C++ does.
+
+[Joseph Babcock] 11:05:09
+The ways you can do it is through this inheritance like we discussed or default parameters or you could have functions where you could have like a control statement based on what data types are passed in. You had trigger different behaviors, but that's all within one function signature. You don't overload the function signature itself.
+
+[Joseph Babcock] 11:05:27
+Define switch logic based on the types that are passed in.
+
+[Joseph Babcock] 11:05:31
+And you see we have a couple of questions. Give me one second.
+
+[Joseph Babcock] 11:05:37
+During overriding. If parent method is intended a call does a super do that?
+
+[Joseph Babcock] 11:05:42
+Yes, you can if you use a super call your, you're automatically referencing the parent.
+
+[Joseph Babcock] 11:05:49
+So that's one of the conveniences of super is it instead of um if you, instead of defaulting to the method resolution order, if you want to explicitly call the parent, you can use super.
+
+[Joseph Babcock] 11:06:07
+All right.
+
+[Joseph Babcock] 11:06:13
+So these are just some other examples of how you can achieve overloading like behavior in.
+
+[Joseph Babcock] 11:06:18
+Python. So one which we were discussing was default arguments. So depending upon Whether you call greet with no arguments or and use default or not, it will change its behavior. So you have the same function with different behavior based on what arguments you pass in.
+
+[Joseph Babcock] 11:06:35
+And then going back to our discussion earlier about variable length arguments, if we use the .orgs we could have… variable linked inputs we could have two inputs, we could have four inputs. This is retrieving a list of inputs.
+
+[Joseph Babcock] 11:06:50
+Star or tree is a variable listing length of inputs.
+
+[Joseph Babcock] 11:06:57
+Or as I was describing, if you use type checking, so you could check if B is none If A is a string or if B is a string or you default to assuming their numbers. So here we're using branching logic based on type checking too.
+
+[Joseph Babcock] 11:07:15
+Effectively do the form of overloading. So you have inputs and based on checking what type they are, you trigger different conditional outputs.
+
+[Joseph Babcock] 11:07:32
+All right. So just another example of inheritance Let's say we have this class animal And it has protected attributes, name, species, and age.
+
+[Joseph Babcock] 11:07:50
+And it has two
+
+[Joseph Babcock] 11:07:58
+So question, is type and is instance interchangeable? Remember that type will give you a different string output so like If you, let's say equals one and you print
+
+[Joseph Babcock] 11:08:17
+So type is giving you this string class int So if you want to use this If you want to use his instance, if you want to use type instead of is instance, you have to compare to the string output instead of the type itself.
+
+[Joseph Babcock] 11:08:30
+You would just have to modify this code to like class string or class int rather than doing his instance here. But you could use type if eliftype equals equals this string, you could do a similar thing.
+
+[Joseph Babcock] 11:08:43
+This is a little bit more straightforward because you're using the actual type rather than having to compare to the string name of the type when you call type.
+
+[Joseph Babcock] 11:08:56
+All right. So class animal has a get info where it's a function string that prints out these protected attributes.
+
+[Joseph Babcock] 11:09:04
+And it has a make sound. And then we have two derived classes, mammal and bird.
+
+[Joseph Babcock] 11:09:13
+So they're both going to call the constructor of the parent.
+
+[Joseph Babcock] 11:09:17
+And they both have their own make sound function that overrides the parent And then we have… grandchildren classes.
+
+[Joseph Babcock] 11:09:28
+So we have line that's derived from mammal and parrot that's derived from bird.
+
+[Joseph Babcock] 11:09:36
+Sort of grandchildren of animal And they're calling their parent And they also make sound.
+
+[Joseph Babcock] 11:09:45
+Functions overriding the the parent.
+
+[Joseph Babcock] 11:09:55
+We have to think this.
+
+[Joseph Babcock] 11:10:01
+All right. We make a lion class.
+
+[Joseph Babcock] 11:10:06
+Object and a parrot. And if we use the get info function, remember.
+
+[Joseph Babcock] 11:10:13
+Get info only exists on the animal. So our method resolution order looks for it on parrot or lion and then bird and mammal doesn't find it so it has to go back to animal to get the get info function.
+
+[Joseph Babcock] 11:10:27
+But for the make sound, it exists on each of the child classes. So we would call it there. It doesn't have to go up to the method resolution order chain in order to find it.
+
+[Joseph Babcock] 11:10:40
+All right. So that's uh caps off our discussion of object-oriented programming.
+
+[Joseph Babcock] 11:10:50
+So next, we are going to turn to a couple of related topics, one on using custom sort functions which is helpful for things like sorting collections of objects, class objects, and also exception handling, which can be useful within the body of
+
+[Joseph Babcock] 11:11:08
+Instance methods or other types of functions.
+
+[Joseph Babcock] 11:11:14
+All right. So let me go back to the slideshow. All right.
+
+[Joseph Babcock] 11:11:21
+To sort collections in Python, you have two options, two built-in functions.
+
+[Joseph Babcock] 11:11:27
+So one is sorted. So Sorta takes a collection and returns a copy of that collection that's been sorted.
+
+[Joseph Babcock] 11:11:36
+And so the function signature of sorted has three inputs. One is the collection that you're sorting.
+
+[Joseph Babcock] 11:11:43
+Key is a function that describes how does on what basis are you comparing the items?
+
+[Joseph Babcock] 11:11:51
+It's optional. But this allows you to do things like if you want to sort on some specific attribute of a class. For key, you could put in a function that like extracts student grade or extracts employee salary. And so then that that
+
+[Joseph Babcock] 11:12:08
+Attribute becomes the basis of the sort. And then reverse is an argument the default order is ascending, but if you want it to be descending.
+
+[Joseph Babcock] 11:12:19
+Would set reverse equals true. So in contrast, if you didn't want to make a sorted copy of the collection.
+
+[Joseph Babcock] 11:12:30
+You can use sort. So it would be collection name dot sort it has the same sort function signature in terms of key and reverse But this returns none because you are sorting in place the existing collection.
+
+[Joseph Babcock] 11:12:44
+See, we had one uh question here.
+
+[Joseph Babcock] 11:12:50
+Yes, exactly. The key is like you're just specifying the comparator. The comparator is some function It's either a built-in function or it could be like a lambda function that's anonymous. And it's a thing you apply to each element of the collection.
+
+[Joseph Babcock] 11:13:05
+And says, what is the attribute that you used as the basis of sorting
+
+[Joseph Babcock] 11:13:18
+All right, so let's look at a few code examples here.
+
+[Joseph Babcock] 11:13:29
+Come on. All right.
+
+[Joseph Babcock] 11:13:32
+So let's say we had a list of 42915.
+
+[Joseph Babcock] 11:13:39
+And you wanted to… sort these in order.
+
+[Joseph Babcock] 11:13:44
+So you have this original list. So if you were to use the sorted function, you would return a copy of this that's in sorted order. So here's in order we called sorted.
+
+[Joseph Babcock] 11:14:00
+This was the original list, and then we return a sorted copy But we've not modified the original list numbers.
+
+[Joseph Babcock] 11:14:09
+Versus sort. We're calling it in place and we're modifying the original list. Is this an ascending order?
+
+[Joseph Babcock] 11:14:18
+And then recall that this has a none type because we don't return anything.
+
+[Joseph Babcock] 11:14:25
+So this is pretty straightforward when we have numerical data. When you start to have things like strings. It allows us to specify how we're going to sort those strings. So here, if we wanted to sort them by length.
+
+[Joseph Babcock] 11:14:38
+For our key, we could supply the lambda function that takes each element of the collection x returns its length So we would sort them in descending order based on the length of the string so you see that three length strain fig.
+
+[Joseph Babcock] 11:14:54
+Is the beginning and then bananas at the end. And then if we want it in descending order.
+
+[Joseph Babcock] 11:15:00
+We would specify the reverse equals true argument in descending order.
+
+[Joseph Babcock] 11:15:07
+We could also do this. To allow very flexible sort functions. So for example, if we want to use the second letter we could make the comparator a tuple with the second letter and then the first letter. And so then we're sorting by
+
+[Joseph Babcock] 11:15:24
+The second letter as the second letter as basis of comparing these strings.
+
+[Joseph Babcock] 11:15:31
+All right, so let's look at a few examples here.
+
+[Joseph Babcock] 11:15:37
+So… Let's say we had this list of points. So we have a string and then followed by two coordinates.
+
+[Joseph Babcock] 11:15:45
+If we sorted points, what is the order of these outputs going to be?
+
+[Joseph Babcock] 11:15:50
+Just using the default.
+
+[Joseph Babcock] 11:15:56
+What order is this list going to be in?
+
+[Charanteja Sakamuri] 11:16:05
+Based on the first character.
+
+[Joseph Babcock] 11:16:07
+Yeah, exactly. So it will be A, B, C, D, exactly.
+
+[Joseph Babcock] 11:16:12
+Because if you have lists, you'll start by comparing the first element of the list.
+
+[Joseph Babcock] 11:16:21
+So you'll see that in the default sorted order. When you print the first element.
+
+[Joseph Babcock] 11:16:28
+But you could change that behavior. So let's say you wanted to sort by The second element, so you could do that using Lambda function. So for each element in the collection.
+
+[Joseph Babcock] 11:16:41
+You return its second element so like the second 1061.
+
+[Joseph Babcock] 11:16:45
+So then if you do that. You're going to see it will be zero, which corresponds to c Then one, which corresponds to a One, which corresponds to D.
+
+[Joseph Babcock] 11:16:59
+And then six, which corresponds to sect.
+
+[Joseph Babcock] 11:17:05
+So that's why you get CABD, CADB here.
+
+[Joseph Babcock] 11:17:13
+And then you could sort by the second and then use, I'm sorry, the third and use the first as the second as a tiebreaker, which then you would get a different order here.
+
+[Joseph Babcock] 11:17:22
+Enforce different conventions for sorting. It's very flexible. All right. So then… to link this together with our discussion of classes, let's say we have this class employee here.
+
+[Joseph Babcock] 11:17:38
+Which has three public attributes And this print function So let's say you created three employees using remember we don't pass self it's implicit.
+
+[Joseph Babcock] 11:17:53
+You have a constructor with three arguments. And then we created a list with these three employee objects. So if we wanted to determine how to sort them.
+
+[Joseph Babcock] 11:18:01
+We could specify a sorting behavior like for each employee, extract its name And their age. And so you're first going to compare names. If there's a tie in names, you'll sort based on age.
+
+[Joseph Babcock] 11:18:16
+This allows you to specify behavior how to sort things like class objects, which is unlike integers or strings. There's not a default uh way to sort them. So you have to provide a basis of comparing them.
+
+[Joseph Babcock] 11:18:34
+All right. The third topic we'll discuss in this segment is exception handling. So this is about How do we make our code like behave gracefully if we were to encounter errors. So this could be in the class method or it could be in a regular function, but it's just how do we sort of protect our code from
+
+[Joseph Babcock] 11:18:59
+Failing and gracefully recovering. So exception broadly are events that occur cease execution of a program raise an error. And so you want to be able to gracefully handle them. Let's say you have Python that's running a web application. You don't want the server to crash every time it encounters an error.
+
+[Joseph Babcock] 11:19:19
+So you want to have a structured way of handling those.
+
+[Joseph Babcock] 11:19:24
+And so what types of common errors are probably familiar to you in Python? So these things like syntax error.
+
+[Joseph Babcock] 11:19:31
+Like you import a module and there's some code bug in it that leaves a syntax error.
+
+[Joseph Babcock] 11:19:35
+Be a type error, like if you try to like add dictionaries or something. They're value error Like if you uh try to do mathematical operations on a string or file not found if you point to a non-existent file.
+
+[Joseph Babcock] 11:19:54
+So how Python handles these Let me go into slideshow.
+
+[Joseph Babcock] 11:19:57
+Is going to be through a try accept block. And so this probably would be if you code in other languages, this sort of structure is probably familiar to you.
+
+[Joseph Babcock] 11:20:06
+Say you have a block with a try and you have indented within this block you have code that may cause an exception.
+
+[Joseph Babcock] 11:20:14
+And then you have an exception handling block. Which is executed if an exception occurs.
+
+[Joseph Babcock] 11:20:18
+So instead of the code just failing because there's an error here, we have a rule as to how to handle that error and then we can keep executing.
+
+[Joseph Babcock] 11:20:29
+So broadly, the type of Other keywords you can use in one of these Exception handling blocks are try where you try to execute some code.
+
+[Joseph Babcock] 11:20:39
+Exception, which it runs if have an exception. So it can be something like handling of an exception, logging it.
+
+[Joseph Babcock] 11:20:48
+Other sorts of debugging output. There is a rarely used keyword called L's. So the explanation I've usually seen for Why do you need an else block in the try accept else?
+
+[Joseph Babcock] 11:21:03
+Is try, you might you have some code that you're executing errors that you're anticipating and that's handled in the exception block.
+
+[Joseph Babcock] 11:21:11
+And then you might have an else block that happens after try that… runs other code that might throw errors that you're not anticipating this accept block.
+
+[Joseph Babcock] 11:21:23
+So you want to break these up potentially so that you don't just swallow unexpected errors.
+
+[Joseph Babcock] 11:21:30
+But I've in practice very rarely seen this. I feel like it's only in these lectures that I go through that we had cover this. I've never really seen this in actual Python in the wild.
+
+[Joseph Babcock] 11:21:40
+But that's the explanation that's given for why you would have an else clause.
+
+[Joseph Babcock] 11:21:44
+And then there's a finally block, which means regardless of whether try or accept are triggered.
+
+[Joseph Babcock] 11:21:50
+You have a finally block and it's always executed. And this is usually used for things like resource cleanup. Like if you had a database connection or a file handler, you would close it here. So you just make sure you clean up resources that may have been opened.
+
+[Joseph Babcock] 11:22:06
+All right. So let's look at a few coding examples of these This exception handling.
+
+[Joseph Babcock] 11:22:15
+So this would be a syntax error because we're missing a parenthesis that's closing this hello world statement. And if you try to import a module that had such a syntax error, it would give you an error.
+
+[Joseph Babcock] 11:22:26
+I see this one question here. Give me a second to… Q&A.
+
+[Joseph Babcock] 11:22:31
+Can you have multiple accept blocks with the same exception block. Yeah, you can either have, except for different kinds of exceptions, or are you going to handle more than one kind of exception with a single accept call. And I'll show you what that looks like.
+
+[Joseph Babcock] 11:22:47
+Um. So are there unchecked exceptions like Java? Well, I guess it basically checked comes about by whether you put explicitly the exception type in the accept call if you don't explicitly if you don't explicitly specify, well, the accept block will catch everything.
+
+[Joseph Babcock] 11:23:10
+That's how you can create the idea of checked and unchecked exceptions is if you if you provide the details and exception block for it to explicitly catch a particular kind of exception.
+
+[Joseph Babcock] 11:23:23
+If we have return within accept block is it still going to call The finally block.
+
+[Joseph Babcock] 11:23:34
+So you're saying… Okay, I see. So you're saying if there's an accept block will the return cause it to prematurely terminate. The filing should be called, but let's check that in a live example.
+
+[Joseph Babcock] 11:23:50
+So we have to sort of configure that. But we'll code up an example to look at that.
+
+[Joseph Babcock] 11:23:55
+All right. So then just as an example of type error, you're trying to add a string to an integer that's undefined.
+
+[Joseph Babcock] 11:24:06
+Value error or try to cast a string to an int.
+
+[Joseph Babcock] 11:24:10
+And here you're trying to open a non-existent file path.
+
+[Joseph Babcock] 11:24:16
+Path doesn't exist. And when you try to open it to read, it throws an error.
+
+[Joseph Babcock] 11:24:21
+So here's a very standard kind of try accept block. You have two numbers and you want to check You might have a division by zero error.
+
+[Joseph Babcock] 11:24:29
+If so, you want to print this instead of Terminating. So let's do this as Define.
+
+[Joseph Babcock] 11:24:41
+This and… So Harish, your question is your question is If we return in the accept block.
+
+[Joseph Babcock] 11:24:51
+We print this and we print this let's say we return negative one And we instead have a finally
+
+[Joseph Babcock] 11:25:02
+So let's do this. And then we're going to run divide with A, B.
+
+[Joseph Babcock] 11:25:07
+We'll see what the result is.
+
+[Joseph Babcock] 11:25:14
+So this shows you that it returns the negative one, but the finally block is indeed executed regardless because this is printed even after the exception returns the negative one.
+
+[Joseph Babcock] 11:25:27
+Yep, no worries.
+
+[Joseph Babcock] 11:25:32
+All right. So here, so here we are specifying the kind of air we can capture. So we're saying we explicitly capturing exceptions.
+
+[Joseph Babcock] 11:25:45
+And we can check the type of the exception using type.
+
+[Joseph Babcock] 11:25:49
+We can print it. If we define custom exceptions, we could define Remember, we could override the REPR representation.
+
+[Joseph Babcock] 11:25:59
+Parameter to determine what it looks like. And that could be useful for Like if you want to log this could trigger different behavior.
+
+[Joseph Babcock] 11:26:11
+You can also explicitly raise an exception. So use the raise keyword and provide a message in exception that exception is a a class that takes a message argument.
+
+[Joseph Babcock] 11:26:24
+So this can be useful if like you're doing defining tests.
+
+[Joseph Babcock] 11:26:29
+And making sure that your logic will be triggered. And then I think this Adam, this goes back to your question. You can have either accept like different exception statements for different kinds of error or you can do this or you can have a single exception statement and you have comma separated list of the kinds of exceptions or errors.
+
+[Joseph Babcock] 11:26:51
+Single accept block handles and you can have different sets for different accept blocks.
+
+[Joseph Babcock] 11:27:03
+And this is, as we were saying, the elses executed after
+
+[Joseph Babcock] 11:27:14
+After a try block so it's executed only if there's no exception raised, but it's very, like I said, I very rarely seen this.
+
+[Joseph Babcock] 11:27:21
+Just format an actual code but it's Basically, if you want to do conditional logic that uh
+
+[Joseph Babcock] 11:27:29
+In you want to put code here that you think may write exceptions you don't want to capture So the question is, how do you explicitly catch custom raised exception errors?
+
+[Joseph Babcock] 11:27:40
+So, um. You could define a exception that inherits, a custom exception that inherits from exception.
+
+[Joseph Babcock] 11:27:50
+And then you reference the name of that child derived class here. So you accept, you catch that exception here.
+
+[Joseph Babcock] 11:27:59
+So let's say we had
+
+[Joseph Babcock] 11:28:08
+All right. So let's say we want it to be
+
+[Joseph Babcock] 11:28:13
+Class custom exception.
+
+[Joseph Babcock] 11:28:20
+And fine. Here.
+
+[Joseph Babcock] 11:28:31
+So it'll just be very simple, but you could catch a custom exception here
+
+[Joseph Babcock] 11:28:40
+In your accept block or your accept block You could… raise a custom exception somewhere in your block like
+
+[Joseph Babcock] 11:28:59
+Yeah, you could also use multiple inheritance if you wanted to combine your custom exception with other inherit from something else yeah so either inherit just from exception or make it one of the things it inherits from But yeah, then if you inherit from exception, you're able to use the raisin accept patterns to catch it or raisin.
+
+[Joseph Babcock] 11:29:24
+So you can hear it from exception just like you would other other classes and define.
+
+[Joseph Babcock] 11:29:30
+Child classes that inheritance behavior like raisin being caught by except blocks.
+
+[Joseph Babcock] 11:29:41
+And then again, finally is used usually for cleanup. Like if you had a file open, you'd usually close it here. If you had a database connection.
+
+[Joseph Babcock] 11:29:50
+Or other kind of resources you wanted to clean up, you'd usually do enough finally block because that's, again, as we saw here, it's going to be executed Regardless of if the uh Where did we do that? Yeah, it was going to be raised regardless of if you
+
+[Joseph Babcock] 11:30:07
+Have the… going to be run regardless of whether it's try or accept is run.
+
+[Joseph Babcock] 11:30:17
+All right. And then as we were showing with you could have custom exceptions that inherit from exception.
+
+[Joseph Babcock] 11:30:24
+And you can raise them or catch them. So this is going to be helpful like for logging particular types of exceptions or if there is application specific errors that you think are going to arise, you can customize their behavior using
+
+[Joseph Babcock] 11:30:38
+The custom exception.
+
+[Joseph Babcock] 11:30:45
+All right.
+
+[Joseph Babcock] 11:30:50
+So that uh so that caps off our discussion of object-oriented programming oriented programming we've covered we covered three more concepts about three object-oriented programming classes which was inheritance, encapsulation.
+
+[Joseph Babcock] 11:31:06
+And polymorphism. We looked at custom sort functions, which among other things allow you to sort class objects by specifying what basis, what attribute they should be sorted on.
+
+[Joseph Babcock] 11:31:18
+And then we were just looking at exception handling. So let's take another break and then we'll come back and look at file handling and JSON. And so these are somewhat related in that json is a form of a form
+
+[Joseph Babcock] 11:31:35
+Data you can store to a file. Um…
+
+[Joseph Babcock] 11:31:44
+So we'll come back and look at that. So I see your question. Do we have an operator overload for brackets.
+
+[Joseph Babcock] 11:31:52
+Yeah, I think that that's something, I think it's one of those double underscores. It's like the get attribute or something, but I can… check on that. I don't know. I don't have it memorized off the top of my head, but I think it's like
+
+[Joseph Babcock] 11:32:02
+It's a double underscore. One of the double underscore methods.
+
+[Joseph Babcock] 11:32:08
+Is it possible to clear a method that might raise an exception? Yeah, so you can actually define a method that explicitly raises an exception. So you could put raise exception as one of the methods in that In that function call.
+
+[Joseph Babcock] 11:32:24
+Yeah, nothing prevents you from writing functions that throw errors. And you actually have done a lot if you're doing unit tests, you would want it to throw an error so you can make sure your code handles it correctly.
+
+[Joseph Babcock] 11:32:39
+All right, so let's take a break until… 45 after the hour, so that will be 45 2.45 my time.
+
+[Joseph Babcock] 11:32:47
+And then we'll come back and finish up. And so these two topics probably won't take all that long. So definitely if you have like broader questions, we can come back and address those as well or any other examples you want to look at.
+
+[Joseph Babcock] 11:45:02
+All right. We'll get started again. Just as a recap, so far… we looked over scope of variables and how immutable versus mutable.
+
+[Joseph Babcock] 11:45:13
+Data types are modified by functions and how we can make variables globally or locally visible based on whether they're in function bodies.
+
+[Joseph Babcock] 11:45:24
+And then we looked over classes and we discussed constructors Instance methods, class methods, and static methods.
+
+[Joseph Babcock] 11:45:33
+And then we went a bit deeper and discussed how class inheritance is handled in Python specifically that one can have multiple inheritance and we use the method resolution order to determine which of potentially competing functions are called an object based on its parents.
+
+[Joseph Babcock] 11:45:55
+And encapsulation and how we can encapsulation and how by convention indicate protected or private variables and methods.
+
+[Joseph Babcock] 11:46:03
+And forms of polymorphism given that Python does not have explicit overriding. We also discussed custom sort functions, which allow us, among other things to sort classes based on their attributes, given that objects, their classes don't have a built-in method of comparison.
+
+[Joseph Babcock] 11:46:23
+And then we discussed exception handling to allow us to gracefully recover from errors in our code and how using inheritance we could define custom exceptions.
+
+[Joseph Babcock] 11:46:35
+So there was one question before the break about overriding the bracket operator. So the bracket operator is the get item. So I thought I couldn't remember if it was get attribute or get item. It's the get item magic method. So if you override it in a class, you can change the behavior of the
+
+[Joseph Babcock] 11:46:55
+Bracket method. So you can see here i just overrode it with a default.
+
+[Joseph Babcock] 11:47:00
+Behavior to return negative one. So most of these built-ins will have a corresponding double underscore function. You just have to figure out which one it is in order to override it.
+
+[Joseph Babcock] 11:47:14
+All right. So the next sections, we're going to talk about two forms of information handling so one is files and then a sort of files specific subset of data, which is JavaScript object notation, also known as JSON.
+
+[Joseph Babcock] 11:47:30
+So let's… go back to the slideshow and go over this.
+
+[Joseph Babcock] 11:47:37
+All right. Python has built-in functionality to handle reading to and writing to a file, which is, of course, a very common task for forms of data analysis.
+
+[Joseph Babcock] 11:47:48
+And we do that using the file function. And… allows us to iterate over our contents and edit contents of a file.
+
+[Joseph Babcock] 11:48:00
+So when we open a file using a file, using the open command, we have different modes we can open it in.
+
+[Joseph Babcock] 11:48:06
+So the default is read, which means that You start from the beginning of the file and read contents.
+
+[Joseph Babcock] 11:48:12
+We can also open in a write format, which is if you want to take some content from our program and write it into the file.
+
+[Joseph Babcock] 11:48:21
+And with a write, if the file you're referencing doesn't exist, it creates it. And if not, it overwrites the existing file.
+
+[Joseph Babcock] 11:48:30
+X is a specific form of right, which is exclusive creation.
+
+[Joseph Babcock] 11:48:38
+If the file already exists, the operation fails so it's indicating that you want to write only the file doesn't exist already.
+
+[Joseph Babcock] 11:48:46
+And then we have an append mode, which is instead of overriding the file.
+
+[Joseph Babcock] 11:48:50
+We append to the end of it. Four different ways to open a file.
+
+[Joseph Babcock] 11:48:57
+So as an example, if we have a file example.txt We open it in read mode. We get a file pointer.
+
+[Joseph Babcock] 11:49:05
+And then we can read the contents of the file as a string with the read method.
+
+[Joseph Babcock] 11:49:12
+Could print it to the console and then we would close it because otherwise the file resource remains… open.
+
+[Joseph Babcock] 11:49:23
+So we have different methods to read the contents from a file we just saw read, which reads the whole Contents is a string.
+
+[Joseph Babcock] 11:49:32
+Read line reads an individual new line delimited.
+
+[Joseph Babcock] 11:49:37
+Text and then reads all the lines as individual strings within a list.
+
+[Joseph Babcock] 11:49:42
+And then here we see a common syntax, which is using the with clause.
+
+[Joseph Babcock] 11:49:48
+So here, instead of So here we said we opened the file and then we had to close it at the end.
+
+[Joseph Babcock] 11:49:55
+So going back to our discussion about variable scope. So, you know, with clause we have a file.
+
+[Joseph Babcock] 11:50:03
+Variable that is created in the context of this with clause.
+
+[Joseph Babcock] 11:50:08
+So that means that we don't have to explicitly close this file at the end. It only exists for the lifetime of the with clause.
+
+[Joseph Babcock] 11:50:14
+So this is one reason that the with clause with open as file is is used as a… conventions because it saves you having to remember to explicitly close the file.
+
+[Joseph Babcock] 11:50:28
+I see we had one question. We'll append mode throw an exception If the file does not exist.
+
+[Joseph Babcock] 11:50:38
+So that was noted here in the description. It creates a new file if the file does not exist.
+
+[Joseph Babcock] 11:50:49
+And is there any… limit on the size of the file So that read will not cause exception on the string it is read into.
+
+[Joseph Babcock] 11:50:59
+That's really determined more by your hardware so you can't If you think about Reid, Reed is taking the contents and putting it in memory as a string. So depending upon how much RAM you have in your computer or that your Python process has access to.
+
+[Joseph Babcock] 11:51:15
+That is going to limit the size of the file that you can read from it's not sort of from the language, it's from your system.
+
+[Joseph Babcock] 11:51:27
+Restrictions um I would say if you're worried that your file may not fit into memory, you usually wouldn't be using it with a read. You would usually want to go line by line somehow.
+
+[Joseph Babcock] 11:51:38
+And use some sort of buffer to hold the contents as you're iterating through it.
+
+[Joseph Babcock] 11:51:42
+In terms of the limit that's defined by the resources on your machine rather than Python itself.
+
+[Joseph Babcock] 11:51:51
+All right. So in this with clause, this goes an example that we're going to read read in the lines as a list of strings And then we're going to… print each one. Remember, strip removes white space from the line.
+
+[Joseph Babcock] 11:52:09
+Similar to the read commands we have write. So write writes an individual string to a file and then write lines writes a list of strings.
+
+[Joseph Babcock] 11:52:17
+So it's sort of the parallel of read and read lines. We have right and write lines.
+
+[Joseph Babcock] 11:52:23
+So we opened a file we have a file this list here that has new line delimited strings, we opened a file with a write command.
+
+[Joseph Babcock] 11:52:32
+Right mode. We write the lines in this list. So this will write first, second, third, one, two, three.
+
+[Joseph Babcock] 11:52:41
+All right, so let's look at some code examples of this
+
+[Joseph Babcock] 11:52:49
+File handling. All right.
+
+[Joseph Babcock] 11:52:54
+So I do not remember if we have, yeah, we have to go create this file All right. So this is a useful So if you use the exclamation mark in your collab notebook This indicates you're dropping into the terminal on your machine. So in the same as if I were to run on the
+
+[Joseph Babcock] 11:53:16
+Terminal on my on my laptop. So instead of executing Python, it's executing shell commands in that terminal.
+
+[Joseph Babcock] 11:53:23
+So if I have to do something like create a test file, this is useful to know.
+
+[Joseph Babcock] 11:53:31
+You kickstart. Click on test file.
+
+[Joseph Babcock] 11:53:36
+So if I want to take this text and put it into a file.
+
+[Joseph Babcock] 11:53:41
+And use the echo command and then i insert it into Test1.txt.
+
+[Joseph Babcock] 11:53:50
+And then if I want to verify I've created the file, I can do the cat command on that EXD.
+
+[Joseph Babcock] 11:54:00
+You can see I inserted the line that I Created. All right, so then Instead of throwing error now.
+
+[Joseph Babcock] 11:54:07
+If I open in read mode I can read all the contents.
+
+[Joseph Babcock] 11:54:12
+You can see the type of the contents is a string And if I print it, it has the string that's in the file And then I can close it.
+
+[Joseph Babcock] 11:54:22
+And so if i try to read again, it's going to throw an error because I've already closed the file. I have to open another pointer to to access the content.
+
+[Joseph Babcock] 11:54:33
+All right. So if I don't want to have to remember to explicitly close the file each time.
+
+[Joseph Babcock] 11:54:39
+I can instead use this width block where would open.
+
+[Joseph Babcock] 11:54:44
+File and then have this indented block so the files can automatically be closed at the end of this width block.
+
+[Joseph Babcock] 11:54:50
+But I would use the same commands. I just am not having to explicitly call file.close.
+
+[Joseph Babcock] 11:54:56
+And if I didn't want to read the whole contents, I could read individual lines. Well, here I only have one line, so it doesn't make much difference but You could read individual lines.
+
+[Joseph Babcock] 11:55:08
+And you could set up a while loop since read line will return
+
+[Joseph Babcock] 11:55:16
+Contents each line by line, delimited by a new line as long as it exists So as long as this is not none.
+
+[Joseph Babcock] 11:55:23
+It will print, else it will break out of this while loop.
+
+[Joseph Babcock] 11:55:26
+Remember, break will terminate the loop. Otherwise, you're running a perpetual loop.
+
+[Joseph Babcock] 11:55:34
+And you can also read the contents as a list. So this list is going to contain a string per line And you could iterate over and print them.
+
+[Joseph Babcock] 11:55:49
+You can also move to individual positions in the file. So you open the file and you can move to a certain number of spaces within the file and then start reading from there.
+
+[Joseph Babcock] 11:56:00
+And if you want to figure out what position you are, you can use the tell function to tell you what position you're in.
+
+[Joseph Babcock] 11:56:10
+So when you've read all the contents, you're at position 37.
+
+[Joseph Babcock] 11:56:14
+Because there's 37 characters. I see there's one question here.
+
+[Joseph Babcock] 11:56:20
+With rightlines, can you modify what end of line character.
+
+[Joseph Babcock] 11:56:26
+Is… used. Yes. And that is used argument.
+
+[Joseph Babcock] 11:56:35
+So let's see. I'm going to find an example here. So this is going to be You're opening a test file two and writing to it.
+
+[Joseph Babcock] 11:56:48
+Here. Where can we go to?
+
+[Joseph Babcock] 11:56:55
+So this is rightlines. So the question was, can we modify this instead of new lines it's uh
+
+[Joseph Babcock] 11:57:03
+So the separator is the separator is You can specify a different separator between the line. So by default.
+
+[Joseph Babcock] 11:57:13
+So here we're including new lines You could specify whatever delimiter you had here between the strings.
+
+[Joseph Babcock] 11:57:20
+So you could specify like Or some other sort of input. By default, it's none and we're supplying the new lines here but You could modify the separation argument here.
+
+[Joseph Babcock] 11:57:36
+All right. So let's go over a few examples here. So let's say we We wanted to create a new file named myfile.txt and add lines ilove python Python is my favorite, which we're going to put in this list.
+
+[Joseph Babcock] 11:57:53
+How would you open this file to write to it? What is the command going to look like for that?
+
+[Joseph Babcock] 11:58:09
+What mode are you going to open the open the file in myfile.txt.
+
+[Joseph Babcock] 11:58:18
+There's actually two choices here. W. Yeah. So W or… X, right? So if you exclusively create, you could do that too.
+
+[Joseph Babcock] 11:58:26
+So yep, we're going to open with file. So we're going to use a with clause here.
+
+[Joseph Babcock] 11:58:32
+And then if you wanted to write these on two separate lines, what would you do?
+
+[Joseph Babcock] 11:58:45
+So you have this list and you want to write each of each stringing this list into the file on separate lines.
+
+[Joseph Babcock] 11:58:53
+Yep. Or yeah, right. And you have to append a new line here.
+
+[Joseph Babcock] 11:58:59
+Or a right line. You know?
+
+[Joseph Babcock] 11:59:03
+And then if you open it, yep, if you open it you will uh We'll give you each line.
+
+[Joseph Babcock] 11:59:17
+All right. And so then if you wanted to append a third line, you could use the append operation.
+
+[Joseph Babcock] 11:59:24
+So then if we read it, we now have a third line here.
+
+[Joseph Babcock] 11:59:30
+And then what if you want to iterate through lines at each iteration, find the location of the word Python in it?
+
+[Joseph Babcock] 11:59:37
+It gives you a hint that there is a hint member function from string that allows you to to do that.
+
+[Joseph Babcock] 11:59:52
+So if you want to iterate through line and find the location of python and each line what was the what's the logic you would use
+
+[Joseph Babcock] 12:00:11
+So what read function would you get to use to get the text line by line in this file?
+
+[Joseph Babcock] 12:00:27
+Yep. Read line, and then you could use string.index to check yep if it's uh either read lines or for line, read line and then Check the index in each line.
+
+[Joseph Babcock] 12:00:44
+Yep. So I think this is related to also to a function that um question that we had earlier about is there a maximum size of the file? So that's determined by your system, but if you're worried about it.
+
+[Joseph Babcock] 12:01:00
+The. You should check, there's a there's a series of methods in python that have… eager execution, which means that you only retrieve data when you ask for it.
+
+[Joseph Babcock] 12:01:14
+Breed lines is a form of greedy or eager execution where you retrieve all the content in one time This is generators and yield are a lazy execution where you only get the data when you ask for it. So you basically like open a connection to a huge file, but you only retrieve
+
+[Joseph Babcock] 12:01:32
+Information when you explicitly ask for it. So for very large data sets.
+
+[Joseph Babcock] 12:01:39
+Yielden, the generator operator. Useful because it only retrieves data when it's asked for so it does not by default load all of the contents into memory. So it's one way to handle those cases.
+
+[Joseph Babcock] 12:01:54
+All right. So that is… file basics. So then our last topic is sort of a subset of file handling in a way which is JSON. So JSON is a stands for JavaScript Object Notation.
+
+[Joseph Babcock] 12:02:09
+If you've ever used… the javascript language.
+
+[Joseph Babcock] 12:02:18
+Objects and functions and in JavaScript look like dictionaries. They have a standard string structure where there's braces and key values. So JSON is a very useful data format because it's understood by languages other than JSON. So if you've worked with Java, there's a Jackson library that reads JSON and
+
+[Joseph Babcock] 12:02:40
+Iterates over it. Parses it. All languages basically of JSON parsing. It's commonly used for REST APIs and web applications.
+
+[Joseph Babcock] 12:02:52
+And it's flexible because it's flexible It has key values.
+
+[Joseph Babcock] 12:02:57
+Can have hierarchical structure, so can handle complex data types. And in terms of Python, it's a way to convert dictionaries to strings that can be read by other programs or save. In fact.
+
+[Joseph Babcock] 12:03:10
+Most classes are sort of dictionaries under the hood. So you can serialize a class into a string.
+
+[Joseph Babcock] 12:03:16
+And save it as a way to export Python objects and Put them in databases or share them with programs written in other languages.
+
+[Joseph Babcock] 12:03:25
+So JSON is a module that's available our default Python installation.
+
+[Joseph Babcock] 12:03:30
+And there's four major functions in the JSON module that we're going to look at. So it comes into two types. One is serializing, which means converting Python dictionary into a JSON string.
+
+[Joseph Babcock] 12:03:41
+And that's either to a string or to a file. So dump is taking a dictionary and putting it into a file and dump s is dump into a string. So you're taking like a dictionary and converting into a string.
+
+[Joseph Babcock] 12:03:58
+Formatted in this JSON syntax. On the flip side, if you wanted to deserialize, so taking JSON formatted string and converting into a Python dictionary.
+
+[Joseph Babcock] 12:04:10
+That is through to Operation Load, which loads from a file. So there's a JSON string in a file and you load from it.
+
+[Joseph Babcock] 12:04:16
+Or load from string where we have a JSON formatted string such as created by dump pass and loaded and transform it into a dictionary.
+
+[Joseph Babcock] 12:04:26
+So let's take a look at these JSON. Functions in action.
+
+[Joseph Babcock] 12:04:33
+So it's included with our default Python installation, but we have to import the module.
+
+[Joseph Babcock] 12:04:41
+And then let's take an example of a Python dictionary. So we have keys.
+
+[Joseph Babcock] 12:04:45
+Which are strings and we have values which are numbers or booleans So if we use the json.dumpousse that means Serializing it to a string. So we're going to take this dictionary and convert it to a string.
+
+[Joseph Babcock] 12:05:00
+And you can verify by looking at the type that it's a string.
+
+[Joseph Babcock] 12:05:04
+And then you can print that string. You see it's a formatted string.
+
+[Joseph Babcock] 12:05:08
+I see there's a question. When is it appropriate to use binary serialization like protobufs instead of JSON?
+
+[Joseph Babcock] 12:05:14
+Yeah, so that kind of depends on the use case. So certainly as you get into larger data type. So here, like person's very small, right? This is like an illustrative example. If you get like very, very large objects, that's where you might start to look in. So either very large objects or very large collections of objects like you might have
+
+[Joseph Babcock] 12:05:37
+Hundreds of millions of person records. And you're worried about the speed at which those are being transmitted, like if this is a like a web application request Using binary serialization can be really helpful there because you you're basically instead of formatting as a string, you're formatting
+
+[Joseph Babcock] 12:05:57
+This object as some sort of binary output that takes up less space than the string would.
+
+[Joseph Babcock] 12:06:04
+It's not as readable. Is really for exchange and storage. If you have to read it, you need to unpack it into JSON to read it but It's really if you have performance like you're trying to minimize the amount of memory you're using to send something over a wire in a binary format.
+
+[Joseph Babcock] 12:06:24
+Or if you're storing a database and you're worried about memory constraints on that column, that's another place you might consider it.
+
+[Joseph Babcock] 12:06:31
+But it really comes up with the scale of the size of the object or the number of objects you have, or that should be consideration.
+
+[Joseph Babcock] 12:06:42
+All right. So in creating this JSON formatted string, we also have a few arguments we can help us format the output so here In addition to the default where we take a dictionary and convert it to a string, we can specify indentation, like if we wanted to put four spaces here.
+
+[Joseph Babcock] 12:07:00
+It helps us distinguish the different hierarchies of the object. So it's offsetting The key is and then the elements in the elements list within one of these keys.
+
+[Joseph Babcock] 12:07:13
+Instead of having a comma we can Separated with an equal sign. We can change how the keys and values are printed.
+
+[Joseph Babcock] 12:07:21
+And then you could sort the keys by string.
+
+[Joseph Babcock] 12:07:26
+So in addition to taking a dictionary here and dumping it into a string, we could also dump to a file.
+
+[Joseph Babcock] 12:07:33
+So that's shown here. So instead of using the dump command, we used the I'm sorry, the dump S command, we use the dump command. So we open. Remember, we have the with statement and the transient file pointer that is closed automatically at the end of the with statement.
+
+[Joseph Babcock] 12:07:48
+And we're serializing that to serializing that file. And again, I could go to my terminal and… cat this you see that indeed my dictionary has been stored as a string here.
+
+[Joseph Babcock] 12:08:02
+So then if I wanted to read back that string into my program.
+
+[Joseph Babcock] 12:08:07
+Use the open command here. I'm read mode.
+
+[Joseph Babcock] 12:08:13
+Json.load. From that file.
+
+[Joseph Babcock] 12:08:18
+You can confirm that that has been loaded into a dictionary. So you deserialized it into a dictionary.
+
+[Joseph Babcock] 12:08:23
+And if you print it, you print out this python dictionary And you can access individual keys like you would any dictionary.
+
+[Joseph Babcock] 12:08:35
+In addition to loading from a file like we did here, we could also write a string in JSON format here. And just remember the triple quotes mean that you mean that can have multi-line comments. So instead of having to put
+
+[Joseph Babcock] 12:08:53
+Escapes at the end of each line. In a string we have a multi-line formatted string here.
+
+[Joseph Babcock] 12:09:00
+So if we wanted to load this, we would use the loadS command. So instead of loading from a file.
+
+[Joseph Babcock] 12:09:06
+Just here. With load from string, load us.
+
+[Joseph Babcock] 12:09:10
+And then, so run this. You have a person which you load into a dictionary, which we can confirm is a dictionary by detecting the type.
+
+[Joseph Babcock] 12:09:19
+And we can print that and again access the keys.
+
+[Joseph Babcock] 12:09:25
+All right. So basically, JSON modules does four commands you either want to load from a string or a file, so that's deserializing or serialize with dump or dump string dump to string or dump to file.
+
+[Joseph Babcock] 12:09:43
+All right. So that is all of our content for today.
+
+[Joseph Babcock] 12:09:48
+We've gone uh tour of variable scope, object-oriented programming concepts And looked at custom sorting, exception handling, and we just looked through some file handling and operations using JSON.
+
+[Joseph Babcock] 12:10:05
+So there's going to be a review session on Thursday as usual to reinforce some of these concepts.
+
+[Joseph Babcock] 12:10:12
+Certainly happy to address any questions you have about The content from today's lecture, or if you had additional questions about real world uses of some of these concepts or any of the interviewing aspects of this.
+
+[Joseph Babcock] 12:10:29
+I see we had one question. Let me just go to the chat.
+
+[Joseph Babcock] 12:10:33
+Unmute. Yeah, can you hear me?
+
+[Charanteja Sakamuri] 12:10:38
+Yes, I can hear you. So I was… I just Googled about procedural versus obituented.
+
+[Charanteja Sakamuri] 12:10:47
+And when do you choose Either one of them.
+
+[Charanteja Sakamuri] 12:10:53
+I found this one i'm just going to read it. So in any complex system, there are going to be times when We want to add new data types rather than new functions.
+
+[Joseph Babcock] 12:10:56
+Sure.
+
+[Charanteja Sakamuri] 12:11:03
+For this case of for these case objects and observing it are most appropriate.
+
+[Charanteja Sakamuri] 12:11:08
+On the other hand, there will be times when we will want to add new functions as opposed to data types.
+
+[Charanteja Sakamuri] 12:11:14
+In that case, procedural code and data structures will be more appropriate.
+
+[Joseph Babcock] 12:11:17
+Yep. Yeah, I think that's a good summary.
+
+[Joseph Babcock] 12:11:22
+Would you mind dropping that in the chat for the other folks in the class?
+
+[Charanteja Sakamuri] 12:11:26
+Yeah.
+
+[Joseph Babcock] 12:11:27
+Thank you.
+
+[Joseph Babcock] 12:11:33
+So there's a question, can I re-summarize dump and dumps and load and loads again? Yeah, sure.
+
+[Joseph Babcock] 12:11:39
+Basically, with JSON, you have two things you can do. You can either serialize a dictionary into into a string. So that's going to be the dump Or dump us. And so S means dumped a string.
+
+[Joseph Babcock] 12:11:57
+So dump or dump S means take a dictionary And then write it to a string. That string can go into a variable which is dump or it can go into a file, which is, I'm sorry, you can go to string, which is dump s.
+
+[Joseph Babcock] 12:12:08
+Or I can go to a file which is dump. So just to show this again. So here we had a dictionary if we take that dictionary and write it to a file as a string. That's the dump command.
+
+[Joseph Babcock] 12:12:22
+If we wrote it to a… string variable that's dump ass dump string On the flip side, we can deserialize, take a string and convert it to a dictionary.
+
+[Joseph Babcock] 12:12:34
+So that would be either you have a string, which is multi-line here.
+
+[Joseph Babcock] 12:12:38
+And you load string load s into a dictionary or we can load from a file So load.
+
+[Joseph Babcock] 12:12:48
+Not load us because it's from a file, not a string And again, we're loading that string and turning it into a dictionary.
+
+[Joseph Babcock] 12:12:56
+So the D functions are going to a file or string. The load functions are going from a file or string.
+
+[Joseph Babcock] 12:13:05
+If they have an S at the end, it's from a string. If they don't, it's from a file and it's converting dictionary to string or string to dictionary.
+
+[Joseph Babcock] 12:13:20
+Adam, does that answer your question? I'm happy to go over more code examples too, if that's helpful.
+
+[Joseph Babcock] 12:13:26
+We should have plenty of time here.
+
+[Joseph Babcock] 12:13:31
+All right. Awesome.
+
+[Joseph Babcock] 12:13:38
+Trontasia.
+
+[Charanteja Sakamuri] 12:13:39
+Yeah. As we go forward in the course, we're going to learn about NPI and other libraries and we will develop some ML algorithms Are we going to use procedural style there or objective organic code there.
+
+[Joseph Babcock] 12:13:47
+Yep. Yep.
+
+[Joseph Babcock] 12:13:56
+It's mostly object oriented in the sense that these libraries like these libraries like matplotlib and pandas that handle plotting and data frames, those are all classes like they're they're complex classes that handle the the functions of plotting and data frame manipulation. And then if you look at like the modeling like scikit-learn
+
+[Joseph Babcock] 12:14:18
+That's all classes. There's a model object that you call fit on.
+
+[Joseph Babcock] 12:14:22
+And it does predictions. The reusability of that complex code is largely enabled by the fact that it's coding in an object-oriented style.
+
+[Joseph Babcock] 12:14:30
+That you utilize. Further that the implementation of those models can change under a hood, but that your code still behaves the same the function signature is like a contract between you and the library maintainers about how the output of the function should behave.
+
+[Charanteja Sakamuri] 12:14:47
+Sounds good
+
+[Joseph Babcock] 12:14:49
+It's definitely a very important part of the fact that we can use those libraries is that they're coded in an object-oriented style with core classes.
+
+[Charanteja Sakamuri] 12:15:13
+And…
+
+[Charanteja Sakamuri] 12:15:18
+And as we discussed before that. Python doesn't have the concept of multi-threading rather it uses multiple process
+
+[Joseph Babcock] 12:15:27
+Yep. I think they're working on, that's like a feature proposal. They're working on maybe integrating true Multi-threading, but it just doesn't exist right now. If you really need to do multi-threading, you need to do C++ or Java.
+
+[Joseph Babcock] 12:15:40
+But you can do parallel. There's a multiprocessing library you can spinoff additional processes, but it's just not it's just not true multi-threading. They're all sharing a single interpreter lock.
+
+[Charanteja Sakamuri] 12:15:54
+Okay. And is… And because… You can have multiple process this allows Python to be the best option to train our gpus with plot size of data right with this amount of parallelism that it has as a different process.
+
+[Joseph Babcock] 12:16:13
+Yeah, so I think the Compatibility with GPUs is really more about the library translation because once you put the data on the GPU, you're making use of the parallelization of the GPU hardware itself.
+
+[Joseph Babcock] 12:16:26
+In terms of like the NVIDIA drivers and stuff, there are tools, there are scripts or tools and Python to allow you to interact with them like you're training some neural network model and you specify its structure in python.
+
+[Joseph Babcock] 12:16:37
+But then in terms of the parallelization it's it's um It's not really parallelization so much in terms of multiprocessing. You're distributing the data to the GPU, which takes over and does its own form of parallelization because the hardware is just different. It can execute
+
+[Joseph Babcock] 12:16:54
+Operations in parallel. Yeah, sorry, go ahead.
+
+[Charanteja Sakamuri] 12:16:56
+Okay, so what if, okay. What if I write some machine learning algorithm using multi-threading.
+
+[Joseph Babcock] 12:17:06
+Yep.
+
+[Charanteja Sakamuri] 12:17:06
+Can I use that code and train that on GPU? I'm just trying to understand whether GPS expect you to be in certain way without threads And what's the best way?
+
+[Joseph Babcock] 12:17:14
+Yeah, well.
+
+[Joseph Babcock] 12:17:21
+Yeah. Yeah, so the GPU is really more about like hardware parallelization where it's doing operations in parallel. I guess… you could have different threads all sending data to a GPU.
+
+[Joseph Babcock] 12:17:36
+But yeah, there's a sort of separate concepts in terms of parallelization. The threading is about like CPU operations.
+
+[Joseph Babcock] 12:17:44
+Running parallel operations versus GPU or FPGAs or other hardware optimization. It's really more about the Implicit parallelization that's allowed by the hardware operations.
+
+[Joseph Babcock] 12:17:55
+So if you write, if you're writing like a well so the thing is like, I think if you're writing that algorithm in multi-threading it to speed it up. Usually that's because the CPU actions you're trying to multi-thread, that's sort of different than you're relying upon the GPU to execute them.
+
+[Joseph Babcock] 12:18:15
+I'd have to think about it. I think it's mostly that you'd be sending like processing a stream of data to the GPU, but you still have one GPU can shuttle data too.
+
+[Charanteja Sakamuri] 12:18:16
+Okay.
+
+[Charanteja Sakamuri] 12:18:27
+Okay. Got it. And will we also discuss about Coda in the course?
+
+[Charanteja Sakamuri] 12:18:32
+Oh. Okay.
+
+[Joseph Babcock] 12:18:32
+I don't think CUDA is part of the lecture, at least the Python, the Python pieces. So as Adam was saying, it's basically just a C++ is a wrapper for the C++ libraries in CUDA. There's Python modules that do that.
+
+[Charanteja Sakamuri] 12:18:39
+Okay.
+
+[Joseph Babcock] 12:18:48
+But it's not really Python per se. It's just a wrapper for C++ functions that format data to the GPU.
+
+[Joseph Babcock] 12:19:09
+And just a reminder, everyone, we did launch a poll so we we do actively monitor feedback to try to improve these lectures so appreciate any comments that you have.
+
+[Joseph Babcock] 12:19:20
+I can tell you from doing these over a year that we do actually change the lecture materials based on feedback.
+
+[Joseph Babcock] 12:19:27
+Meaningful. So appreciate any comments.
+
+[Joseph Babcock] 12:19:39
+All right. Well, I hope everyone enjoys the rest of their weekend. I expect it's probably a long weekend for… many folks so enjoy your Monday off if you have it and uh See you on Thursday.
+
+[Charanteja Sakamuri] 12:19:54
+Bye-bye.
+
+[Joseph Babcock] 12:19:56
+Thank you.
+

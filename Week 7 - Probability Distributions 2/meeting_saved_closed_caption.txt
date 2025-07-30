@@ -1,0 +1,2007 @@
+[Sanatan Sukhija] 18:59:31
+Start in a minute. Meanwhile, if anyone has any questions.
+
+[Sanatan Sukhija] 18:59:35
+From the last session, do let me know.
+
+[Sanatan Sukhija] 18:59:56
+I think all of you can use your mics if you want.
+
+[Sanatan Sukhija] 18:59:59
+Requesting you directly interact with me. It's difficult to look at the chat today.
+
+[Sanatan Sukhija] 19:00:05
+I mean, we don't have a Q&A for this the session.
+
+[Sanatan Sukhija] 19:00:11
+So you can directly ask. All right, I'm starting. So we have to save time also So the next distribution that we are going to study is the normal distribution.
+
+[Sanatan Sukhija] 19:00:23
+Okay. See, this is one of the most widely used distributions
+
+[Sanatan Sukhija] 19:00:38
+Now, we'll discuss, okay, why it is the most widely used because it has certain properties which do not get violated okay even if you kind of I mean, modify the data slightly okay so we'll talk about that okay why it is like most widely used and what
+
+[Sanatan Sukhija] 19:00:58
+Are there okay which make it so popular amongst all the data scientists.
+
+[Sanatan Sukhija] 19:01:04
+Now, so far, whatever distributions that you have seen okay So, for example, uniform okay connect all the uniform distribution as a symmetric distribution?
+
+[Sanatan Sukhija] 19:01:16
+What do you think?
+
+[Sanatan Sukhija] 19:01:23
+And we call uh Yes.
+
+[David] 19:01:25
+Yeah, I just, can you hear me? It looks like I'm actually the only one in this session.
+
+[Sanatan Sukhija] 19:01:28
+Yeah. No, no, no. There are 10 other people.
+
+[David] 19:01:33
+Okay, that's weird. It just doesn't show that. Oh, okay. It's scrolling. All right. Sorry. I'll be quiet.
+
+[Sanatan Sukhija] 19:01:38
+Go ahead, go ahead. Go ahead. So if you look at uniform distribution, right? Okay, let's say if this is your minimum limit and this is the maximum limit.
+
+[Sanatan Sukhija] 19:01:48
+Okay. All right. It's symmetric, right? If you look at the left half and the right half.
+
+[Sanatan Sukhija] 19:01:54
+Okay. I mean, you can say mirror image of each other.
+
+[Sanatan Sukhija] 19:01:59
+All right. But the problem with uniform is okay with it's giving equal density for each point. It's the same density for each point.
+
+[Sanatan Sukhija] 19:02:06
+Even though it's a metric, it gives the same density for each point We also studied beta distribution, which is very flexible, which can be symmetric.
+
+[Sanatan Sukhija] 19:02:16
+Are asymmetric. So for what values of alpha beta the distribution is symmetric Anyone?
+
+[Sanatan Sukhija] 19:02:23
+Equal. So whenever alpha is equal to beta, the distribution comes out to be symmetric.
+
+[Sanatan Sukhija] 19:02:28
+Okay. Now, depending on the values of alpha and beta, the curve you can say can be asymmetric. If alpha is more, the curve will be shifted towards the right.
+
+[Sanatan Sukhija] 19:02:37
+We have beta is more the car will be shifted towards the left. If alpha and beta are between zero to one, the curve will be, you can say, convex. It will be upward facing. And on the corners.
+
+[Sanatan Sukhija] 19:02:48
+The values will not be defined. It'll be singular. Okay.
+
+[Sanatan Sukhija] 19:02:53
+This normal distribution is actually used predominantly for most of the features because most of these You can say real world data or real world characteristics.
+
+[Sanatan Sukhija] 19:03:05
+They will follow normal distribution. I will say most of them okay So think of age of the people in a particular country All right. Now, what do you think? How will the distribution of the age is going to look like, let's say if I draw the histogram for it
+
+[Sanatan Sukhija] 19:03:22
+It might be somewhat biased okay but do you realize that okay that most of the people, okay, let's say if I'm looking at a country where most of the people are around say age of 27 to 30. So can I say that I will see the peak at 27 to 30 does it make sense?
+
+[Sanatan Sukhija] 19:03:39
+Yes or no. Okay. All right. Now, obviously, people who are young or who are just newly born okay can you say that their numbers would be smaller Does it make sense? So let's say if I'm plotting from zero to infinity, okay, I'll just give you an indication right now.
+
+[Sankar Piram] 19:03:41
+Yes.
+
+[Sanatan Sukhija] 19:03:56
+So if you think about this, the people who are just one, okay, maybe say one day, two days, their density would be very, very small. Similarly, the people who are teenagers or maybe say in the age of 27 to 30 their density is
+
+[Sanatan Sukhija] 19:04:11
+Slightly more. So if you try to draw this plot as you Look at this plot, right? Okay, this plot is going to converge like this.
+
+[Sanatan Sukhija] 19:04:19
+All right now please note that though i have said it is Yes.
+
+[Jenny Kwan] 19:04:24
+Songan tongs. Hello.
+
+[Sanatan Sukhija] 19:04:27
+Just a second.
+
+[Jenny Kwan] 19:04:30
+Sean Gantong. Levi song.
+
+[Sanatan Sukhija] 19:04:35
+Operations, can you make me a host, please?
+
+[Jenny Kwan] 19:04:40
+My call program. I am.
+
+[Sanatan Sukhija] 19:04:47
+Just a second. To make me the post. Jenny, could you please mute yourself?
+
+[Sanatan Sukhija] 19:04:58
+All right. So the idea is the following. So if you have a symmetric distribution okay Especially when you want to see when you want to At… a certain value okay the curve has like or the you can say the variable has the maximum density
+
+[Sanatan Sukhija] 19:05:18
+Normal distribution is the way to go. More or less, I'm saying see curve will not be perfectly symmetric. This curve, if you try to draw for real data, it will not be perfectly symmetric.
+
+[Sanatan Sukhija] 19:05:28
+But for most of the data sets okay Can you confirm if you have… read about central limit theorem before the session.
+
+[Sankar Piram] 19:05:39
+Yeah.
+
+[Sanatan Sukhija] 19:05:39
+Okay, what is the uh a main lemma in central limit theorem, what does it say? If you remember it?
+
+[Sanatan Sukhija] 19:05:50
+If anyone remembers, yes, Scott.
+
+[Sankar Piram] 19:05:50
+So… central limit theorem. So what are you actually looking for? I mean, it should have, I think one of the
+
+[Sankar Piram] 19:06:02
+Does it say the sample size should be greater than 30.
+
+[Sanatan Sukhija] 19:06:07
+Yeah, that's one of the assumptions. Okay. When it holds Okay. What else?
+
+[Sanatan Sukhija] 19:06:17
+So I hope everyone remembers this. See, whenever you're collecting some data, right? Let's say you're recording some information about say individuals okay do you think that I'll be able to track all the individuals in the entire universe or the world? No, right?
+
+[Sanatan Sukhija] 19:06:33
+I hope that makes sense. So whatever I typically do is, I mean, in statistics, we represent it like this.
+
+[Sanatan Sukhija] 19:06:40
+So we have some population data with us. Okay. All right. So whatever data that we are collecting, we call it sample data.
+
+[Sanatan Sukhija] 19:06:50
+Okay. Now, please note that In the original distribution okay so this entire population, whatever this entire population is What central limit theorem says is the following whatever is the original population distribution, we don't care about that okay Please, please note this carefully okay
+
+[Sanatan Sukhija] 19:07:09
+So if you are looking at okay if you are looking at this population data, it can have any distribution. It can follow any distribution.
+
+[Sanatan Sukhija] 19:07:22
+Okay, now what this Central limit theorem says is the following If you are drawing samples from this population okay Now, these samples can have multiple observations. So imagine that X1 is the first sample where I'm looking at maybe say 50 individuals.
+
+[Sanatan Sukhija] 19:07:40
+X2 is another sample where i have Again, say, 70 individuals.
+
+[Sanatan Sukhija] 19:07:44
+X3 is another sample where I have, say, 100 individuals okay So it can be of varying sizes, but for now, just imagine that X1, X2, X3 have the same number of individuals, but the individuals are different.
+
+[Sanatan Sukhija] 19:07:56
+They are randomly selected from the population okay So if you select, okay, so please note that if you select more than 30 samples. If you select more than 30 samples okay I shouldn't say more than 37, more than 30 observations within each sample okay
+
+[Sanatan Sukhija] 19:08:15
+The sampling mean for the sampling mean What does the sampling mean see look at the average of X1. So I'm going to call it say X1 bar. This is the average of all the samples so think of say maybe the salary of
+
+[Sanatan Sukhija] 19:08:30
+All the individuals in x1 and taking the average okay x2 bar is the average of all the individuals, the salary of all the individuals who are in X2.
+
+[Sanatan Sukhija] 19:08:42
+Similarly, X3 bar and so on. So if you collect maybe say n samples okay And now you try to draw the draw sampling distribution. Think of sampling distribution as the histogram So what you're plotting is the means.
+
+[Sanatan Sukhija] 19:08:58
+Okay what you're plotting is that histogram of these means. So these are all the different means that you have What CLT says is the following.
+
+[Sanatan Sukhija] 19:09:08
+This histogram of means is going to be normal Is that clear? See, my drawing is bad, but I hope you get the idea.
+
+[Sanatan Sukhija] 19:09:16
+Okay, my drawing is bad, but I hope you get the idea okay And where will it peak? What do you think?
+
+[Sankar Piram] 19:09:23
+The mean and i mean mean of all these ample means.
+
+[Sanatan Sukhija] 19:09:24
+The mean of what? Clean off all the sample means. So this would be the value where it actually peaks.
+
+[Sanatan Sukhija] 19:09:32
+Okay all right and what what is the standard deviation of these means?
+
+[Sankar Piram] 19:09:41
+Zero.
+
+[Sanatan Sukhija] 19:09:41
+No, no, no. So let's say if the original population has See, do you think that I know the original population mean?
+
+[Sanatan Sukhija] 19:09:51
+Do I know the original population mean? No, right? These are unknown Does this make sense?
+
+[Sankar Piram] 19:09:56
+But you did calculate the mean of all the sample means right
+
+[Sanatan Sukhija] 19:10:00
+Samples I can compute, right? But do you think I know the original population mean?
+
+[Sankar Piram] 19:10:05
+Original, no. But now that you've calculated all the sample means, the mean of the sample means isn't that original isn't that about
+
+[Sanatan Sukhija] 19:10:07
+All right.
+
+[Sanatan Sukhija] 19:10:11
+It is an approximation. It is an approximation to that okay so this mean that you see over here It's a good approximation to it. That's what center limit theorem says.
+
+[Sankar Piram] 19:10:22
+Okay.
+
+[Sanatan Sukhija] 19:10:22
+Okay, that is the idea. So see, there is no way, I mean, it is intractable to compute the population mean, right? Yes or no?
+
+[Sanatan Sukhija] 19:10:30
+Okay. So it is now an approximation okay that's why we use center limit therapy.
+
+[Sankar Piram] 19:10:30
+Yeah, agreed.
+
+[Sanatan Sukhija] 19:10:35
+Now, another LC, there are other assumptions So one is that, okay, your population can follow any distribution okay it needs to have a finite mean and variance All right. That's another thing.
+
+[Sanatan Sukhija] 19:10:49
+It cannot be, so there are certain distributions where the variance can be infinite okay or the mean cannot be well defined.
+
+[Sanatan Sukhija] 19:10:56
+Okay. All right. Yes. So if you look at the standard deviations okay So if I see, do you think that I can compute the standard deviation of these sample means? Yes or no?
+
+[Sanatan Sukhija] 19:11:10
+You think that we can compute the standard deviation of these sample means?
+
+[Sankar Piram] 19:11:14
+Yeah.
+
+[Sanatan Sukhija] 19:11:14
+Okay, so the standard deviation of this histogram will turn out to be the actual it's again an approximation i'm saying okay That's what the center limit theorem says. This will turn out to be sigma squared by n, or I will say that the variance, let me say the variance of these values
+
+[Sanatan Sukhija] 19:11:31
+So the variance of all these means Okay, so the variance of all these means is going to be sigma squared by n or you can say that the standard deviation of all these means is going to be sigma by row 10.
+
+[Sanatan Sukhija] 19:11:45
+Is that clear? Where sigma is the original population. Or population sorry population standard deviation, which is unknown to me, by the way.
+
+[Sanatan Sukhija] 19:11:54
+Okay. All right. And please note this okay typically we want the number of observations to be greater than 30.
+
+[Sanatan Sukhija] 19:12:02
+Now, what happens when this n increases? So when you are increasing the number of samples okay Please note that the approximation gets better and better.
+
+[Sanatan Sukhija] 19:12:11
+Okay. So… If you try to increase N, if it goes, say, higher and higher, then the approximation will get better and better. That's what CLT says.
+
+[Sanatan Sukhija] 19:12:21
+All right. And also there are other assumptions that these samples that you're picking right these x1 x2 x3 up to XN, okay, they should be independently picked.
+
+[Sanatan Sukhija] 19:12:31
+Okay. So you have independent samples that you are sampling.
+
+[Sanatan Sukhija] 19:12:36
+These are independent samples. It means that okay there is no relationship when you are picking these samples So think of it like this.
+
+[Sankar Piram] 19:12:38
+What does it mean? I mean…
+
+[Sanatan Sukhija] 19:12:47
+Let's say I'm trying to collect salary of Maybe say, or I am interested in knowing the average salary of all people in us Okay. Now.
+
+[Sanatan Sukhija] 19:12:57
+If I collect data from say one state Do you think that is this independently chosen Or is it like deliberately chosen or there must be you can say some bias in my sample let's say I go to people in california okay all right i look at maybe say 50 random individuals in California though.
+
+[Sankar Piram] 19:13:11
+Yeah, that'll be…
+
+[Sanatan Sukhija] 19:13:19
+Do you think that their salaries would be higher? Yes or no?
+
+[Sankar Piram] 19:13:23
+Yes.
+
+[Sanatan Sukhija] 19:13:23
+Because there is a bias there. What I'm saying is whenever you are trying to do a task pick these samples. So if you think about it, I'm saying that randomly pick these samples maybe one is coming from California or two are coming from California, then one is coming from Texas, one is coming from Florida and other states as well.
+
+[Sanatan Sukhija] 19:13:40
+Do you get my point? So there should be no bias when you select these samples.
+
+[Sankar Piram] 19:13:41
+Yeah. Quick question, but is it okay to select the same data same observation in multiple samples?
+
+[Sanatan Sukhija] 19:13:52
+Yes, yes. So this holds even if you do with replacement or without replacement.
+
+[Sankar Piram] 19:13:57
+Got it. Okay.
+
+[Sanatan Sukhija] 19:13:59
+So this CLT holds even with or without replacement. But as long as they are independent okay all right that's one beautiful property about clt yes
+
+[Sankar Piram] 19:14:07
+If you don't… I mean, if you're okay, can you help us understand the standard deviation and variance like how did you calculate Is it like x bar minus
+
+[Sanatan Sukhija] 19:14:14
+Yeah, sure, sure, sure, sure, sure.
+
+[Sonia] 19:14:17
+Yeah, also this formula sigma by root n i'm sorry Thank you.
+
+[Sanatan Sukhija] 19:14:21
+Sure, sure, sure. No worries. No worries. See, let's say if I have certain values, A1, A2 up to n Okay. All right.
+
+[Sanatan Sukhija] 19:14:28
+How do I compute the mean of these values? I sum all these values, okay?
+
+[Sanatan Sukhija] 19:14:32
+And divide by the number of values, right? This is the okay let's say this i'm just writing it as low as I'll use this, maybe say X or A bar is that clear This is the mean. Okay.
+
+[Sankar Piram] 19:14:33
+Billion.
+
+[Sankar Piram] 19:14:43
+Yeah.
+
+[Sanatan Sukhija] 19:14:45
+I'm showing you first two things okay first there's like, how do you compute variance Okay. Currently, I'm showing you sample variance.
+
+[Sanatan Sukhija] 19:14:56
+Let me start with population variance so that you understand the difference between the two.
+
+[Sanatan Sukhija] 19:15:01
+Okay. See, the idea is the following. Whenever we want to measure the spread in data.
+
+[Sanatan Sukhija] 19:15:08
+Okay. Variance is one such metrics which can help us understand how much are the values spread out.
+
+[Sanatan Sukhija] 19:15:14
+So let's say if all the values are the same, is there any spread in the data?
+
+[Sanatan Sukhija] 19:15:20
+No, right. Okay. So can I say that? So look at this. Okay, let's say this is A1, this is A2.
+
+[Sankar Piram] 19:15:20
+No.
+
+[Sanatan Sukhija] 19:15:25
+This is A3 and so on. Let's say this is am okay assume that all these values are kind of sorted okay Do you see that there is some spread in the data? Yes or no?
+
+[Sankar Piram] 19:15:34
+Yes.
+
+[Sanatan Sukhija] 19:15:34
+Does that make sense? Okay. So one way to measure the spread is, okay, look at where this average is. Let's say this is where ABAR is.
+
+[Sanatan Sukhija] 19:15:41
+Okay. And now what you do is you look at the distance between each point and the mean.
+
+[Sanatan Sukhija] 19:15:47
+All right. So look at the distance between each point on the mean.
+
+[Sankar Piram] 19:15:47
+Yeah.
+
+[Sanatan Sukhija] 19:15:50
+And you square up this distance. Why we are squaring it up because Otherwise, negative distances will cancel out positive distances. Does that make sense?
+
+[Sanatan Sukhija] 19:15:59
+Okay, so what we do is we take each value. So I'm calling it as AI right now.
+
+[Sanatan Sukhija] 19:16:05
+We subtract the mean, we square it up and then we sum it up across all the samples and then we divide by n.
+
+[Sanatan Sukhija] 19:16:12
+So think of it as average because one by n is outside okay we are doing the square. So average squared we are doing the distance, right? A distance is also called as deviation okay so average square deviation And what is the reference point?
+
+[Sanatan Sukhija] 19:16:29
+So variance is also called as average square deviation from the mean. Is that clear?
+
+[Sanatan Sukhija] 19:16:34
+Now, what is the unit of variance So this is called as variance typically denoted as sigma square.
+
+[Sankar Piram] 19:16:35
+Since…
+
+[Sanatan Sukhija] 19:16:41
+So if you knew all the individuals in the universe, let's say n are the number of individuals in the universe What you have just computed is population variance.
+
+[Sanatan Sukhija] 19:16:51
+Okay. All right. Now, if you are computing sample variance the formula changes by n minus 1.
+
+[Sanatan Sukhija] 19:16:58
+So if you compute sample variance the formula changes by this, okay?
+
+[Sanatan Sukhija] 19:17:04
+All right. N is the number of samples. N is the number of samples, okay?
+
+[Sonia] 19:17:04
+N is the number of sample right here So why is n minus 1? Could you please one more time?
+
+[Sanatan Sukhija] 19:17:11
+This is called as a bezels correction Okay.
+
+[Sanatan Sukhija] 19:17:16
+Okay, this terminology, like why it is reduced by n minus 1, I'll give you a slight idea okay Now, see, the thing is the following.
+
+[Sanatan Sukhija] 19:17:24
+Whenever… Okay, so let me put it this way.
+
+[Sanatan Sukhija] 19:17:30
+If you know. Let's say that, okay, you know the mean okay You know the mean of the individuals, the actual population mean you know it okay All right. You know the actual population mean okay Now, what is it that you are doing okay when you are computing the sample mean
+
+[Sanatan Sukhija] 19:17:51
+Think about it. You are randomly picking, right? So how is population mean defined? Can I say it is defined as A1 plus a2 up to this an where n is a very big number, yes or no?
+
+[Sankar Piram] 19:17:53
+We are just randomly picking
+
+[Sankar Piram] 19:18:03
+Yeah, that's right.
+
+[Sanatan Sukhija] 19:18:05
+Does that make sense? Okay, now what we are doing is, see, let's say this is known to me.
+
+[Sanatan Sukhija] 19:18:09
+Let's say this is known to me right now okay Now, the idea is the following.
+
+[Sanatan Sukhija] 19:18:15
+If I take these samples, maybe say A2, and I take some samples And I now compute their means. Let's say I select K samples out of it.
+
+[Sanatan Sukhija] 19:18:24
+Let me call it K observations. Okay.
+
+[Sanatan Sukhija] 19:18:29
+All right. So I'm just writing it as maybe say AI plus AJ and so on okay And I divide this by k the total number of entries are k okay Now think about it. Will it be an overestimate or an underestimate?
+
+[Sankar Piram] 19:18:43
+Underestimate.
+
+[Sanatan Sukhija] 19:18:44
+Do you get my point? So if it's an underestimate okay why it's an underestimate first of all, because you're looking at Or can I say this would be a bias estimate?
+
+[Sankar Piram] 19:18:58
+It can be, yeah.
+
+[Sanatan Sukhija] 19:18:59
+Okay, see, it can be overestimate also, right? What if my random selection okay was from the points which are more. Do you get my point?
+
+[Sanatan Sukhija] 19:19:06
+Okay, now what Basil said was The idea is the following. So I'll explain it through a terminology So let's say you have $500 with you okay and you want to distribute it. I think this is the example that is there in your slides also.
+
+[Sankar Piram] 19:19:07
+Oh, yeah.
+
+[Sanatan Sukhija] 19:19:21
+You want to distribute it to some number of individuals. So you have these $500, just imagine for now.
+
+[Sanatan Sukhija] 19:19:26
+And that is my population mean. This is the amount of data that I have, okay?
+
+[Sanatan Sukhija] 19:19:31
+And I want to distribute it to say five people okay Now, for the first person, do you think I can distribute any amount Yes, I don't.
+
+[Sankar Piram] 19:19:40
+Yes.
+
+[Sonia] 19:19:40
+Yes, yes, correct.
+
+[Sanatan Sukhija] 19:19:41
+Second person, can you distribute like whatever is from the remaining amount you can take any value from that But the last person, do you think it has a choice?
+
+[Sankar Piram] 19:19:49
+Yeah, no choice.
+
+[Sonia] 19:19:50
+No, whatever left over.
+
+[Sanatan Sukhija] 19:19:50
+All right. Okay. So can I say that okay if the this population mean was known to me.
+
+[Sanatan Sukhija] 19:19:58
+I do not have the freedom for one individual. Does that make sense?
+
+[Sanatan Sukhija] 19:20:04
+If it was known to me. Does it make sense?
+
+[Sankar Piram] 19:20:06
+Yeah, it makes sense.
+
+[Howard] 19:20:08
+You know?
+
+[Sanatan Sukhija] 19:20:08
+Okay, so the n minus one that you see over here okay all right This is kind of basically It is giving you now a So think of this one by n.
+
+[Sanatan Sukhija] 19:20:20
+To be used when you know that all the data is present.
+
+[Sanatan Sukhija] 19:20:24
+Typically, if we are choosing a sample where we have lesser samples there okay So whatever we are typically going to estimate, it will be an underestimate okay assuming that the number of samples, the number of observation scale that you pick are very high. Does it make sense?
+
+[Sankar Piram] 19:20:41
+Yeah, it makes sense.
+
+[Sanatan Sukhija] 19:20:42
+If A is relatively a larger number, see, it can be the overall number can be even more. I mean, if you pick smaller samples, okay, that's when CLT doesn't hold.
+
+[Sanatan Sukhija] 19:20:51
+So what this bezel guy said. If you want to get, okay, so whatever number that you are going to get from your sample, it will be typically a smaller number.
+
+[Sanatan Sukhija] 19:21:00
+Okay so to compensate for that, he divided this by n minus 1. So what do you think which will be more sample variance or population variance
+
+[Sankar Piram] 19:21:09
+Population variance will be more.
+
+[Sanatan Sukhija] 19:21:10
+Sample would be more rape. Because it's an underestimate because it is n minus one in the denominator.
+
+[Sonia] 19:21:14
+Sample would be worried.
+
+[Sankar Piram] 19:21:17
+Well, yeah. Okay.
+
+[Sanatan Sukhija] 19:21:17
+Yes, I know. Okay. So to correct this underestimation, if you are choosing a good set of samples, you can say, and what happens when N is infinite think about it.
+
+[Sanatan Sukhija] 19:21:32
+So let's say n is going to be a very large number in the population, right? Yes or no?
+
+[Sarat Polavarapu] 19:21:32
+Same.
+
+[Sankar Piram] 19:21:38
+Yes.
+
+[Sanatan Sukhija] 19:21:38
+So if you choose K to be very, very, I mean, a very good or you can say almost a similar value to n okay Can I say that the estimate will now be very very equal They get my point. And then n minus 1 will not hold much impact right
+
+[Sankar Piram] 19:21:53
+Yeah, it makes sense.
+
+[Sanatan Sukhija] 19:21:54
+Okay, so in that case bezels correction, if you choose a good number of samples, right, it becomes equal to population variance.
+
+[Sanatan Sukhija] 19:22:01
+So this minus one is essentially the degrees of freedom that you lose when you do not know about population variance. This comes from that.
+
+[Sanatan Sukhija] 19:22:11
+Okay. Please notice, okay, most of the data in the real world. Look at the definition of CLT. It says that it can follow any distribution.
+
+[Sanatan Sukhija] 19:22:21
+Okay, so the original population can have any distribution As long as there is finite clean and variance and you follow these sampling policy with independence okay whatever sampling means distribution that you'll get will follow normal distribution.
+
+[Sanatan Sukhija] 19:22:38
+That's one of the primary reasons why normal distribution is so popular.
+
+[Sanatan Sukhija] 19:22:42
+And the estimates are very easy to do. Because the actual population mean would be the mean of all the sample means and the you can say the estimate for the population standard deviation Okay, which is nothing but square root of variance.
+
+[Sanatan Sukhija] 19:22:58
+So this population variance is there, right? We call it variance. If you take the square root of this variance okay we call it standard deviation.
+
+[Sanatan Sukhija] 19:23:07
+It's denoted as sigma okay all right So this standard deviation would be nothing but standard deviation of all these means divided by root n okay all right sorry standard deviation of all these means multiplied by the router.
+
+[Sanatan Sukhija] 19:23:21
+Okay, that would be your population standard deviation. Again. As the number of samples if they increase, your estimates get better and better. Please note that this is an approximation.
+
+[Sanatan Sukhija] 19:23:33
+Okay. Now… This is just an example that is demonstrated for human height okay So they are saying that, okay, if you look at the curve, it is almost symmetric okay So most of the characteristics about humans or any general stuff okay
+
+[Sanatan Sukhija] 19:23:51
+It will definitely follow. I'm saying most of the time it will follow.
+
+[Sanatan Sukhija] 19:23:55
+You can say like a normal distribution. Can you think of any characteristic which doesn't follow normal distribution?
+
+[Sanatan Sukhija] 19:24:02
+Any one characteristic? Yes. If you can name any.
+
+[Sanatan Sukhija] 19:24:09
+Age is actually most of the times normal okay if you sample it with a good number.
+
+[Sanatan Sukhija] 19:24:17
+Any other comes to mind?
+
+[Deepak] 19:24:20
+Death. If these people die?
+
+[Sanatan Sukhija] 19:24:22
+What? Oh, okay. So if you look at where most people are dying, right?
+
+[Sanatan Sukhija] 19:24:30
+Yes, it will be skewed. It will be skewed. Age will not be age will, most of the time the age will be symmetric. Most of the times if you take it from a sample.
+
+[Sankar Piram] 19:24:34
+Yeah.
+
+[Sanatan Sukhija] 19:24:41
+Most of the times I'm saying. Most of the times I'm saying most of the times okay most of the times, okay? See, again, it depends if you make it very specific.
+
+[Sankar Piram] 19:24:42
+We are looking for asymmetric.
+
+[Sankar Piram] 19:24:47
+Okay.
+
+[Sanatan Sukhija] 19:24:52
+If you are picking a sample data, which is independent, which is independently sampled That will come out of the semi truck okay However, please note this One of the vehicles, as you said, like maybe say when people are dying okay
+
+[Sanatan Sukhija] 19:25:10
+See, it will somewhat be asymmetric. Think of salaries If you try to draw salary, how will it look like? Any guesses?
+
+[Sanatan Sukhija] 19:25:19
+Let's say this is a Most of the people will have lower salaries or high salaries.
+
+[Sankar Piram] 19:25:20
+And we lifted.
+
+[Sarat Polavarapu] 19:25:26
+Lower.
+
+[Sanatan Sukhija] 19:25:28
+Very low, right? So can I say that the density would be highly on the highest? Yes or no. So the curve would actually look like this. Does it make sense?
+
+[Sanatan Sukhija] 19:25:35
+Only very few people in the world will have very high salaries.
+
+[Sanatan Sukhija] 19:25:38
+Does that make sense? This is called as a scale three distribution, also called as exponential distribution.
+
+[Sanatan Sukhija] 19:25:44
+Okay, this is not there in your slides but this is another continuous distribution. If you want to see, if you want to look at, okay, maybe you can explore it. And if you want to have a chat with me.
+
+[Sanatan Sukhija] 19:25:54
+We can do that in the next session, in the AR session. All right.
+
+[Sanatan Sukhija] 19:25:58
+So let's try to understand okay how this normal distribution looks like what is the formula for it okay Please note this currently I'm talking about density It tells me a density around a certain point Okay.
+
+[Sanatan Sukhija] 19:26:12
+See, a normal distribution, this bell curve right it has like very, very beautiful properties One of the beautiful properties is that you see, see, it is symmetric, right?
+
+[Sanatan Sukhija] 19:26:25
+So if I say it is symmetric okay where will it peak I mean, don't you think if it is speaking at the mean It is the mode also, yes or no?
+
+[Sarat Polavarapu] 19:26:29
+Mean.
+
+[Sanatan Sukhija] 19:26:36
+The most frequent value okay That's what the peak actually means, right? Okay.
+
+[Sanatan Sukhija] 19:26:43
+And if the mean is equal to mode, what does that imply?
+
+[Sanatan Sukhija] 19:26:48
+Can I say that the middle value is where it will peak as well?
+
+[Sanatan Sukhija] 19:26:52
+Does this make sense? So in this type of a curve, which is like highly symmetric, okay, mean will be equal to mod A will be equal to median okay Now, what we want to know from this normal distribution are two things okay
+
+[Sanatan Sukhija] 19:27:10
+One quantity is which is where it peaks. So that is the mean okay So we defined a normal distribution in terms of two parameters.
+
+[Sanatan Sukhija] 19:27:20
+So if you remember, in beta distribution, we had these two parameters, alpha, beta.
+
+[Sanatan Sukhija] 19:27:25
+Okay. In uniform distribution, we had a and b Now we are having two parameters these mean and the spread of the data which is defined by sigma okay you can call it sigma squared also doesn't really matter okay So we have these two parameters, mean and variance okay
+
+[Sanatan Sukhija] 19:27:42
+Look at the formula for this. I'll give you a slight hint about it.
+
+[Sanatan Sukhija] 19:27:47
+See, if you look at this curve e to the power of this minus Z square by 2, If this is Z, this will come out to be like this Okay, like a bell curve. You can try plotting it if you wish okay
+
+[Sanatan Sukhija] 19:28:01
+Now, this curve is what okay That is symmetric. But please note that if you try to integrate it between minus infinity to infinity.
+
+[Sanatan Sukhija] 19:28:10
+If you try to integrate this this special function.
+
+[Sanatan Sukhija] 19:28:13
+It will not be boiling down to one okay and this curve also doesn't have like other beautiful properties I will not know where the mean is lying okay so to ensure that this is centered around the mean, they make certain changes to the formula. So see this carefully
+
+[Sanatan Sukhija] 19:28:29
+Zega is nothing but your X. What you are doing is you are centering each point. So you're subtracting this mean from it.
+
+[Sanatan Sukhija] 19:28:38
+This two sigma square that you see over here it is kind of controlling How much is the spread okay So this standard deviation tells you how much the spread is Now, I want you to look at this formula and tell me okay
+
+[Sanatan Sukhija] 19:28:52
+Look at this moment. I'll just rewrite this in case and unable to follow this.
+
+[Sanatan Sukhija] 19:28:57
+So if there is a random variable x, it follows a normal distribution. I am interested in computing the density at value x.
+
+[Sanatan Sukhija] 19:29:06
+Okay, I wanted to see this formula. The density is defined as 1 by root 2 pi sigma Okay, please note that this is a scaling factor. This root 2 pi sigma is a scaling factor okay e to the power of minus of x minus mean whole square divided by 2 sigma squared.
+
+[Sanatan Sukhija] 19:29:24
+Okay. All right. I want you to see this. Can you tell me what would happen okay Assume that This is the random variable x that you are plotting. I want to do it for different values of x.
+
+[Sanatan Sukhija] 19:29:36
+So maybe say this value is x1, this is x2, this is x3 and so on.
+
+[Sanatan Sukhija] 19:29:41
+I want you to do it for different values of x okay So this normal distribution, first of all, the range of it is between minus infinity to infinity okay you can define it for any number.
+
+[Sanatan Sukhija] 19:29:54
+Okay. My question is the following. Sigma that you see right now is okay basically the spread What will happen if this spread is See, mean of the points is very straightforward, right?
+
+[Sanatan Sukhija] 19:30:09
+Some of the points divided by n okay My question is this.
+
+[Sanatan Sukhija] 19:30:13
+If you look at the spread of the data. If the spread is small okay If the data spread is small.
+
+[Sanatan Sukhija] 19:30:22
+Will the curve be like more centric? Will the curve be more like this?
+
+[Sanatan Sukhija] 19:30:27
+Basically, if the distribution of the data is centered around a few points and they are very very close by Will it be like this or will it be like this?
+
+[Sankar Piram] 19:30:38
+It will be narrow.
+
+[Howard] 19:30:39
+It'll be more narrow.
+
+[Sanatan Sukhija] 19:30:39
+It'll be more narrow, right? See, what is sigma telling us? Sigma tells you about the spread. So if spread is narrow, can I say that the density would have a very high peak?
+
+[Sanatan Sukhija] 19:30:48
+Yes or no. You get my point. So if sigma is narrow, it'll have a very high peak. So this is when the spread is lesser okay if spread is more then you can say that most of the values will have a good density.
+
+[Sanatan Sukhija] 19:31:01
+Is that clear? All right. Another key thing to note about This distribution is the following.
+
+[Sanatan Sukhija] 19:31:07
+Please note that, okay, I will see that okay we'll see it in just a bit. I'm just going to state a fact right now.
+
+[Sanatan Sukhija] 19:31:14
+Around you can say uh the corners okay What do you think the density will be? Will it be very small or will it be very low?
+
+[Sanatan Sukhija] 19:31:23
+Like at the corners Very, very low. There will be some density, but it will be very, very low, very minute.
+
+[Sonia] 19:31:26
+Hello.
+
+[Sanatan Sukhija] 19:31:32
+Okay. All right. Keep this in mind. And what was the assumption of normal distribution in CLD, how many samples you must take greater than 30. So if you are going to assume a normal distribution for any data, please note that it should have more than 30 points. Keep this in mind.
+
+[Sankar Piram] 19:31:42
+30 more.
+
+[Howard] 19:31:43
+30, over 30.
+
+[Sanatan Sukhija] 19:31:51
+All right now let's try to understand, okay, how do you deal with this So let's say, okay, I'm giving you a set of points okay let's say you are given the age of the individuals or say BMI of the individuals. Okay.
+
+[Sanatan Sukhija] 19:32:04
+And these are the values b1, B2, B3, up to so on.
+
+[Sanatan Sukhija] 19:32:07
+Let's say you have these n values given to you okay Do you think that you can compute the mean value from this yes or no?
+
+[Sankar Piram] 19:32:18
+Yes. Yes.
+
+[Sanatan Sukhija] 19:32:18
+Okay, can you compute the standard deviation from it? Okay, so what I'm going to say is that this data okay Because I know that if n is significant enough, if n is more than 30, Can I say that okay this data
+
+[Sanatan Sukhija] 19:32:32
+Will follow like a normal distribution with mean mu and say variance sigma squared.
+
+[Sanatan Sukhija] 19:32:37
+Is that clear? That's how we represent it okay So we are going to assume that this data follows the normal distribution with some mean and some sigma squared. Now the question comes okay Tell me what is the density okay
+
+[Sanatan Sukhija] 19:32:51
+Around a point. So let's say b1 is maybe say 22. B2 is 22.3.
+
+[Sanatan Sukhija] 19:32:55
+Is there a possibility that I might not have a point, maybe say 22.7?
+
+[Sanatan Sukhija] 19:32:59
+Is there a possibility like this? Am I right, right? Do you get my point? I might not even have this number. Okay. All right.
+
+[Sanatan Sukhija] 19:33:09
+I'm asking you for what the density is. So what you will do is put it in the form one by root 2 pi sigma okay e to the power of this 22.7 okay there's a minus sign here minus mean whole square divided by 2 sigma squared. You know what mean and sigma are and this will give you the density.
+
+[Sanatan Sukhija] 19:33:26
+Is that clear? So this function can be used to tell you the density. So if this is the mean, think of it like this. If this is the mean.
+
+[Sankar Piram] 19:33:28
+Got it.
+
+[Sanatan Sukhija] 19:33:36
+And whatever is the standard deviation okay i want you to see this carefully.
+
+[Sanatan Sukhija] 19:33:41
+Let's say if 22.7 is smaller than the mean, then 22.7 will lie here. Is that clear?
+
+[Sanatan Sukhija] 19:33:47
+If it was smaller than the mean, then what I'm seeking is this value.
+
+[Sanatan Sukhija] 19:33:51
+This is what this function is giving me. Is that clear?
+
+[Sanatan Sukhija] 19:33:56
+This is what this function tells me. The density around the value 22.7.
+
+[Sanatan Sukhija] 19:34:01
+Okay. How many other values are close by to 22.7? The value indicates, I mean, if it is higher, then more points are nearby.
+
+[Sanatan Sukhija] 19:34:09
+Okay. Now, see this carefully. So I'm going to show you like a certain trick first.
+
+[Sanatan Sukhija] 19:34:15
+I'm going to show you a certain trick. Please note that I am not using more than 30 samples.
+
+[Sanatan Sukhija] 19:34:20
+Because I just want to show you some computation. So let's take some values one three Variance. Yes.
+
+[Sonia] 19:34:24
+One square is variance, right? Sorry, the previous variance. So variance means if you take B1, B2, B3, B4 variants with mean from mean we are how much is the difference between mean minus Excellent.
+
+[Sanatan Sukhija] 19:34:29
+Yes.
+
+[Sanatan Sukhija] 19:34:37
+Or from each value you take the mean and square it up.
+
+[Sanatan Sukhija] 19:34:41
+Okay. All right. And then you sum it up across all the samples. So this is squared deviation from the mean.
+
+[Sonia] 19:34:41
+Great. Okay.
+
+[Sanatan Sukhija] 19:34:46
+Okay. And take the average. This is your variance. Is that clear? Currently, I'm showing you population variance.
+
+[Sanatan Sukhija] 19:34:52
+Okay. If you want to go to… If you consider it as a sample, then you consider it as N minus 1.
+
+[Sonia] 19:34:52
+Yeah. N or N minus 1.
+
+[Sonia] 19:34:59
+Okay, thank you.
+
+[Sanatan Sukhija] 19:34:59
+All right if you consider it as sampling okay All right. Now I want you to see these values. Okay, please note that I'm taking less than 30 values, but this is just for computation okay What does the mean right now?
+
+[Sanatan Sukhija] 19:35:16
+You should be able to do this in your head. Three, right? 15 by five okay which is three. All right.
+
+[Sonia] 19:35:17
+Three. Three. Yeah.
+
+[Sanatan Sukhija] 19:35:22
+Okay, let me tell you, if you want to compute the sigma square, right, this will come down to B2.
+
+[Sanatan Sukhija] 19:35:27
+Okay, you can do this. Subtract the mean okay i'm telling you population okay this is population one.
+
+[Sanatan Sukhija] 19:35:35
+You can compute this in uh i mean And you'll come down to this confusion that sigma squared will come out to be two okay Now, I wanted to see something.
+
+[Sanatan Sukhija] 19:35:43
+So what I'm going to do is I'm going to subtract okay each value from the mean.
+
+[Sanatan Sukhija] 19:35:48
+So I'm going to subtract each value from the mean. Or I'm going to subtract mean from each value. Let me put it that way.
+
+[Sanatan Sukhija] 19:35:56
+Okay. It will hold either ways, by the way. Now, can you tell me what is the resultant mean now?
+
+[Sanatan Sukhija] 19:36:12
+Yes.
+
+[Sankar Piram] 19:36:16
+Isn't that the population mean?
+
+[Sanatan Sukhija] 19:36:17
+No, no, no. I'm saying, see, what I have just done is I've taken my original data X and I subtracted the mean from it. Does this make sense?
+
+[Sarat Polavarapu] 19:36:19
+Okay.
+
+[Sanatan Sukhija] 19:36:27
+Okay. I'm asking what is the resultant mean right now? Zero. Okay. Do you think that it will always remain a zero?
+
+[Sankar Piram] 19:36:29
+That will be. Zero.
+
+[Sanatan Sukhija] 19:36:40
+It would it would… Okay, let me tell you why. It would. Okay.
+
+[Sarat Polavarapu] 19:36:40
+If you do X minus all the time.
+
+[Sanatan Sukhija] 19:36:45
+See, how do you compute the mean? You take all the samples. Let's say these are A1, A2, A3, A4.
+
+[Sarat Polavarapu] 19:36:53
+Average.
+
+[Sanatan Sukhija] 19:36:54
+Average okay so what i'm doing right now is i'm subtracting the mean from each sample, right? Yes or no?
+
+[Sankar Piram] 19:37:01
+Yes.
+
+[Sanatan Sukhija] 19:37:01
+Does this make sense? So I have these five samples I'm subtracting from each. Okay. And let's say I'm computing the average right now. This is my new average.
+
+[Sanatan Sukhija] 19:37:10
+Yes or no. Does this make sense? Okay.
+
+[Howard] 19:37:15
+Yeah.
+
+[Sanatan Sukhija] 19:37:15
+Now, if you look at the sum, a1, A2 up to say a5 okay And how many times mean would come n times mu yes or no?
+
+[Sanatan Sukhija] 19:37:25
+Okay, all right. What is new on the older average right does it make sense?
+
+[Sonia] 19:37:25
+Yes.
+
+[Sanatan Sukhija] 19:37:31
+This new is the older average. How is the older average computed?
+
+[Sankar Piram] 19:37:40
+Some, yeah.
+
+[Sanatan Sukhija] 19:37:40
+Do you see that it cancels out? Does it make sense?
+
+[Sarat Polavarapu] 19:37:44
+Mm-hmm.
+
+[Sanatan Sukhija] 19:37:46
+The new average is going to be zero regardless of the number of points. Does that make sense?
+
+[Sanatan Sukhija] 19:37:52
+This new average is going to be zero regardless of the number of points. Does that make sense?
+
+[Sanatan Sukhija] 19:37:57
+So subtracting the mean okay gives us the zero mean, okay? Please note that this process is called as standardization Okay. This process is called as standardization
+
+[Sonia] 19:38:10
+I'm sorry, the last part I could not understand. So this formula, right, you did a1 into A3.
+
+[Sanatan Sukhija] 19:38:11
+Okay. Yes.
+
+[Sonia] 19:38:17
+3 plus minus nu right divided by N.
+
+[Sanatan Sukhija] 19:38:17
+Yes. So a muest time, right? Mu is coming, basically 5 mu, if you want to write it that way.
+
+[Sonia] 19:38:24
+Yes. Yeah. Okay.
+
+[Sanatan Sukhija] 19:38:25
+And this way. Okay. All right. See, new is coming five times, so I can write it as 5 mu, right? I've written the sum of the limit separately. And what is mu, the older average a1 plus a2 plus a3 plus a4 plus a5 divided by 5. Yes or no?
+
+[Sonia] 19:38:32
+Right.
+
+[Sonia] 19:38:40
+Okay, that is older. Okay.
+
+[Sanatan Sukhija] 19:38:41
+This is the average rate, which would be a1 plus a2 plus so on divided by 5 divided by five. Yes or no?
+
+[Sanatan Sukhija] 19:38:47
+Does this make sense?
+
+[Sanatan Sukhija] 19:38:53
+Yes or no. Do you get my point? So the new average would be zero, right?
+
+[Sonia] 19:38:56
+We got the formula but i did not understand from where the older came here.
+
+[Sanatan Sukhija] 19:39:00
+See, if I ask you to compute the mean of these values, how would you compute it?
+
+[Sanatan Sukhija] 19:39:04
+Some of all the values divided by five right like That is what I've written over here.
+
+[Sonia] 19:39:06
+Give me a five. Yes.
+
+[Sanatan Sukhija] 19:39:11
+I'm just showing you. See, this is how you will compute the new mean right after subtracting.
+
+[Sonia] 19:39:16
+Okay.
+
+[Sanatan Sukhija] 19:39:16
+I'm showing you that the new average is nothing but Zeto. So new average into n is zero.
+
+[Sanatan Sukhija] 19:39:23
+Does that make sense? Which means that the new average is zero.
+
+[Sanatan Sukhija] 19:39:28
+Not yet. All right. No?
+
+[Sonia] 19:39:29
+Yeah, got it. Thank you. Sorry for asking so many questions
+
+[Sanatan Sukhija] 19:39:34
+So I think it is four questions, okay? Don't worry. Yes.
+
+[Sarat Polavarapu] 19:39:39
+How do you write the population mean as a standard deviations?
+
+[Sarat Polavarapu] 19:39:43
+Square root 2.
+
+[Sanatan Sukhija] 19:39:44
+Again, the same thing, just have one by n over that.
+
+[Sanatan Sukhija] 19:39:48
+So in the formula, AI minus this mean whole square, okay, which you are doing okay I'm saying one by n is what I'm taking right now.
+
+[Sanatan Sukhija] 19:39:58
+Is that clear? Okay, this is what I'm computing. I'm saying that, okay, if you compute it in your head, it'll boil down as almost two.
+
+[Sarat Polavarapu] 19:40:02
+Okay.
+
+[Sarat Polavarapu] 19:40:10
+Okay.
+
+[Sanatan Sukhija] 19:40:10
+Okay, now I'm going to show you one more step okay So process of standardization involves actually two things. One is right okay I mean, centering the data to zero okay so we are doing zero centering if you think about
+
+[Sanatan Sukhija] 19:40:23
+And there is one more thing we want to set the standard deviation is one okay We want to ensure that the spread becomes one okay So if you have any set of data points, just like I have proven it to you that, okay, if you subtract the mean
+
+[Sanatan Sukhija] 19:40:40
+You get data as zero centered. If you want to ensure that there is so what is the resultant standard deviation right now
+
+[Sanatan Sukhija] 19:40:49
+Yes, people. What is the standard deviation right now? Of the original data. No, no, no. Standard deviation i'm asking.
+
+[Sonia] 19:40:53
+Jido?
+
+[Sanatan Sukhija] 19:40:56
+How much is the variance? So what is the standard then?
+
+[Sarat Polavarapu] 19:40:59
+Two. True, too.
+
+[Sanatan Sukhija] 19:41:03
+So if you divide all these elements, so see this carefully Firstly, what I did, I subtracted the mean. And what this process does, it makes the data zero centered. Is that clear?
+
+[Sanatan Sukhija] 19:41:18
+All right. Now, do you think that if I divide this by any quantity, will the data still be remaining zero centered?
+
+[Sanatan Sukhija] 19:41:23
+Yes or no. It should break if you think about it.
+
+[Sanatan Sukhija] 19:41:30
+If I divide every quantity by the same number. Let's say if I divide it by say 10 Do you think that it will still remain zero centered?
+
+[Sanatan Sukhija] 19:41:39
+Yes or no. Do you think the mean will change okay if the current mean is zero.
+
+[Sanatan Sukhija] 19:41:50
+Not getting this? Okay. See, if the current mean is zero okay If you divide every quantity by 10, what would be the new mean? 0 by 10, right? Yes or no?
+
+[Sarat Polavarapu] 19:41:52
+That's correct.
+
+[Sanatan Sukhija] 19:42:01
+So it will still be zero. They get my point okay So the idea is, okay, if you take these values and divide everything by the standard deviation okay This will ensure that the resultant standard deviation becomes one.
+
+[Sarat Polavarapu] 19:42:02
+Right.
+
+[Sanatan Sukhija] 19:42:16
+You can actually prove it. I'm not going to spend time right now to do this. It will take 20 minutes okay all right if you're interested, we can do that in the session okay but the resultant standard deviation would be one.
+
+[Sanatan Sukhija] 19:42:28
+Okay. Now, why is this useful? This is useful for two reasons. I want you to see this.
+
+[Sanatan Sukhija] 19:42:34
+So whatever is my original data Currently, I just want you to think that I have a lot of samples okay assume that I have n samples okay is it okay to say that, okay, let's say there is some mean okay which is new
+
+[Sanatan Sukhija] 19:42:49
+And some standard deviation which is sigma. I can say it like this, right?
+
+[Sanatan Sukhija] 19:42:52
+Now, can you apply these operations basically can you subtract from each value, can you subtract the mean and divide by the standard deviation Do you think you can do that?
+
+[Sanatan Sukhija] 19:43:03
+You can do that, right? Okay. And now I want to ask you where will this data be centered?
+
+[Sarat Polavarapu] 19:43:12
+Zero point.
+
+[Howard] 19:43:12
+Zero.
+
+[Sanatan Sukhija] 19:43:13
+Zero okay now look at this okay what is the standard deviation of the resultant One. So I'm going one step to the right. So can I say this is nothing but mu plus sigma Where new is the resultant basically the new mean
+
+[Howard] 19:43:19
+One.
+
+[Sanatan Sukhija] 19:43:29
+Yes or no. Can you say this is one standard deviation away?
+
+[Sanatan Sukhija] 19:43:33
+Does that make sense? So basically, this was one standard deviation to the right.
+
+[Howard] 19:43:35
+Yes.
+
+[Sanatan Sukhija] 19:43:39
+This is one standard deviation to the left. Does this make sense? Similarly, this is standard deviations to the right and two standard deviations to the left.
+
+[Howard] 19:43:43
+Yes.
+
+[Sanatan Sukhija] 19:43:46
+Similarly, three standard deviations to the right and three standard deviations to the left.
+
+[Sanatan Sukhija] 19:43:50
+I'm going to show you certain things. If you try to plot it okay If my drawing is bad, I hope you get the intuition. So this curve is going to peak at zero.
+
+[Sanatan Sukhija] 19:44:03
+I'm a bad drawer. But anyways, think of this as this curve is going to peak at zero. Does that make sense? Why? Because It's normally distributed okay and it peaks at the mean okay Now, why did I do all this, Jack Larry?
+
+[Sanatan Sukhija] 19:44:18
+So if I give you the data, okay, and I ask you what percentage of data lies between minus one to one. Do you think it is easier to do it now now that the mean is zero and standard deviation is one?
+
+[Sanatan Sukhija] 19:44:30
+Yes or no. Okay. Can you just integrate my function that I have given you over there Between what range would you compute it if I'm interested in between minus one to one?
+
+[Howard] 19:44:32
+Yes
+
+[Sanatan Sukhija] 19:44:44
+Minus one to one, right? I hope that makes sense and what this value comes out to be is 68.2%.
+
+[Sanatan Sukhija] 19:44:52
+Now, do you think that this curve is symmetric? Yes or no. Is it symmetric around this mean?
+
+[Howard] 19:44:57
+Yes, it is submissible.
+
+[Sanatan Sukhija] 19:44:57
+So if it is 68, it is 0.682 what is the area of the entire curve
+
+[Sarat Polavarapu] 19:44:58
+Yes.
+
+[Howard] 19:45:05
+One for the entire crew.
+
+[Sanatan Sukhija] 19:45:07
+One for the entire cub. I'm doing it between minus one to one. So I wanted to see this. This will come out as 34.1%. So total would be, so you can call it a 0.341.
+
+[Sanatan Sukhija] 19:45:16
+This is also 34.1%. So totally, this is around 68.2%. That's why we did all this jugglery. And this standard, you can say This process of standardization, it's actually used in machine learning models. We'll discuss it whenever the time comes over there.
+
+[Sanatan Sukhija] 19:45:32
+And this is called as Z distribution. Where the mean is.
+
+[Sanatan Sukhija] 19:45:38
+Zero and the standard deviation or the variance is one. See, if I say that the variance is one is the standard deviation also one Yes or no.
+
+[Sanatan Sukhija] 19:45:47
+Sigma square, right? If standard deviation is one, variance is also one okay You can do it between minus 2 to 2. You can do it between minus three to three. So one thing I want you to highlight here is the following. Okay, see this carefully.
+
+[Sanatan Sukhija] 19:46:01
+It's actually the 68.26% between one standard deviation please think of it as mu is zero right now and mu minus Sigma is one okay Now, I want you to see this, okay?
+
+[Sanatan Sukhija] 19:46:14
+A value is beyond three standard deviations. Okay.
+
+[Sanatan Sukhija] 19:46:20
+What is the chance what is the density I wanted to sum up all these numbers between mu minus 3 sigma to mu plus three sigma. How much is the area within this curve?
+
+[Sanatan Sukhija] 19:46:31
+You can actually see the numbers are written there
+
+[Sarat Polavarapu] 19:46:35
+Zero.
+
+[Sanatan Sukhija] 19:46:36
+This would be one minus 0.26%. Or is 1 minus 0.26?
+
+[Sanatan Sukhija] 19:46:42
+This is the area outside. Does this make sense?
+
+[Sanatan Sukhija] 19:46:51
+The area outside three standard deviations. How much is this area, by the way? This is the probability. Can I say that This is the probability that a point If you want a point from a normal distribution.
+
+[Sanatan Sukhija] 19:47:03
+This is the probability that a point will be coming from three standard deviations away.
+
+[Sanatan Sukhija] 19:47:08
+Does that make sense? And what is this number? See, I should have written it like this 0026 because it's the percent Okay, so this is around 99% Sorry, can I say that so this is within my bag.
+
+[Howard] 19:47:13
+What do you say?
+
+[Howard] 19:47:19
+0.74.
+
+[Sanatan Sukhija] 19:47:24
+Sorry, sorry, sorry, I'm making a mistake here. So area Vidar.
+
+[Sanatan Sukhija] 19:47:30
+0.026, which is these two numbers okay uh 0.13% and 0.13.
+
+[Sanatan Sukhija] 19:47:36
+These are the ones that are outside. So area within is around 99% approximately.
+
+[Sanatan Sukhija] 19:47:41
+Even, I mean, you can put like 99. You can say 88th or 9974 okay all right now think of it like this.
+
+[Sanatan Sukhija] 19:47:53
+If a point has very little probability of coming from outside, can I say that this is likely an outlier?
+
+[Howard] 19:48:01
+Yes, you can.
+
+[Sanatan Sukhija] 19:48:01
+Yes or no? Okay. So this way of computation okay using normal distribution This is called as z-score outlier detection.
+
+[Sanatan Sukhija] 19:48:15
+Okay, so this is also one of the popular ways to determine okay If a point is an outlier or not. So what you have to do is the following.
+
+[Sanatan Sukhija] 19:48:23
+If you are given these values okay a1 a2 up to an What you have to do is compute the mean, compute the standard deviation Subtract each point okay subtract each point from the mean divide by the standard deviation. I'm just writing it as AI right now okay
+
+[Sanatan Sukhija] 19:48:41
+Because I'm looking at it both ways. I'm looking at it both ways.
+
+[Sanatan Sukhija] 19:48:45
+Okay. What does it mean for a point to be more than three standard deviations away? Let's say if I'm looking at here.
+
+[Sanatan Sukhija] 19:48:51
+If I'm looking at here. What will be the value of this point?
+
+[Sanatan Sukhija] 19:48:56
+If it is in this region, 0.13% What can you say about the value of that point?
+
+[Sanatan Sukhija] 19:49:03
+It'll be. More than three, less than three, what value will it be there?
+
+[David] 19:49:06
+Three. Variances.
+
+[Sanatan Sukhija] 19:49:10
+See, what is the resultant mean right now once you do this process?
+
+[Sanatan Sukhija] 19:49:16
+You know what is the standard deviation? One so if you look at this mu plus three sigma, what is this value?
+
+[Sarat Polavarapu] 19:49:16
+Deter. Mun.
+
+[Sanatan Sukhija] 19:49:24
+So can you say that if a value is greater than three or less than minus three then so after this process of standardization If any value is more than 3 or less than minus 3, then it is an outlier. Yes or no?
+
+[Sarat Polavarapu] 19:49:24
+Zero plus.
+
+[Sankar Piram] 19:49:38
+Yes. Yeah.
+
+[Sarat Polavarapu] 19:49:39
+Yes.
+
+[Sanatan Sukhija] 19:49:39
+Okay, that's what this means. So I'm going to take an absolute sign just to demonstrate because I'm looking at both the sides.
+
+[Sanatan Sukhija] 19:49:46
+If this value is greater than this threshold. This threshold can be anything that you can set. Typically, this threshold is around 2.7, 2.5. It depends on how you want to look at it. Now, tell me if you want more outliers. Will you reduce the threshold or increase the threshold?
+
+[Joseph] 19:50:05
+Reduce.
+
+[Sanatan Sukhija] 19:50:06
+Okay, so you can think of similar scenarios okay so if you are given a data set, you want, say, more outliers, reduce the threshold okay All right. So typically 2.75, 2.8 is what people choose This is called a z-score outlier detection. These scores are called as z-scores because they come from
+
+[Sarat Polavarapu] 19:50:06
+Great address.
+
+[Sanatan Sukhija] 19:50:23
+Z distribution. Okay, that's another advantage of using normal distribution okay Now, please note that so far what we have been discussing is okay univariate distribution.
+
+[Sanatan Sukhija] 19:50:37
+Where I am looking at only one feature okay So this is univariate normal distribution.
+
+[Sanatan Sukhija] 19:50:45
+I'm only looking at that feature alone. I'm not looking at other features.
+
+[Sanatan Sukhija] 19:50:49
+Do you think that we can model multiple features together also?
+
+[Sanatan Sukhija] 19:50:52
+Yes or no? There must be a way to model the density of two or more features together right okay that is called a multivariate normal distribution.
+
+[Sanatan Sukhija] 19:51:02
+So currently we are looking at univariate. The density was this 1 by root to pi sigma okay e to the power of minus of x minus mu squared divided by 2 sigma squared okay
+
+[Sanatan Sukhija] 19:51:17
+All right. So this is just an example sake. You can see that okay for different means and different sigmas okay how the curve is going to look like So if you carefully see If the mean is 80, you can see that the mean is centered at 80 for this black curve
+
+[Sanatan Sukhija] 19:51:34
+All right. And sigma is 15, so it is quite spread out okay And for the other curve where you see where mean is 100 and sigma is five, so it is centered at 100.
+
+[Sanatan Sukhija] 19:51:44
+Okay. And because standard deviation is low, so that's why there is a huge peak there.
+
+[Sanatan Sukhija] 19:51:49
+All right. Okay. Try to give answer to this question.
+
+[Sanatan Sukhija] 19:51:55
+What happens to the shape of the normal curve when the standard deviation is varied?
+
+[Sanatan Sukhija] 19:52:00
+So is A option true?
+
+[Sankar Piram] 19:52:06
+Yeah.
+
+[Sanatan Sukhija] 19:52:07
+True, right? What about second option?
+
+[Sankar Piram] 19:52:11
+Shorter and better. Yes, true.
+
+[Sanatan Sukhija] 19:52:13
+True. Okay. What about a third one?
+
+[Sanatan Sukhija] 19:52:21
+This is right. Okay. So A and B both are right okay All right. Okay, this we have already discussed. Okay, so if you change the formula where you put mean as zero and standard deviation as one, the formula would become this.
+
+[Sarat Polavarapu] 19:52:22
+Roman, Ram.
+
+[Sanatan Sukhija] 19:52:36
+Okay. All right. So if you put mean as zero and standard deviation is one, the formula would become this okay Please note that, okay, if you integrate this function between minus one to one, now it will be equal to one.
+
+[Sanatan Sukhija] 19:52:50
+This is the scaling factor that you see over here, one by root 2 pi.
+
+[Sanatan Sukhija] 19:52:55
+Okay. So in most of the property distributions, there will be a scaling factor outside to ensure that the integral sums up to one.
+
+[Sanatan Sukhija] 19:53:02
+Okay. All right.
+
+[Howard] 19:53:04
+So I have a quick question.
+
+[Sanatan Sukhija] 19:53:06
+Yes. Fee distribution. You can call it standard normal distribution also Okay. Yeah.
+
+[Sarat Polavarapu] 19:53:06
+It's called g distribution or is it called
+
+[Howard] 19:53:12
+And I have a quick question with regard to So when you pull this into models, like more specifically, so when you're looking at the feature set and you perform your standardization, the standardization, I guess it acts as like kind of a
+
+[Sarat Polavarapu] 19:53:14
+Is that correct?
+
+[Sanatan Sukhija] 19:53:16
+Sure.
+
+[Howard] 19:53:27
+Constant approximation for each variable. If it falls outside of a certain threshold that basically gives you the signal that it's a big outlier or if it's within reason.
+
+[Howard] 19:53:40
+And, you know, comparison to the rest of the data, am I kind of thinking of that correctly?
+
+[Sanatan Sukhija] 19:53:45
+Got it. Got it. So the process of standardization gives you two things One is that if a value okay if it is an outlier value or not, if it's a low value outlier or a high value outlier, that's one thing.
+
+[Sanatan Sukhija] 19:53:57
+The other is it scales the values within this a range of so can I say that most of the values after scaling will be between minus three to three? Yes or no?
+
+[Joseph] 19:54:08
+Yes.
+
+[Sanatan Sukhija] 19:54:09
+Okay now if i do this for all the other features, can I say that there most of the values will also be between minus three to three?
+
+[Sanatan Sukhija] 19:54:16
+Yes or no. So can you say that it is giving me now, so I'll show you why it is needed.
+
+[Joseph] 19:54:18
+Yes.
+
+[Howard] 19:54:19
+Yes.
+
+[Sanatan Sukhija] 19:54:23
+So this process of standardization acts as a scaling, I mean, acts as a way of scaling as well. So think of it like this. Let's say I'm asking you to compute distances.
+
+[Sanatan Sukhija] 19:54:35
+Okay. I'm giving you now a multivariate data set. So let's say you have age and BMI.
+
+[Sanatan Sukhija] 19:54:41
+There are two individuals okay or maybe three individuals I'm taking. I want you to see this carefully. All right.
+
+[Sanatan Sukhija] 19:54:47
+Or let me instead of taking age and BMI, let me take say age and salary so that you see some clear differences So let's say the first sample is 18 okay My age is 18. The salary is maybe say $10,000.
+
+[Sanatan Sukhija] 19:55:04
+The second person is having age 25. The salary is $35,000. Okay.
+
+[Sanatan Sukhija] 19:55:10
+There could be a bunch of other points also. I'm just demonstrating with three of them. Let's say this is 60 maybe the salary is, say, $100,000.
+
+[Sanatan Sukhija] 19:55:18
+Okay. Or even more. Just assume a number. This is person one, this is person two, this is person three.
+
+[Sanatan Sukhija] 19:55:25
+If I compute the distance of person one and person two okay or between any two persons or between any two persons Do you think if I ignore age will it kind of play any role at all?
+
+[Sanatan Sukhija] 19:55:45
+If I ignore age, will I still get almost like a good interpretation of my distances yes or no Okay, think of this. How do you compute distance of person one and person two?
+
+[Sanatan Sukhija] 19:55:58
+So I'm going to show you certain metrics. I want you to see this carefully. So one of the metrics is called as Manhattan distance.
+
+[Sanatan Sukhija] 19:56:05
+Okay also called as L1 distance okay So what is the distance between age of person one and person two?
+
+[Sankar Piram] 19:56:14
+P2 minus P1.
+
+[Sanatan Sukhija] 19:56:15
+Which is? The difference between the ages of the first two individuals.
+
+[Sarat Polavarapu] 19:56:20
+Seven.
+
+[Sanatan Sukhija] 19:56:21
+Seven, right? Okay. So think of taking the absolute of that. Is that clear? So basically this is the distance between the age of P1 and P2. Is that clear?
+
+[Sankar Piram] 19:56:21
+Yeah.
+
+[Sanatan Sukhija] 19:56:29
+What is the difference between the salary of the two people okay which is 10,000 minus 35,000.
+
+[Sankar Piram] 19:56:30
+Yeah.
+
+[Sarat Polavarapu] 19:56:30
+Yes.
+
+[Sanatan Sukhija] 19:56:33
+Does that make sense? My question is for most of these, so the total distance is the distance along the dimension h And the distance along the dimension salary is that clear?
+
+[Sankar Piram] 19:56:37
+Yep.
+
+[Sanatan Sukhija] 19:56:47
+The net distance is the distance along the dimension h and the distance along the dimension salary. My question is.
+
+[Sanatan Sukhija] 19:56:53
+If I remove this distance along the edge, do you think that I will still have a good notion of the distances between the points
+
+[Sankar Piram] 19:57:02
+Yes, because this is smaller, is that the reason?
+
+[Sanatan Sukhija] 19:57:04
+Yes, because the range of the features, okay, these distances are impacted by range, right? Yes or no?
+
+[Sanatan Sukhija] 19:57:12
+So what should I do if I want to compute any kind of distances?
+
+[Sanatan Sukhija] 19:57:16
+Especially when you're using multivariate data sets, multiple features. I should scale my data, right? Otherwise, one feature will take over.
+
+[Sankar Piram] 19:57:24
+Exactly. Okay. I see. Okay.
+
+[Sanatan Sukhija] 19:57:25
+Okay, so what we typically do is we will first standardize age How do you standardize age? Take the mean value of age Okay, whatever the mean value of age is divide by the standard deviation of the age. Can you do it for all the values? Yes or no?
+
+[Sanatan Sukhija] 19:57:40
+You can do that right okay similarly we'll do it for the salary also Does that make sense? And then we compute the distances. Is that clear?
+
+[Joseph] 19:57:41
+Yes.
+
+[Sankar Piram] 19:57:41
+Yes.
+
+[Sankar Piram] 19:57:50
+Yes.
+
+[Sanatan Sukhija] 19:57:50
+And this will give us a good indication of both the features contributing to you can set to the final distance. That's why you do scaling.
+
+[Sanatan Sukhija] 19:57:59
+Otherwise, scaling, I mean, if you don't do scaling, right, distance-based algorithms will be biased towards that feature which has a bigger range.
+
+[Sankar Piram] 19:57:59
+Got it.
+
+[Sanatan Sukhija] 19:58:08
+Okay.
+
+[Joseph] 19:58:09
+So question, Sunat. So if I'm doing a pca right It's important to standardize first, right?
+
+[Sanatan Sukhija] 19:58:15
+Mm-hmm. Absolutely. Absolutely.
+
+[Joseph] 19:58:18
+And next question, no. What if I don't what if i'm okay so i'm not doing PCA now. I'm modeling now.
+
+[Sanatan Sukhija] 19:58:26
+Mm-hmm.
+
+[Joseph] 19:58:28
+Do I need to let any model? Do I need a standardized tool or the model will take care of that for me that's a
+
+[Sanatan Sukhija] 19:58:33
+If you see if you are going to make… you can say your predictions based on distances then you must.
+
+[Joseph] 19:58:40
+Okay.
+
+[Sanatan Sukhija] 19:58:41
+If you are going to make your predictions where you are following some other process which is not making use of distances, then you don't need to.
+
+[Joseph] 19:58:48
+Okay.
+
+[Sanatan Sukhija] 19:58:50
+So I'll be very precise here. You are going to study machine learning models which are distance based.
+
+[Sanatan Sukhija] 19:58:56
+For example, nearest neighbors okay for example linear regression logistic regression they will require you to scale the data And there are algorithms which do not require you to scale. For example, decision tree based algorithms.
+
+[Joseph] 19:58:56
+Okay. Yes, yes, yes.
+
+[Joseph] 19:59:05
+Okay.
+
+[Sanatan Sukhija] 19:59:09
+The second tree is random for us, gradient boosting NAVE base. So they all do not require any type of scaling because the methodology that they use to get your predictions is not based on distances at all.
+
+[Joseph] 19:59:10
+Yep.
+
+[Joseph] 19:59:22
+Okay. Awesome. Awesome. Thank you.
+
+[Sanatan Sukhija] 19:59:22
+Okay. So there you don't need scaling. Now, if the question is, what if I standardize? Now, the beauty is even if you standardize, right?
+
+[Sanatan Sukhija] 19:59:30
+Their predictions do not change. See, if you do standardization For those models which are not distance based it will not create any harm okay but you'll be foolish in doing so if you're doing it because you'll be wasting time.
+
+[Joseph] 19:59:46
+Yeah, that's true.
+
+[Sanatan Sukhija] 19:59:48
+All right. You'll realize it okay once you see the actual models okay standardization will not play a role for those which are not distance based.
+
+[Sanatan Sukhija] 19:59:55
+Okay. Now… This we have already seen. Okay, I'm just skipping through the slides okay which are kind of Yes, yes, yes.
+
+[Sarat Polavarapu] 20:00:04
+One question. Go back in the formula in the g distribution formula when you write down what is that
+
+[Sanatan Sukhija] 20:00:12
+Yeah, I'll write it again. Don't worry. So this was the actual formula. See this?
+
+[Sanatan Sukhija] 20:00:15
+This is your normal distribution. Let's say where you have some mean and some.
+
+[Sanatan Sukhija] 20:00:20
+Variance. This is the formula 1 by root two pi sigma e to the power of minus of x minus mean whole square divided by 2 sigma squared. Now, if mean is zero.
+
+[Sanatan Sukhija] 20:00:28
+Okay, I'll just write it again. So this is your normal distribution with your normal distribution mean mu and variant sigma squared. Is that clear? Now I'm writing standard normal distribution. You can write it like this okay that means zero and sigma square one okay so the formula would be
+
+[Sanatan Sukhija] 20:00:46
+See this one by so what is sigma right now one is that clear?
+
+[Sanatan Sukhija] 20:00:51
+What does mean? In the denominator sigma square is one so it will be this is that clear This is your standard normal.
+
+[Sarat Polavarapu] 20:00:54
+Indeedo.
+
+[Sarat Polavarapu] 20:01:01
+Got it. Thank you.
+
+[Sanatan Sukhija] 20:01:02
+Distribution.
+
+[Sanatan Sukhija] 20:01:09
+Okay, now I want you to see this And we'll close it with this.
+
+[Sanatan Sukhija] 20:01:15
+And then I will discuss the remaining distribution, which is just a variant of normal distribution. We'll discuss it tomorrow.
+
+[Sanatan Sukhija] 20:01:21
+So, okay, look at this curve okay and let's say if i ask you Okay.
+
+[Sanatan Sukhija] 20:01:29
+Tell me, okay, what is the probability, okay? Maybe say till the value one So do you think that I can compute the integral of the function Okay. Between, say, minus infinity to one, if I'm interested in up to going to one, I can compute this area
+
+[Sanatan Sukhija] 20:01:48
+Yes or no? Does it make sense? I can go up to infinity to minus infinity to one and I can integrate my function, be it standard normal or be it the actual normal distribution, the regular normal distribution. Do you think that makes sense
+
+[Sanatan Sukhija] 20:02:03
+Okay. We are going to see one usage of it okay data analysis.
+
+[Sanatan Sukhija] 20:02:09
+Okay, so I want you to see this. So this is what they are indicating. So if let's say Z is 1.5 and I'm interested in getting the probability where So if Z is 1.5, what is the probability of this curve. Do you think that what is the total area one
+
+[Sanatan Sukhija] 20:02:24
+And I can compute the cdf okay up to this value 1.5 Does this make sense? Cdf means integral from minus infinity to this one of your function of your density function is that clear So integral to 1.5.
+
+[Sanatan Sukhija] 20:02:40
+Okay. Is that good? This will be this value.
+
+[Sanatan Sukhija] 20:02:47
+Or you can write it as from 1.5 to infinity if you want to do it that way.
+
+[Sanatan Sukhija] 20:02:52
+Okay. Similarly, yes.
+
+[Sarat Polavarapu] 20:02:53
+So CDF means continuous density function you are calculating here.
+
+[Sanatan Sukhija] 20:02:57
+Cumulative density function.
+
+[Sanatan Sukhija] 20:03:05
+It is the sum of all the density values up to that point.
+
+[Sanatan Sukhija] 20:03:10
+How you can interpret this it is the sum of all the values up to 1.5. Is that clear?
+
+[Sarat Polavarapu] 20:03:11
+Hmm.
+
+[Sanatan Sukhija] 20:03:16
+So this will be so cdf of 1.5 will be this okay from minus infinity up to 1.5. I'm subtracting 1 from it because I know that the entire area is 1. Is that clear?
+
+[Sarat Polavarapu] 20:03:17
+Yes.
+
+[Sanatan Sukhija] 20:03:28
+Okay. The same thing you can do for the other one where you can say that I'm only interested between 0.5 to 1.5.
+
+[Sanatan Sukhija] 20:03:33
+Let's do a numerical on it, okay? See this. So there are, and this is the last thing that I'm discussing today.
+
+[Sanatan Sukhija] 20:03:41
+So there are 50 random individuals who are taking an IQ test okay Parth is one of the volunteers who scored 74 from a maximum of 120 points okay The average score is given, which is 62.
+
+[Sanatan Sukhija] 20:03:55
+Okay, so mu is given to you as 62. Parts code.
+
+[Sanatan Sukhija] 20:04:01
+74. Okay. All right. And the standard deviation that is given is 11.
+
+[Sanatan Sukhija] 20:04:06
+Okay, this is 11 okay Now, how will you figure out? So it should be a he, not a she.
+
+[Sanatan Sukhija] 20:04:13
+Can you tell us, okay, or can you tell me How well did Parth do in comparison to all the other volunteers?
+
+[Sanatan Sukhija] 20:04:20
+So if you try to draw this curve, where will this curve be? Assume that you are following a normal distribution. Where will this curve peak?
+
+[Sankar Piram] 20:04:27
+62.
+
+[Sanatan Sukhija] 20:04:28
+62 okay all right you know that okay standard deviation is 11 okay so where does parts fall to the right of it or to the left of it?
+
+[Sarat Polavarapu] 20:04:36
+To the right.
+
+[Sanatan Sukhija] 20:04:36
+To the right of it right okay does that make sense okay Now, let me ask you this. If I would have scaled this data okay So what would be the resultant value for the scaling?
+
+[Sanatan Sukhija] 20:04:47
+Think about it. If I would have scaled this data, if I would have scaled a score of path.
+
+[Sanatan Sukhija] 20:04:53
+What would be the resultant value if you assume that okay 62 is now boiled down to zero Now 62 resembles 0.
+
+[Sanatan Sukhija] 20:05:01
+So where will this zero be? See, I'm going to subtract each entry from the mean. Yes or no.
+
+[Sanatan Sukhija] 20:05:07
+So if I subtract. No, no, no. This is the 74 value for path, right? Okay. I'm centering it. So if I center it, I have to subtract the mean. Does that make sense?
+
+[Sarat Polavarapu] 20:05:10
+The plus three and minus three?
+
+[Howard] 20:05:13
+Going to be 12.
+
+[Sanatan Sukhija] 20:05:21
+And if I divide it by 11, can I say that this is where somewhere parts would lie and this is that value Does that make sense? This is also called as Z statistic or z score is that clear?
+
+[Sankar Piram] 20:05:29
+Yes.
+
+[Sanatan Sukhija] 20:05:33
+This is a z-score, right? Yes or no? Okay, now if I ask you if i ask you How will these parts do or what percentile is path? What would you say?
+
+[Sankar Piram] 20:05:36
+Yes.
+
+[Sanatan Sukhija] 20:05:47
+No, no, no. What percentile is Spark?
+
+[Sankar Piram] 20:05:51
+0 to 74 like the sum of all the points
+
+[Sanatan Sukhija] 20:05:54
+No. Think about it. Don't you see that okay we have to compute the area under the curve from essentially minus infinity to this path score, the part z statistic yes or no?
+
+[Deepak] 20:05:55
+I wish.
+
+[Sarat Polavarapu] 20:05:56
+One point.
+
+[Sankar Piram] 20:06:07
+Yes, correct.
+
+[Sarat Polavarapu] 20:06:07
+Yes.
+
+[Sanatan Sukhija] 20:06:08
+I mean, you are right that it cannot be minus infinity. I have to go from zero onwards, right? Why? Because scores are positive.
+
+[Sanatan Sukhija] 20:06:13
+But after scaling sports can be negative also, yes or no Okay, after scaling scores can be negative also right some of the values are smaller than this zero okay all right After scaling, I'm saying. Now, if you look at the Z statistic okay
+
+[Sankar Piram] 20:06:17
+Oh, I see. Okay. Makes sense.
+
+[Sanatan Sukhija] 20:06:29
+Let's say you, so how do you compute this number okay how do you compute this probability score Please note that you have tables for it okay So whenever you're solving such questions, you'll be given a table. So I'm just showing you what are the calculations.
+
+[Sanatan Sukhija] 20:06:41
+Okay, so this is what it will come down to be. This is your Z statistic.
+
+[Sanatan Sukhija] 20:06:46
+Now, how would you interpret the Z statistic? This value is around 1.09 Can I say that Parth is now 1.09 standard deviations away from the mean. Yes or no?
+
+[Sarat Polavarapu] 20:06:58
+Yes.
+
+[Sanatan Sukhija] 20:06:59
+Okay, you can interpret it like this, right? These many standard deviations away
+
+[Sanatan Sukhija] 20:07:06
+Okay, from the mean. And what does it mean right now? Zero.
+
+[Sanatan Sukhija] 20:07:13
+Or you can say from 62 okay is that clear from the actual mean which is 62 okay Now, if you want to compute the probability for this number 1.09, I'm going to show you a small table. See this carefully.
+
+[Sanatan Sukhija] 20:07:29
+So all you have to do is, okay, first find the value of z okay the you can say the integer value okay what is the integer value right now one And what is the decimal value? 0.09 to the right.
+
+[Sanatan Sukhija] 20:07:41
+So if you come to this value, you get a probability score of 0.
+
+[Sanatan Sukhija] 20:07:46
+86214. Okay. So can I say that path is in the 86th percentile or 87th percentile almost. Yes or no.
+
+[Sarat Polavarapu] 20:07:57
+Yes.
+
+[Sanatan Sukhija] 20:07:57
+Does that make sense? Or Parth is better than 87% of the individuals Okay, or 86% of the individuals okay Now, if I ask you how many individual sparse is better than, what would you do?
+
+[Sanatan Sukhija] 20:08:08
+So you now know path is in the 86th percentile because that's the probability So how many individuals path is better than just multiply this number by
+
+[Sanatan Sukhija] 20:08:21
+The number of people who took this test. And what is in there?
+
+[Sankar Piram] 20:08:21
+120. 120.
+
+[Sanatan Sukhija] 20:08:26
+120 okay so 85% of 120, I don't know what that number is okay so This number boils down to… No, it's it.
+
+[Sanatan Sukhija] 20:08:38
+It should be actually more okay 87% of or almost this is number 86.21%.
+
+[Sanatan Sukhija] 20:08:44
+So this percent okay of this 120, okay?
+
+[Sanatan Sukhija] 20:08:50
+Well, there should be more right okay Okay, let me uh so this would be 12 Definitely higher, I mean, closer to 100 or more. So this person is better than 100 or more individuals. Is that clear?
+
+[Sanatan Sukhija] 20:09:04
+Does that make sense? I think these calculations are wrong okay Bishop. Yeah.
+
+[Sankar Piram] 20:09:08
+It just thinks only 50 people took the test, right? Maybe that is what
+
+[Sanatan Sukhija] 20:09:12
+People who took the test, right? Oh, sorry. It's 120 points. My bad. 50 individuals took the test. My bad.
+
+[Sanatan Sukhija] 20:09:18
+Sorry, sorry, sorry. Okay, this is right then. Okay. So this is 50 people who took the test. Okay. All right. So 86% of FT is around 43.
+
+[Sanatan Sukhija] 20:09:27
+So path is better than 43 individuals. Or his ranking is 43, you can say.
+
+[Sanatan Sukhija] 20:09:33
+Sorry, seventh, if you want to put it that way. Any questions on this?
+
+[Sanatan Sukhija] 20:09:38
+Ask. So we have discussed today univariate normal distribution Any questions on this?
+
+[Sarat Polavarapu] 20:09:48
+For uni-made normal distribution only g distribution will fall under this or do we have
+
+[Sanatan Sukhija] 20:09:54
+You can view it both ways. If you are standardizing the data, you can say that normal distribution has been transformed to Z distribution. Both are normal distribution only, by the way.
+
+[Sanatan Sukhija] 20:10:04
+This is that you're shifting the values of the mean and the standard deviation.
+
+[Sarat Polavarapu] 20:10:08
+I'm trying to understand like univariate and bivariate right so it's
+
+[Sanatan Sukhija] 20:10:12
+So in bivariate, what we'll do is we'll combine multiple features together. We'll discuss it tomorrow.
+
+[Sanatan Sukhija] 20:10:19
+The formula is different for that okay and it will involve how one feature is deviating with respect to the other.
+
+[Sanatan Sukhija] 20:10:26
+Okay. Yes.
+
+[Sankar Piram] 20:10:28
+Got it. Hey, quick question. So how do we join for the tomorrow session? I didn't see that
+
+[Sanatan Sukhija] 20:10:35
+Yeah, I think there's a one is to end session on your up level.
+
+[Sanatan Sukhija] 20:10:38
+Oh, no, no. I think you'll have the link for that. Ar sessions are compulsory for everyone.
+
+[Sanatan Sukhija] 20:10:43
+We'll probably have the link for that, no? Can someone confirm? You don't have to register for that.
+
+[Sankar Piram] 20:10:50
+I see.
+
+[Sanatan Sukhija] 20:10:50
+As far as…
+
+[Sonia] 20:10:51
+If you go to your schedule, you can see that. You don't need to go to the expert connect you have to go to your schedule tab And you can see tomorrow's decision.
+
+[Sankar Piram] 20:10:57
+I think I was not part of the same cohort. I just joined this session. Maybe tomorrow's might be not in my cohort.
+
+[Sanatan Sukhija] 20:11:04
+Oh, okay. I'm not sure. I cannot provide you the, is there a way to provide the link beforehand?
+
+[Sarat Polavarapu] 20:11:10
+Thank you.
+
+[Sanatan Sukhija] 20:11:14
+If anyone knows how to get the link, okay, maybe you can post it in the chat and it'll be helpful for him.
+
+[Sanatan Sukhija] 20:11:20
+Let me see, I'm actually looking at if there is a way I can share this link.
+
+[Sanatan Sukhija] 20:11:25
+Okay, I can… But Tava's card.
+
+[Sonia] 20:11:26
+I think he will have same time different class. Everyone everyone will have same time Thursday and Sunday class.
+
+[Sanatan Sukhija] 20:11:32
+Oh.
+
+[Sanatan Sukhija] 20:11:36
+Okay, in case you don't have a class, what you can do, buddy, is send me a request on LinkedIn.
+
+[Sankar Piram] 20:11:42
+Okay. Sounds good. Yeah, thanks, Anadan.
+
+[Sanatan Sukhija] 20:11:42
+Okay. All right. And I'll send you the link five minutes prior.
+
+[Sanatan Sukhija] 20:11:47
+That you need the link for this and then we can discuss.
+
+[Sankar Piram] 20:11:51
+Sounds good. Thank you so much.
+
+[Sanatan Sukhija] 20:11:52
+All right. Okay. Okay, guys, we'll meet. Any questions before i go Just final call for the questions.
+
+[David] 20:12:06
+Check my understanding. So if we have a normal distribution And then we take it through a process called standardizing it, which is what we just kind of went over.
+
+[David] 20:12:15
+Then we can utilize z scores to kind of reverse that process.
+
+[David] 20:12:22
+To get it back to its original values. So that's kind of a way that we can reliably normalize any normal distribution to present them in a way that's going to kind of remove or abstract away the nuances of the numbers like a super high salary or
+
+[Sanatan Sukhija] 20:12:26
+Yes.
+
+[Sanatan Sukhija] 20:12:41
+Correct.
+
+[David] 20:12:41
+Anything like that. Okay, cool. Yeah, that's brilliant. Thank you.
+
+[Sanatan Sukhija] 20:12:48
+All right. Any other?
+
+[Sonia] 20:12:51
+Sorry, could you please repeat this again? If we have a normal distribution and we wanted to do the standardization?
+
+[Sanatan Sukhija] 20:12:56
+Saying that, okay, so regardless of the range of the values of any feature okay This process of standardization kind of abstracts that.
+
+[Sanatan Sukhija] 20:13:07
+See, all you are left with is these standardized values, right? Minus three, minus one, minus two. And if you want to get back to the original values, you can do so, right?
+
+[Sanatan Sukhija] 20:13:14
+How will you do so? Multiply by the standard deviation and add the mean.
+
+[Sanatan Sukhija] 20:13:19
+Yes or no. So this, you can say this uh I mean, very simple process, okay, is you can say uh I mean, loss free and you can go back anytime Okay. All right. And it is beautiful in this that it is
+
+[Sonia] 20:13:20
+Okay, yes, okay. I'll put you today.
+
+[Sonia] 20:13:35
+Thank you.
+
+[Sanatan Sukhija] 20:13:36
+Independent of the range of the features. Okay. All right. It brings all the features down almost to the same scale between, I would say minus three to three for most of the values.
+
+[Sanatan Sukhija] 20:13:46
+Okay. Very welcome. I have to take leave.
+
+[Sonia] 20:13:48
+Thank you.
+
+[Sanatan Sukhija] 20:13:53
+I'll discuss the remaining part in the AR session first, and then we'll go over your assignment questions and interview questions.
+
+[Sanatan Sukhija] 20:14:02
+Feel free to even explore more and ask me your interview questions or anything that you come across bring that and we'll discuss in the AR session. And whenever you see me next also after this After the AR session, feel free to come and join okay
+
+[Sanatan Sukhija] 20:14:16
+Bye-bye, everyone. Take care. Hi, everyone. Take care.
+
+[Sankar Piram] 20:14:20
+Thank you. Thank you so much.
+
