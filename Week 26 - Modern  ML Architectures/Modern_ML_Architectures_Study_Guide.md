@@ -1,10 +1,12 @@
 # Modern ML Architectures Study Guide - Week 26
-*Explaining Modern ML Architectures like to a smart 12-year old, then diving into technical details*
+*Comprehensive study material covering Autoencoders, VAEs, and Graph Neural Networks*
 
 ## 🎯 Table of Contents
 1. [Simple Explanations with Illustrations](#simple-explanations)
 2. [Technical Deep Dive](#technical-concepts)
-3. [Interview Questions & Answers](#interview-questions)
+3. [Live Class Key Points](#live-class-notes)
+4. [Interview Questions & Answers](#interview-questions)
+5. [Practical Implementation Guide](#implementation-guide)
 
 ---
 
@@ -49,14 +51,28 @@ Imagine you have a huge LEGO castle, but you need to pack it in a small box for 
 - **Regular:** Can only recreate what it's seen
 - **VAE:** Can create brand new examples!
 
-#### 3. Generative Adversarial Networks (GANs) 🥊
+#### 3. Graph Neural Networks (GNNs) 🕸️
+**Simple:** "Understanding relationships between connected things"
+
+**Real-life analogy:** Social media friend recommendations
+- **Nodes:** People in the network
+- **Edges:** Friendships between people
+- **GNN Magic:** "If you're friends with Alice and Bob, and Alice likes jazz music, maybe you'll like jazz too!"
+- **Learning:** The network learns that connected people often have similar interests
+
+**Applications:**
+- **Social networks:** Friend recommendations, community detection
+- **Citation networks:** Paper recommendations, research area classification
+- **Molecular analysis:** Drug discovery, protein folding prediction
+
+#### 4. Generative Adversarial Networks (GANs) 🥊
 **Simple:** "Two AI systems competing to get better"
 
 **Real-life analogy:** Art forger vs Art detective
 - **Generator (Forger):** Tries to create fake paintings
 - **Discriminator (Detective):** Tries to spot fake paintings
 - **Competition:** They keep getting better by competing!
-- **Result:** Generator becomes so good it creates perfect "real" paintings##
+- **Result:** Generator becomes so good it creates perfect "real" paintings
 # Dimensionality Reduction Techniques
 
 #### 1. PCA (Principal Component Analysis) 📊
@@ -103,6 +119,82 @@ Result: "These photos seem to group into furry animals, vehicles, and buildings"
 - **K-Means Clustering:** Group similar things together
 - **DBSCAN:** Find clusters of any shape, ignore outliers
 - **Hierarchical Clustering:** Build a family tree of similarities
+
+---
+
+## 📚 Live Class Key Points {#live-class-notes}
+
+### Unsupervised Learning Fundamentals
+
+**What is Unsupervised Learning?**
+- Machine learning approach where **no target variable** is provided
+- Algorithm must find patterns and relationships in data **without supervision**
+- More common in real-world applications than supervised learning
+- Target variables are often difficult or expensive to obtain
+
+**Key Difference from Supervised Learning:**
+```
+Supervised:   Features + Target → Prediction
+Unsupervised: Features only → Discover Patterns
+```
+
+**Common Unsupervised Algorithms:**
+- **K-Means Clustering**: Groups data into k clusters
+- **DBSCAN**: Density-based clustering, finds clusters of any shape
+- **Hierarchical Clustering**: Creates tree-like cluster structures
+- **Gaussian Mixture Models**: Probabilistic clustering approach
+
+### Dimensionality Reduction Deep Dive
+
+**Why Dimensionality Reduction Matters:**
+- **Curse of Dimensionality**: Too many features can hurt model performance
+- **Computational Efficiency**: Fewer features = faster training
+- **Visualization**: Reduce to 2D/3D for human understanding
+- **Noise Reduction**: Remove irrelevant or redundant features
+- **Storage**: Compress data while preserving information
+
+**The Goal:**
+Take 10,000 features → Reduce to 100 features while retaining 95% of information
+
+#### Principal Component Analysis (PCA) - Mathematical Foundation
+
+**PCA Algorithm Steps:**
+1. **Compute Covariance Matrix**: C = (1/n) × X^T × X
+2. **Eigenvalue Decomposition**: C = Q × Λ × Q^T
+3. **Sort Eigenvalues**: λ₁ ≥ λ₂ ≥ ... ≥ λₙ
+4. **Select Components**: Choose top k eigenvectors
+5. **Transform Data**: X_reduced = X × Q_k
+
+**Why PCA is Linear:**
+- **Mathematical Mapping**: T(x) = Ax (matrix multiplication)
+- **Satisfies Linearity**: T(x + y) = T(x) + T(y)
+- **Scalar Property**: T(αx) = αT(x)
+- **Linear Projection**: Projects data onto lower-dimensional subspace
+
+**Interview Question - Prove PCA Linearity:**
+```
+Given: T(x) = Ax where A is the projection matrix
+Prove: T(x + y) = T(x) + T(y)
+
+Solution:
+T(x + y) = A(x + y)     [Definition]
+         = Ax + Ay      [Matrix distributivity]
+         = T(x) + T(y)  [Definition]
+```
+
+#### Advanced Dimensionality Reduction Techniques
+
+**t-SNE (t-Distributed Stochastic Neighbor Embedding):**
+- **Nonlinear**: Captures complex manifold structures
+- **Local Focus**: Preserves local neighborhoods excellently
+- **Visualization**: Best for 2D/3D visualization
+- **Computational Cost**: O(n²) - expensive for large datasets
+
+**UMAP (Uniform Manifold Approximation and Projection):**
+- **Faster than t-SNE**: O(n log n) complexity
+- **Global Structure**: Preserves both local and global relationships
+- **Scalable**: Works with larger datasets
+- **Flexible**: Can reduce to any number of dimensions
 
 ---
 
@@ -320,6 +412,321 @@ embedding = reducer.fit_transform(high_dim_data)
 | **t-SNE** | Nonlinear | Slow | Poor | Excellent | Many |
 | **UMAP** | Nonlinear | Fast | Good | Good | Moderate |
 
+### Graph Neural Networks (GNNs)
+
+#### Graph Convolutional Networks (GCNs)
+
+**Core Concept:** Extend convolution to graph-structured data
+
+```python
+class GCN(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super().__init__()
+        self.conv1 = GCNConv(input_dim, hidden_dim)
+        self.conv2 = GCNConv(hidden_dim, output_dim)
+    
+    def forward(self, x, edge_index):
+        # First graph convolution
+        x = self.conv1(x, edge_index)
+        x = F.relu(x)
+        
+        # Second graph convolution
+        x = self.conv2(x, edge_index)
+        return F.log_softmax(x, dim=1)
+```
+
+#### Message Passing Framework
+
+**Mathematical Foundation:**
+```
+h_i^(l+1) = UPDATE(h_i^(l), AGGREGATE({h_j^(l) : j ∈ N(i)}))
+```
+
+**GCN Specific Formula:**
+```
+H^(l+1) = σ(D̃^(-1/2) Ã D̃^(-1/2) H^(l) W^(l))
+
+where:
+- Ã = A + I (adjacency matrix + self-loops)
+- D̃ = degree matrix of Ã
+- H^(l) = node features at layer l
+- W^(l) = learnable weight matrix
+- σ = activation function
+```
+
+#### GNN Applications
+
+**1. Node Classification:**
+```python
+# Predict node labels (e.g., paper categories)
+def node_classification_loss(model, data):
+    out = model(data.x, data.edge_index)
+    loss = F.nll_loss(out[data.train_mask], data.y[data.train_mask])
+    return loss
+```
+
+**2. Link Prediction:**
+```python
+# Predict missing edges in graph
+class LinkPredictor(nn.Module):
+    def __init__(self, encoder):
+        super().__init__()
+        self.encoder = encoder
+    
+    def decode(self, z, edge_label_index):
+        # Dot product of node embeddings
+        return (z[edge_label_index[0]] * z[edge_label_index[1]]).sum(dim=-1)
+    
+    def forward(self, x, edge_index, edge_label_index):
+        z = self.encoder(x, edge_index)
+        return self.decode(z, edge_label_index)
+```
+
+**3. Graph Classification:**
+```python
+# Classify entire graphs
+from torch_geometric.nn import global_mean_pool
+
+class GraphClassifier(nn.Module):
+    def __init__(self, input_dim, hidden_dim, num_classes):
+        super().__init__()
+        self.gnn = GCN(input_dim, hidden_dim, hidden_dim)
+        self.classifier = nn.Linear(hidden_dim, num_classes)
+    
+    def forward(self, x, edge_index, batch):
+        # Node-level representations
+        node_embeddings = self.gnn(x, edge_index)
+        
+        # Graph-level representation
+        graph_embedding = global_mean_pool(node_embeddings, batch)
+        
+        # Classification
+        return self.classifier(graph_embedding)
+```
+
+#### Advanced GNN Architectures
+
+**GraphSAGE (Sample and Aggregate):**
+```python
+from torch_geometric.nn import SAGEConv
+
+class GraphSAGE(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super().__init__()
+        self.conv1 = SAGEConv(input_dim, hidden_dim)
+        self.conv2 = SAGEConv(hidden_dim, output_dim)
+    
+    def forward(self, x, edge_index):
+        x = F.relu(self.conv1(x, edge_index))
+        x = self.conv2(x, edge_index)
+        return x
+```
+
+**Graph Attention Networks (GAT):**
+```python
+from torch_geometric.nn import GATConv
+
+class GAT(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim, heads=8):
+        super().__init__()
+        self.conv1 = GATConv(input_dim, hidden_dim, heads=heads, dropout=0.6)
+        self.conv2 = GATConv(hidden_dim * heads, output_dim, heads=1, dropout=0.6)
+    
+    def forward(self, x, edge_index):
+        x = F.dropout(x, p=0.6, training=self.training)
+        x = F.elu(self.conv1(x, edge_index))
+        x = F.dropout(x, p=0.6, training=self.training)
+        x = self.conv2(x, edge_index)
+        return F.log_softmax(x, dim=1)
+```
+
+---
+
+## 💻 Practical Implementation Guide {#implementation-guide}
+
+### Building Your First Autoencoder
+
+**Step 1: Data Preprocessing**
+```python
+# Normalize data to [0,1] range
+X_train = X_train.astype('float32') / 255.0
+X_test = X_test.astype('float32') / 255.0
+
+# Reshape for CNN input
+X_train = X_train.reshape(-1, 28, 28, 1)
+X_test = X_test.reshape(-1, 28, 28, 1)
+```
+
+**Step 2: Encoder Architecture**
+```python
+# Progressive compression
+encoder_input = Input(shape=(28, 28, 1))
+x = Conv2D(16, (3, 3), activation='relu', padding='same')(encoder_input)
+x = MaxPooling2D((2, 2))(x)  # 14x14
+x = Conv2D(8, (3, 3), activation='relu', padding='same')(x)
+x = MaxPooling2D((2, 2))(x)  # 7x7
+encoded = Conv2D(1, (3, 3), activation='relu', padding='same')(x)
+```
+
+**Step 3: Decoder Architecture**
+```python
+# Progressive reconstruction
+x = Conv2D(8, (3, 3), activation='relu', padding='same')(encoded)
+x = UpSampling2D((2, 2))(x)  # 14x14
+x = Conv2D(16, (3, 3), activation='relu', padding='same')(x)
+x = UpSampling2D((2, 2))(x)  # 28x28
+decoded = Conv2D(1, (3, 3), activation='sigmoid', padding='same')(x)
+```
+
+### VAE Implementation Tips
+
+**Reparameterization Trick:**
+```python
+def sampling(args):
+    z_mean, z_log_var = args
+    epsilon = tf.random.normal(shape=tf.shape(z_mean))
+    return z_mean + tf.exp(0.5 * z_log_var) * epsilon
+```
+
+**Custom Loss Function:**
+```python
+def vae_loss(x, x_decoded, z_mean, z_log_var):
+    # Reconstruction loss
+    reconstruction_loss = tf.reduce_mean(tf.square(x - x_decoded))
+    
+    # KL divergence loss
+    kl_loss = -0.5 * tf.reduce_mean(
+        1 + z_log_var - tf.square(z_mean) - tf.exp(z_log_var)
+    )
+    
+    return reconstruction_loss + kl_loss
+```
+
+### Graph Neural Network Setup
+
+**Data Preparation:**
+```python
+# Convert to PyTorch Geometric format
+from torch_geometric.utils import from_networkx
+import torch_geometric.transforms as T
+
+# Load graph data
+data = from_networkx(networkx_graph)
+
+# Add node features (if not available)
+if data.x is None:
+    data.x = torch.eye(data.num_nodes)  # Identity matrix as features
+
+# Apply transforms
+transform = T.Compose([
+    T.NormalizeFeatures(),  # Normalize node features
+    T.RandomNodeSplit(num_val=0.1, num_test=0.2)  # Create train/val/test splits
+])
+data = transform(data)
+```
+
+**GCN Implementation:**
+```python
+import torch
+import torch.nn.functional as F
+from torch_geometric.nn import GCNConv
+
+class GCN(torch.nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim, dropout=0.5):
+        super().__init__()
+        self.conv1 = GCNConv(input_dim, hidden_dim)
+        self.conv2 = GCNConv(hidden_dim, output_dim)
+        self.dropout = dropout
+    
+    def forward(self, x, edge_index):
+        # First layer
+        x = self.conv1(x, edge_index)
+        x = F.relu(x)
+        x = F.dropout(x, p=self.dropout, training=self.training)
+        
+        # Second layer
+        x = self.conv2(x, edge_index)
+        return F.log_softmax(x, dim=1)
+
+# Training loop
+def train_gnn(model, data, optimizer):
+    model.train()
+    optimizer.zero_grad()
+    
+    # Forward pass
+    out = model(data.x, data.edge_index)
+    
+    # Compute loss only on training nodes
+    loss = F.nll_loss(out[data.train_mask], data.y[data.train_mask])
+    
+    # Backward pass
+    loss.backward()
+    optimizer.step()
+    
+    return loss.item()
+
+# Evaluation
+def evaluate_gnn(model, data, mask):
+    model.eval()
+    with torch.no_grad():
+        out = model(data.x, data.edge_index)
+        pred = out.argmax(dim=1)
+        correct = (pred[mask] == data.y[mask]).sum().item()
+        accuracy = correct / mask.sum().item()
+    return accuracy
+```
+
+**Link Prediction Setup:**
+```python
+from torch_geometric.utils import negative_sampling
+from sklearn.metrics import roc_auc_score
+
+class LinkPredictor(torch.nn.Module):
+    def __init__(self, input_dim, hidden_dim):
+        super().__init__()
+        self.encoder = GCN(input_dim, hidden_dim, hidden_dim)
+    
+    def encode(self, x, edge_index):
+        return self.encoder(x, edge_index)
+    
+    def decode(self, z, edge_label_index):
+        # Dot product of node embeddings
+        return (z[edge_label_index[0]] * z[edge_label_index[1]]).sum(dim=-1)
+    
+    def forward(self, x, edge_index, edge_label_index):
+        z = self.encode(x, edge_index)
+        return self.decode(z, edge_label_index)
+
+# Training for link prediction
+def train_link_prediction(model, data, optimizer):
+    model.train()
+    optimizer.zero_grad()
+    
+    # Generate negative samples
+    neg_edge_index = negative_sampling(
+        edge_index=data.edge_index,
+        num_nodes=data.num_nodes,
+        num_neg_samples=data.edge_index.size(1)
+    )
+    
+    # Combine positive and negative edges
+    edge_label_index = torch.cat([data.edge_index, neg_edge_index], dim=-1)
+    edge_label = torch.cat([
+        torch.ones(data.edge_index.size(1)),
+        torch.zeros(neg_edge_index.size(1))
+    ])
+    
+    # Forward pass
+    out = model(data.x, data.edge_index, edge_label_index)
+    loss = F.binary_cross_entropy_with_logits(out, edge_label)
+    
+    # Backward pass
+    loss.backward()
+    optimizer.step()
+    
+    return loss.item()
+```
+
 ---
 
 ## 🎤 Interview Questions & Detailed Answers {#interview-questions}
@@ -388,6 +795,206 @@ x_new = decoder(z_new)  # Generate new data
 - **Semi-supervised learning** (few labeled examples)
 - **Disentangled representations** (controllable generation)
 - **Probabilistic modeling** (uncertainty quantification)
+
+#### Q6: Compare different unsupervised learning algorithms and their use cases.
+
+**Answer:**
+
+**Clustering Algorithms Comparison:**
+
+| Algorithm | Type | Advantages | Disadvantages | Best Use Case |
+|-----------|------|------------|---------------|---------------|
+| **K-Means** | Centroid-based | Fast, simple, works well with spherical clusters | Requires k specification, sensitive to outliers | Customer segmentation, image compression |
+| **DBSCAN** | Density-based | Finds arbitrary shapes, handles outliers, auto-determines clusters | Sensitive to hyperparameters, struggles with varying densities | Anomaly detection, spatial data analysis |
+| **Hierarchical** | Tree-based | No k specification needed, creates dendrogram | O(n³) complexity, sensitive to noise | Taxonomy creation, phylogenetic analysis |
+| **Gaussian Mixture** | Probabilistic | Soft clustering, handles overlapping clusters | Assumes Gaussian distributions, requires k | Image segmentation, speech recognition |
+
+**Dimensionality Reduction Comparison:**
+
+| Method | Type | Speed | Global Structure | Local Structure | Best For |
+|--------|------|-------|------------------|-----------------|----------|
+| **PCA** | Linear | Very Fast | Good | Poor | Preprocessing, noise reduction |
+| **t-SNE** | Nonlinear | Slow | Poor | Excellent | Visualization, exploration |
+| **UMAP** | Nonlinear | Fast | Good | Good | Large datasets, production systems |
+
+**Selection Criteria:**
+- **Data size**: PCA for large datasets, t-SNE for small
+- **Cluster shape**: K-means for spherical, DBSCAN for arbitrary
+- **Interpretability**: PCA for interpretable components
+- **Visualization**: t-SNE/UMAP for 2D/3D plots
+
+#### Q7: Explain Graph Neural Networks and their key applications.
+
+**Answer:**
+
+**What are Graph Neural Networks?**
+Graph Neural Networks are deep learning models designed to work with graph-structured data, where relationships between entities are as important as the entities themselves.
+
+**Key Components:**
+1. **Nodes**: Individual entities (users, papers, molecules)
+2. **Edges**: Relationships between entities (friendships, citations, bonds)
+3. **Node Features**: Attributes of each node
+4. **Edge Features**: Attributes of relationships (optional)
+
+**Message Passing Framework:**
+```python
+# General GNN operation
+for layer in range(num_layers):
+    for node_i in graph.nodes:
+        # Collect messages from neighbors
+        messages = []
+        for neighbor_j in graph.neighbors(node_i):
+            message = MESSAGE(node_i.features, neighbor_j.features, edge_ij.features)
+            messages.append(message)
+        
+        # Aggregate messages
+        aggregated = AGGREGATE(messages)  # sum, mean, max, etc.
+        
+        # Update node representation
+        node_i.features = UPDATE(node_i.features, aggregated)
+```
+
+**GCN Mathematical Formulation:**
+```
+H^(l+1) = σ(D̃^(-1/2) Ã D̃^(-1/2) H^(l) W^(l))
+
+where:
+- H^(l) = node features at layer l
+- Ã = A + I (adjacency + self-loops)
+- D̃ = degree matrix of Ã
+- W^(l) = learnable parameters
+- σ = activation function
+```
+
+**Key Applications:**
+
+**1. Social Networks:**
+- **Friend recommendation**: Predict missing connections
+- **Community detection**: Find groups of similar users
+- **Influence analysis**: Identify key opinion leaders
+- **Content recommendation**: Leverage social connections
+
+**2. Citation Networks:**
+- **Paper classification**: Categorize research papers
+- **Citation prediction**: Predict future citations
+- **Research trend analysis**: Identify emerging topics
+- **Author disambiguation**: Resolve author identities
+
+**3. Molecular Analysis:**
+- **Drug discovery**: Predict molecular properties
+- **Protein folding**: Understand 3D structure
+- **Chemical reaction prediction**: Predict reaction outcomes
+- **Toxicity assessment**: Evaluate drug safety
+
+**4. Knowledge Graphs:**
+- **Entity linking**: Connect entities across databases
+- **Relation extraction**: Discover new relationships
+- **Question answering**: Navigate knowledge for answers
+- **Recommendation systems**: Leverage entity relationships
+
+**Advantages of GNNs:**
+- **Relational reasoning**: Incorporates structural information
+- **Permutation invariant**: Order of nodes doesn't matter
+- **Inductive learning**: Can generalize to unseen graphs
+- **Interpretable**: Can analyze learned attention weights
+
+**Challenges:**
+- **Over-smoothing**: Deep GNNs may lose node distinctions
+- **Scalability**: Large graphs require efficient implementations
+- **Heterophily**: Performance drops when connected nodes are dissimilar
+- **Dynamic graphs**: Handling temporal changes in structure
+
+#### Q8: Compare different GNN architectures and their use cases.
+
+**Answer:**
+
+**GNN Architecture Comparison:**
+
+| Architecture | Key Innovation | Strengths | Weaknesses | Best Use Case |
+|--------------|----------------|-----------|------------|---------------|
+| **GCN** | Spectral convolution | Simple, fast, interpretable | Fixed receptive field, over-smoothing | Node classification, small graphs |
+| **GraphSAGE** | Sampling + aggregation | Scalable, inductive | Sampling may lose information | Large graphs, inductive tasks |
+| **GAT** | Attention mechanism | Adaptive weights, interpretable | Computational overhead | Heterogeneous graphs, explainability |
+| **GIN** | Injective aggregation | Theoretically powerful | May overfit on small graphs | Graph classification, molecular data |
+
+**Detailed Comparison:**
+
+**Graph Convolutional Networks (GCN):**
+```python
+# Simple and effective for homophilic graphs
+class GCN(nn.Module):
+    def forward(self, x, edge_index):
+        x = self.conv1(x, edge_index)  # Aggregate neighbors
+        x = F.relu(x)
+        x = self.conv2(x, edge_index)
+        return F.log_softmax(x, dim=1)
+```
+- **Best for**: Citation networks, social networks with homophily
+- **Limitations**: Assumes similar neighbors, fixed aggregation
+
+**GraphSAGE:**
+```python
+# Scalable to large graphs through sampling
+class GraphSAGE(nn.Module):
+    def forward(self, x, edge_index):
+        # Sample fixed number of neighbors
+        x = self.conv1(x, edge_index)  # Mean aggregation
+        x = F.relu(x)
+        return self.conv2(x, edge_index)
+```
+- **Best for**: Large-scale graphs, inductive learning
+- **Innovation**: Neighbor sampling for scalability
+
+**Graph Attention Networks (GAT):**
+```python
+# Learn attention weights for different neighbors
+class GAT(nn.Module):
+    def forward(self, x, edge_index):
+        # Compute attention weights
+        x, attention = self.conv1(x, edge_index, return_attention_weights=True)
+        x = F.elu(x)
+        return self.conv2(x, edge_index)
+```
+- **Best for**: Heterogeneous graphs, interpretability needed
+- **Innovation**: Adaptive neighbor weighting
+
+**Graph Isomorphism Networks (GIN):**
+```python
+# Maximally powerful for graph classification
+class GIN(nn.Module):
+    def forward(self, x, edge_index, batch):
+        x = self.conv1(x, edge_index)  # (1 + ε) * x + Σ neighbors
+        x = F.relu(x)
+        return global_add_pool(x, batch)  # Graph-level representation
+```
+- **Best for**: Graph classification, molecular property prediction
+- **Innovation**: Theoretically most expressive aggregation
+
+**Selection Guidelines:**
+
+**Choose GCN when:**
+- Graph exhibits homophily (similar nodes connect)
+- Computational resources are limited
+- Interpretability is important
+- Graph is relatively small
+
+**Choose GraphSAGE when:**
+- Graph is very large (millions of nodes)
+- Need inductive learning (new nodes at test time)
+- Memory constraints are important
+- Graph structure changes over time
+
+**Choose GAT when:**
+- Graph is heterogeneous (different node/edge types)
+- Need to understand which neighbors are important
+- Nodes have rich feature representations
+- Explainability is crucial
+
+**Choose GIN when:**
+- Task is graph-level classification
+- Working with molecular or chemical data
+- Need maximum expressive power
+- Graph structure is the primary signal
 
 #### Q2: How does the reparameterization trick work in VAEs and why is it necessary?
 
@@ -686,7 +1293,40 @@ umap_reducer = umap.UMAP(
 )
 ```
 
-#### Q4: What are the applications of autoencoders in practice?
+#### Q4: Prove mathematically that PCA is a linear transformation.
+
+**Answer:**
+
+**Given:** PCA transformation T(x) = Ax, where A is the projection matrix containing principal components.
+
+**To Prove:** T is linear, meaning it satisfies:
+1. T(x + y) = T(x) + T(y) (additivity)
+2. T(αx) = αT(x) (homogeneity)
+
+**Proof:**
+
+**Part 1 - Additivity:**
+```
+T(x + y) = A(x + y)           [Definition of T]
+         = Ax + Ay            [Matrix distributivity]
+         = T(x) + T(y)        [Definition of T]
+```
+
+**Part 2 - Homogeneity:**
+```
+T(αx) = A(αx)                 [Definition of T]
+      = α(Ax)                 [Scalar multiplication property]
+      = αT(x)                 [Definition of T]
+```
+
+**Therefore:** PCA is linear because it's fundamentally matrix multiplication, which preserves linear relationships.
+
+**Why This Matters:**
+- **Interpretability**: Linear transformations preserve relative distances
+- **Computational Efficiency**: Matrix operations are highly optimized
+- **Mathematical Properties**: Enables theoretical analysis and guarantees
+
+#### Q5: What are the applications of autoencoders in practice?
 
 **Answer:**
 
@@ -916,18 +1556,20 @@ class VariationalDataAugmentation:
 ### Key Concepts to Master
 1. **Autoencoder Architecture:** Encoder-decoder structure, latent space
 2. **VAE Theory:** Reparameterization trick, ELBO loss, probabilistic modeling
-3. **Dimensionality Reduction:** PCA vs t-SNE vs UMAP trade-offs
-4. **Applications:** Denoising, compression, anomaly detection, generation
+3. **Graph Neural Networks:** Message passing, node/link/graph-level tasks
+4. **Dimensionality Reduction:** PCA vs t-SNE vs UMAP trade-offs
+5. **Applications:** Denoising, compression, anomaly detection, generation, social networks
 
 ### Practical Implementation
-- **Libraries:** PyTorch, scikit-learn, UMAP-learn
-- **Datasets:** MNIST, CIFAR-10, CelebA for image tasks
-- **Visualization:** matplotlib, seaborn for embeddings
+- **Libraries:** PyTorch, PyTorch Geometric, scikit-learn, UMAP-learn
+- **Datasets:** MNIST, CIFAR-10, CelebA for images; Cora, CiteSeer for graphs
+- **Visualization:** matplotlib, seaborn for embeddings, NetworkX for graphs
 
 ### Next Steps
 - **Advanced Architectures:** β-VAE, WAE, AAE (Adversarial Autoencoders)
+- **Advanced GNNs:** Graph Transformers, Heterogeneous GNNs, Temporal GNNs
 - **Generative Models:** GANs, Diffusion Models, Flow-based Models
-- **Applications:** Build recommendation systems, anomaly detectors
+- **Applications:** Build recommendation systems, anomaly detectors, social network analyzers
 
 ---
 
