@@ -867,21 +867,61 @@ Think of temperature like heating particles in physics:
 - Decoder-only models use only causal self-attention
 - Enables deeper networks with same computational budget
 - No lossy compression bottleneck from encoder
+- Encoder-only models (BERT, RoBERTa) for classification tasks
+- Encoder-decoder models (T5, BART) for sequence-to-sequence tasks
+- Decoder-only models (GPT, Llama, Claude) for autoregressive generation
 
 **Comprehensive Sampling Strategies:**
 - **Greedy**: Deterministic, safe but potentially repetitive
 - **Top-K**: Fixed-size candidate set, consistent randomness
-- **Top-P**: Adaptive candidate set, balances confidence and diversity
+- **Top-P (Nucleus)**: Adaptive candidate set, balances confidence and diversity
 - **Beam Search**: Multiple path exploration, higher quality but slower
 - **Temperature Scaling**: Controls randomness through probability sharpening/flattening
+- **Speculative Decoding**: Use small model to propose, large model to verify
 
 **Training vs Inference Critical Gap:**
 - Training uses teacher forcing with ground truth context
 - Inference relies on autoregressive generation with model predictions
 - KV caching essential for efficient inference (36x speedup possible)
 - Distribution shift between training and inference phases
+- Autoregressive generation: each token depends on all previous tokens
 
 **LLM Optimization Landscape:**
+- Vocabulary reduction, model dimension reduction, layer reduction
+- Multi-Query Attention (MQA) and Grouped Query Attention (GQA)
+- Window attention and latent space attention
+- Feed-forward network optimization (reduce expansion factor)
+- Distributed training: data parallelism, model parallelism, pipeline parallelism
+- Knowledge distillation, pruning, quantization
+- Post-Training Quantization (PTQ) vs Quantization-Aware Training (QAT)
+
+**Special Tokens in Transformers:**
+- **SOS (Start of Sequence)**: Signals beginning of decoder generation
+- **EOS (End of Sequence)**: Signals end of generation
+- **CLS (Classification)**: Used in encoder-only models for classification tasks
+- **SEP (Separator)**: Separates two different sentences in input
+- **PAD (Padding)**: Fills shorter sequences to match batch length
+- **UNK (Unknown)**: Represents out-of-vocabulary words
+
+**Multitask Learning in LLMs:**
+- Pre-training phase: Self-supervised learning on massive datasets
+- Instruction tuning phase: Fine-tuning on specific tasks
+- Loss computation: Cross-entropy loss unified across all tasks
+- Task-specific loss weighting: λ₁L₁ + λ₂L₂ + ... for multiple tasks
+- Model learns task understanding through prompt structure and context
+
+**Attention Mechanism Insights:**
+- Encoder attention: Full attention (no masking), can see entire input
+- Decoder self-attention: Causal masking (can only see previous tokens)
+- Cross-attention: Decoder attends to encoder outputs
+- Decoder-only: Only causal self-attention, no cross-attention needed
+
+**Normalization Strategies:**
+- **Post-Layer Norm**: Apply normalization after main calculations
+- **Pre-Layer Norm**: Apply normalization before main calculations
+- Pre-layer norm empirically better for training stability
+- Layer normalization better than batch normalization for LLMs
+- Layer norm independent of batch size, works with variable sequence lengthsdscape:**
 - **Model-Level**: Reduce layers, heads, dimensions, vocabulary size
 - **Attention-Level**: Multi-query attention, grouped query attention, window attention
 - **Compression**: Quantization (FP32→INT4), pruning, knowledge distillation
@@ -930,3 +970,440 @@ Think of temperature like heating particles in physics:
 ---
 
 *This study guide covers the fundamental concepts from Week 30's Generative AI Part 2 session. The concepts build upon each other, so ensure you understand each section before moving to the next.*
+
+
+---
+
+## 🎓 Additional MLE Interview Questions (20+ Questions)
+
+### Transformer Architecture Deep Dive
+
+**Q20: Explain the difference between encoder-only, decoder-only, and encoder-decoder architectures with real-world examples.**
+
+**Answer:**
+- **Encoder-Only (BERT, RoBERTa)**:
+  - Architecture: Single stack of transformer layers with self-attention
+  - Attention: Full attention (can see all tokens)
+  - Use Cases: Classification, NER, sentiment analysis
+  - Example: "Classify this review as positive or negative"
+  - Advantage: Bidirectional context understanding
+  - Limitation: Cannot generate sequences
+
+- **Decoder-Only (GPT, Llama, Claude)**:
+  - Architecture: Single stack with causal self-attention
+  - Attention: Masked (can only see previous tokens)
+  - Use Cases: Text generation, code generation, chat
+  - Example: "Complete this sentence: The weather today is..."
+  - Advantage: Autoregressive generation, scalable
+  - Limitation: No bidirectional context
+
+- **Encoder-Decoder (T5, BART, mT5)**:
+  - Architecture: Two stacks - encoder and decoder
+  - Encoder Attention: Full attention
+  - Decoder Attention: Causal + cross-attention to encoder
+  - Use Cases: Translation, summarization, question answering
+  - Example: "Translate this English text to French"
+  - Advantage: Leverages both input and output context
+  - Limitation: More complex, slower inference
+
+**Q21: Why is causal masking necessary in decoder-only models?**
+
+**Answer:**
+- **Problem**: During training, we want to prevent the model from "cheating" by looking at future tokens
+- **Solution**: Apply causal mask to attention matrix
+- **Implementation**: Set attention scores to -∞ for future positions before softmax
+- **Effect**: Softmax of -∞ becomes 0, so future tokens have zero attention weight
+- **Why Important**: Ensures model learns to predict based only on past context
+- **Training vs Inference**: 
+  - Training: Causal mask applied to entire sequence
+  - Inference: Only one token at a time, so no masking needed
+
+**Q22: Explain positional encoding and why it's necessary.**
+
+**Answer:**
+- **Problem**: Attention mechanism is permutation-invariant (order doesn't matter)
+- **Solution**: Add positional information to embeddings
+- **Two Approaches**:
+  - Absolute: Fixed sinusoidal functions based on position
+  - Relative: Learned relative position biases
+- **Mathematical Formula** (Absolute):
+  - PE(pos, 2i) = sin(pos / 10000^(2i/d_model))
+  - PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
+- **Why Sinusoidal**: 
+  - Allows model to learn relative positions
+  - Extrapolates to longer sequences
+  - Periodic pattern captures position relationships
+
+**Q23: What is the role of layer normalization in transformers?**
+
+**Answer:**
+- **Purpose**: Stabilize training by normalizing activations
+- **Formula**: y = γ * (x - mean) / √(variance + ε) + β
+- **Key Differences from Batch Norm**:
+  - Layer norm: Normalizes across features (independent of batch)
+  - Batch norm: Normalizes across batch (depends on batch statistics)
+- **Why Better for LLMs**:
+  - Works with variable sequence lengths
+  - Independent of batch size
+  - More stable during inference
+- **Pre-Layer Norm vs Post-Layer Norm**:
+  - Pre: Apply norm before attention/MLP (modern, more stable)
+  - Post: Apply norm after attention/MLP (original, less stable)
+
+### Sampling and Generation
+
+**Q24: Compare and contrast greedy decoding, beam search, and sampling methods.**
+
+**Answer:**
+
+| Aspect | Greedy | Beam Search | Sampling |
+|--------|--------|-------------|----------|
+| **Strategy** | Pick highest prob | Maintain K best paths | Random from distribution |
+| **Speed** | Fastest | K times slower | Fast |
+| **Quality** | Good | Best | Variable |
+| **Determinism** | Deterministic | Deterministic | Stochastic |
+| **Repetition** | Can repeat | Less repetition | Diverse |
+| **Use Case** | Factual tasks | High-quality output | Creative tasks |
+
+**Detailed Comparison:**
+- **Greedy**: Always picks argmax, fast but can get stuck
+- **Beam Search**: Explores K hypotheses, recovers from early mistakes, slower
+- **Top-K**: Constrains to K most likely tokens, balances speed and quality
+- **Top-P**: Adaptive vocabulary based on cumulative probability
+- **Temperature**: Controls randomness of distribution
+
+**Q25: Explain the mathematical relationship between temperature and probability distribution.**
+
+**Answer:**
+- **Formula**: P(token) = softmax(logits / T)
+- **Effect of Temperature**:
+  - T → 0: Distribution becomes one-hot (greedy)
+  - T = 1: Original distribution
+  - T → ∞: Uniform distribution (completely random)
+- **Practical Values**:
+  - T < 1 (0.1-0.7): Deterministic, factual tasks
+  - T = 1: Default, balanced
+  - T > 1 (1.2-2.0): Creative, diverse outputs
+- **Why It Works**:
+  - Low T sharpens peaks (confident predictions)
+  - High T flattens distribution (uncertain, exploratory)
+- **Example**:
+  - Logits: [3.0, 2.0, 1.0]
+  - T=0.5: [0.84, 0.14, 0.02] (very peaked)
+  - T=1.0: [0.67, 0.24, 0.09] (moderate)
+  - T=2.0: [0.46, 0.31, 0.23] (flatter)
+
+### Optimization and Efficiency
+
+**Q26: Explain the computational complexity of attention and how KV caching reduces it.**
+
+**Answer:**
+- **Standard Attention Complexity**: O(N²d) where N = sequence length, d = hidden dimension
+- **Breakdown**:
+  - Q @ K^T: O(N²d) - comparing all pairs
+  - Softmax: O(N²)
+  - Attention @ V: O(N²d)
+- **With KV Caching**:
+  - Per token: O(Nd) instead of O(N²d)
+  - Total for M tokens: O(M × N × d) instead of O(M × N² × d)
+  - Speedup: ~N/1 = N times faster (for large N)
+- **Memory Trade-off**:
+  - Cache size: O(N × d × num_heads)
+  - Acceptable because computation savings >> memory cost
+- **Practical Impact**: 36x speedup for 1000-token generation
+
+**Q27: What are the trade-offs between different model compression techniques?**
+
+**Answer:**
+
+| Technique | Speed | Quality | Memory | Complexity |
+|-----------|-------|---------|--------|-----------|
+| **Pruning** | 2-5x | High | 2-5x | Medium |
+| **Quantization** | 2-4x | Medium | 4-8x | Low |
+| **Distillation** | 2-10x | High | 2-10x | High |
+| **LoRA** | 1x | High | 0.1x | Low |
+
+**Detailed Analysis:**
+- **Pruning**: Remove weights/layers, fine-tune to recover
+- **Quantization**: Reduce precision (FP32→INT8), hardware acceleration
+- **Distillation**: Train small model from large model
+- **LoRA**: Add small trainable adapters, freeze base model
+
+**Q28: Explain Multi-Query Attention (MQA) and Grouped Query Attention (GQA).**
+
+**Answer:**
+- **Standard Multi-Head Attention (MHA)**:
+  - Each head has separate Q, K, V matrices
+  - Parameters: H × (d_q + d_k + d_v)
+  - Computation: H parallel attention operations
+  
+- **Multi-Query Attention (MQA)**:
+  - Separate Q per head, shared K and V across all heads
+  - Parameters: H × d_q + d_k + d_v (much smaller)
+  - Benefit: Smaller KV cache, faster inference
+  - Trade-off: Slightly reduced model capacity
+  
+- **Grouped Query Attention (GQA)**:
+  - Compromise between MHA and MQA
+  - Group heads, share K,V within groups
+  - Parameters: H × d_q + (H/G) × (d_k + d_v)
+  - Benefit: Balance between efficiency and capacity
+
+**Q29: How does distributed training work for large language models?**
+
+**Answer:**
+- **Data Parallelism**:
+  - Same model on multiple GPUs
+  - Different data batches on each GPU
+  - Gradients averaged across GPUs
+  - Scaling: Linear with number of GPUs
+  
+- **Model Parallelism**:
+  - Different layers on different GPUs
+  - Sequential computation (bottleneck)
+  - Useful for models too large for single GPU
+  
+- **Pipeline Parallelism**:
+  - Stages of computation pipelined across GPUs
+  - Reduces idle time compared to model parallelism
+  - Requires careful synchronization
+  
+- **Challenges**:
+  - Communication overhead (gradient synchronization)
+  - Load balancing (ensuring equal utilization)
+  - Fault tolerance (handling GPU failures)
+  - Debugging complexity (distributed systems are hard)
+
+### Training and Fine-tuning
+
+**Q30: Explain the difference between pre-training, instruction tuning, and fine-tuning.**
+
+**Answer:**
+- **Pre-training**:
+  - Objective: Next token prediction on massive unlabeled data
+  - Data: Web crawls, books, code (terabytes)
+  - Duration: Weeks to months on thousands of GPUs
+  - Result: Foundation model with general knowledge
+  - Example: Training GPT-2 from scratch
+  
+- **Instruction Tuning**:
+  - Objective: Learn to follow instructions
+  - Data: Curated instruction-response pairs (thousands to millions)
+  - Duration: Hours to days on single/few GPUs
+  - Result: Model that follows user instructions
+  - Example: Fine-tuning GPT-2 on instruction dataset
+  
+- **Fine-tuning**:
+  - Objective: Adapt to specific task
+  - Data: Task-specific labeled data (hundreds to thousands)
+  - Duration: Minutes to hours
+  - Result: Task-specific model
+  - Example: Fine-tuning for sentiment analysis
+
+**Q31: What is teacher forcing and why is it used during training?**
+
+**Answer:**
+- **Definition**: During training, condition on ground truth tokens instead of model predictions
+- **Why Used**:
+  - Prevents error accumulation during learning
+  - Allows parallel processing of entire sequences
+  - Provides stable training signal
+  
+- **Training vs Inference Gap**:
+  - Training: Model sees correct previous tokens
+  - Inference: Model sees its own predictions
+  - This mismatch can cause distribution shift
+  
+- **Scheduled Sampling**:
+  - Gradually transition from teacher forcing to model predictions
+  - Reduces distribution shift
+  - Improves inference performance
+  
+- **Example**:
+  - Training: "The cat sat on the [mat]" (ground truth)
+  - Inference: "The cat sat on the [rug]" (model prediction)
+
+**Q32: Explain loss functions used in LLM training.**
+
+**Answer:**
+- **Cross-Entropy Loss** (most common):
+  - Formula: -log(P(y_true))
+  - Measures difference between predicted and true probability distributions
+  - Works for any task that can be framed as classification
+  
+- **KL Divergence** (knowledge distillation):
+  - Formula: Σ P(x) * log(P(x) / Q(x))
+  - Measures how one distribution differs from another
+  - Used to match student to teacher predictions
+  
+- **Contrastive Loss** (representation learning):
+  - Pulls similar examples together, pushes dissimilar apart
+  - Used in some modern training approaches
+  
+- **Weighted Loss** (multi-task learning):
+  - Loss = λ₁L₁ + λ₂L₂ + ... + λₙLₙ
+  - Balances multiple objectives
+  - Weights can be fixed or learned
+
+### Advanced Topics
+
+**Q33: What is Low-Rank Adaptation (LoRA) and why is it useful?**
+
+**Answer:**
+- **Concept**: Add small trainable matrices to frozen base model
+- **Mathematical Formulation**:
+  - Original: y = Wx
+  - With LoRA: y = Wx + BAx (where B and A are small)
+  - Rank r << hidden dimension d
+  
+- **Advantages**:
+  - Dramatically reduces trainable parameters (0.1% of original)
+  - Faster training and inference
+  - Can switch between tasks by swapping LoRA weights
+  - Enables fine-tuning on consumer GPUs
+  
+- **Trade-offs**:
+  - Slightly reduced model capacity
+  - May not work for all tasks
+  - Requires careful rank selection
+  
+- **Practical Impact**:
+  - 7B model: ~1M trainable parameters instead of 7B
+  - Training time: Hours instead of days
+  - Memory: Fits on single GPU instead of requiring multiple
+
+**Q34: Explain Retrieval-Augmented Generation (RAG) and its benefits.**
+
+**Answer:**
+- **Architecture**:
+  1. Query: User question
+  2. Retrieval: Find relevant documents from knowledge base
+  3. Augmentation: Combine query with retrieved documents
+  4. Generation: LLM generates answer using augmented context
+  
+- **Benefits**:
+  - Reduces hallucinations (grounded in retrieved documents)
+  - Handles knowledge cutoff (can access current information)
+  - Interpretable (can show which documents were used)
+  - Reduces model size needed (doesn't need to memorize everything)
+  
+- **Challenges**:
+  - Retrieval quality affects generation quality
+  - Computational cost (retrieval + generation)
+  - Handling long documents
+  
+- **Use Cases**:
+  - Question answering over documents
+  - Customer support (company-specific knowledge)
+  - Medical/legal domain-specific QA
+
+**Q35: What are the main challenges in deploying LLMs in production?**
+
+**Answer:**
+- **Latency**:
+  - Challenge: Autoregressive generation is slow
+  - Solutions: KV caching, quantization, speculative decoding
+  
+- **Throughput**:
+  - Challenge: Limited by GPU memory
+  - Solutions: Batching, dynamic batching, model parallelism
+  
+- **Cost**:
+  - Challenge: Large models expensive to run
+  - Solutions: Distillation, quantization, LoRA
+  
+- **Hallucinations**:
+  - Challenge: Models can generate false information
+  - Solutions: RAG, fact-checking, confidence scoring
+  
+- **Safety**:
+  - Challenge: Models can generate harmful content
+  - Solutions: Content filtering, RLHF, safety training
+  
+- **Monitoring**:
+  - Challenge: Detecting model degradation
+  - Solutions: Logging, metrics, user feedback loops
+
+---
+
+## 🎓 Summary of Key Concepts for Interviews
+
+### Must-Know Topics (Absolutely Essential)
+1. **Transformer Architecture**: Attention mechanism, positional encoding, layer norm
+2. **Decoder-Only Models**: Causal masking, autoregressive generation
+3. **Sampling Strategies**: Greedy, top-k, top-p, temperature
+4. **KV Caching**: Why it's important, how it works, speedup
+5. **Training vs Inference**: Teacher forcing, distribution shift
+
+### Should-Know Topics (Very Important)
+1. **Model Compression**: Distillation, quantization, pruning
+2. **Attention Optimizations**: MQA, GQA, window attention
+3. **Distributed Training**: Data parallelism, model parallelism
+4. **Fine-tuning**: Instruction tuning, task-specific adaptation
+5. **Loss Functions**: Cross-entropy, KL divergence, weighted loss
+
+### Nice-to-Know Topics (Good to Mention)
+1. **LoRA**: Parameter-efficient fine-tuning
+2. **RAG**: Retrieval-augmented generation
+3. **Speculative Decoding**: Speed optimization
+4. **Multi-task Learning**: Training on multiple objectives
+5. **Production Deployment**: Challenges and solutions
+
+### Interview Strategy
+1. **Start Simple**: Explain concepts like you're teaching a 12-year-old
+2. **Go Deep**: Then dive into mathematical details
+3. **Use Examples**: Concrete examples are more memorable
+4. **Connect Concepts**: Show how different topics relate
+5. **Discuss Trade-offs**: Every technique has pros and cons
+6. **Mention Papers**: Reference key papers (Attention is All You Need, etc.)
+7. **Ask Clarifying Questions**: Show you understand the nuances
+
+---
+
+## 📚 Recommended Reading and Resources
+
+### Foundational Papers
+1. "Attention is All You Need" (Vaswani et al., 2017)
+2. "Language Models are Unsupervised Multitask Learners" (Radford et al., 2019)
+3. "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" (Raffel et al., 2020)
+
+### Key Concepts Papers
+1. "Efficient Transformers: A Survey" (Tay et al., 2022)
+2. "LoRA: Low-Rank Adaptation of Large Language Models" (Hu et al., 2021)
+3. "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" (Lewis et al., 2020)
+
+### Implementation Resources
+1. Hugging Face Transformers Documentation
+2. PyTorch Official Tutorials
+3. Fast.ai Deep Learning Course
+4. Stanford CS224N: NLP with Deep Learning
+
+---
+
+## 🎯 Final Preparation Tips
+
+### Before the Interview
+1. Review the core concepts multiple times
+2. Practice explaining concepts out loud
+3. Work through coding examples
+4. Understand the mathematical foundations
+5. Be ready to discuss trade-offs
+
+### During the Interview
+1. Listen carefully to the question
+2. Ask clarifying questions if needed
+3. Start with high-level explanation
+4. Provide concrete examples
+5. Discuss implementation details
+6. Mention relevant papers/research
+7. Be honest about what you don't know
+
+### After the Interview
+1. Follow up with thank you email
+2. Mention specific topics discussed
+3. Provide additional resources if relevant
+4. Express genuine interest in the role
+
+---
+
+This comprehensive study guide covers all major topics in Generative AI Part 2, from fundamental concepts to advanced optimization techniques. Use it as a reference for both learning and interview preparation. Good luck!
